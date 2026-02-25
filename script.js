@@ -1,59 +1,55 @@
-// ===============================
-// LOAD PLAYER DATA FROM JSON
-// ===============================
-
 fetch("player_points.json")
-.then(response => response.json())
-
+.then(res => res.json())
 .then(data => {
 
-    // ===============================
-    // THIS IS WHERE PLAYERS ARE DISPLAYED
-    // ===============================
+    const container = document.getElementById("leaderboard");
 
-    const playersContainer = document.getElementById("players");
-
-    // convert JSON object → list of players
     const players = Object.values(data);
 
-    // sort players by points (highest first)
-    players.sort((a, b) => b.total_points - a.total_points);
+    // sort leaderboard
+    players.sort((a,b)=>b.total_points-a.total_points);
 
-    // loop through every player
-    players.forEach((player, index) => {
+    players.forEach((player,index)=>{
 
-        // create player card
-        const card = document.createElement("div");
+        const row = document.createElement("div");
+        row.className = "player";
 
-        card.className = "player-card";
+        // =====================
+        // GAMEMODE BADGES
+        // =====================
+        let tiersHTML = "";
 
-        // ===============================
-        // PLAYER VISUAL DISPLAY
-        // ===============================
-        card.innerHTML = `
-            <div class="rank">#${index + 1}</div>
+        for(const gm in player.gamemodes){
+            const tier = player.gamemodes[gm].tier;
 
-            <img 
-                src="https://mc-heads.net/avatar/${player.mc_username}"
-                width="50"
-                height="50"
-            >
+            tiersHTML +=
+                `<span class="tier ${tier}">
+                    ${tier}
+                 </span>`;
+        }
+
+        row.innerHTML = `
+            <div class="rank">${index+1}.</div>
+
+            <img src="https://mc-heads.net/avatar/${player.mc_username}">
 
             <div class="info">
+                <h3>
                 <a href="player.html?user=${player.mc_username}">
-                    <strong>${player.mc_username}</strong>
+                    ${player.mc_username}
                 </a>
-
-                <p>${player.region}</p>
+                </h3>
                 <p>${player.total_points} Points</p>
+            </div>
+
+            <div class="region">${player.region}</div>
+
+            <div class="tiers">
+                ${tiersHTML}
             </div>
         `;
 
-        // ===============================
-        // 🔥 THIS LINE ADDS PLAYER TO WEBSITE
-        // ===============================
-        playersContainer.appendChild(card);
-
+        container.appendChild(row);
     });
 
 });
