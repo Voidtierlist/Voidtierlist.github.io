@@ -22,10 +22,27 @@ fetch("player_points.json")
         const card = document.createElement("div");
         card.className = "tier-player";
 
+
         card.innerHTML = `
-            <img src="https://mc-heads.net/avatar/${player.mc_username}">
-            ${player.mc_username}
-        `;
+        <div class="rank">${index + 1}.</div>
+
+        <img class="skin"
+        src="https://mc-heads.net/body/${player.mc_username}/100">
+
+        <div class="info">
+        <a href="player.html?user=${player.mc_username}">
+        ${player.mc_username}
+        </a>
+
+        <p>${player.total_points} Points</p>
+        </div>
+
+       <div class="tiers">
+       ${createTierBadges(player)}
+       </div>
+`      ;
+
+
 
         column.appendChild(card);
     });
