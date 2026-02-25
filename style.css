@@ -76,3 +76,33 @@ body{
 .HT2{background:#f97316;}
 .LT1{background:#eab308;}
 .HT1{background:#ef4444;}
+.player{
+    width:1000px;
+    margin:10px auto;
+    background:#141420;
+    padding:15px;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.region{
+    margin-left:auto;
+    background:#1f2937;
+    padding:6px 10px;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+.tiers{
+    display:flex;
+    gap:6px;
+}
+
+.tier{
+    padding:5px 8px;
+    border-radius:6px;
+    font-size:12px;
+    font-weight:bold;
+}
