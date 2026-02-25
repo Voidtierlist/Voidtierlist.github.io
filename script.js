@@ -1,34 +1,59 @@
+let ALL_PLAYERS = [];
+let currentMode = "all";
+
 fetch("player_points.json")
-.then(res => res.json())
-.then(data => {
+.then(r=>r.json())
+.then(data=>{
 
-    const players = Object.values(data);
+    ALL_PLAYERS = Object.values(data);
+    render();
+});
 
-    // sort by points
-    players.sort((a,b)=> b.total_points - a.total_points);
+function filterMode(mode){
+    currentMode = mode;
+    render();
+}
+
+function render(){
 
     const board = document.getElementById("leaderboard");
+    board.innerHTML="";
+
+    let players=[...ALL_PLAYERS];
+
+    players.sort((a,b)=>b.total_points-a.total_points);
 
     players.forEach((p,index)=>{
 
-        const skin =
-        `https://mc-heads.net/avatar/${p.mc_username}/100`;
+        Object.entries(p.gamemodes).forEach(([mode,info])=>{
 
-        const div = document.createElement("div");
-        div.className = "player";
+            if(currentMode!="all" && mode!=currentMode) return;
 
-        div.innerHTML = `
+            const skin=`https://mc-heads.net/avatar/${p.mc_username}/100`;
+
+            const div=document.createElement("div");
+            div.className="player";
+
+            div.innerHTML=`
             <div class="rank">#${index+1}</div>
 
             <img src="${skin}">
 
-            <div>
-                <h2>${p.mc_username}</h2>
-                <p>Points: ${p.total_points}</p>
+            <div class="info">
+                <h3>${p.mc_username}</h3>
+                <p>${mode.toUpperCase()}</p>
             </div>
-        `;
 
-        board.appendChild(div);
+            <div class="tier ${info.tier}">
+                ${info.tier}
+            </div>
+
+            <div>
+                ${info.points} pts
+            </div>
+            `;
+
+            board.appendChild(div);
+        });
     });
-
-});
+}
