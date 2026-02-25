@@ -1,3 +1,16 @@
+function createTierBadges(player){
+
+    let html = "";
+
+    for(const gm in player.gamemodes){
+
+        const tier = player.gamemodes[gm].tier;
+
+        html += `<span class="tier ${tier}">${tier}</span>`;
+    }
+
+    return html;
+}
 fetch("player_points.json")
 .then(res => res.json())
 .then(data => {
