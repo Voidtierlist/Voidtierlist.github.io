@@ -197,7 +197,7 @@ body{
 .gamemode-bar{
     display:flex;
     gap:12px;
-    padding:18px 40px;
+    margin-top:10px;
 }
 
 .mode{
