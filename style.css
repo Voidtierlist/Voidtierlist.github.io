@@ -43,6 +43,38 @@ body{
     gap:15px;
     transition:.2s;
 }
+.tiers-container{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    margin-top:30px;
+}
+
+.tier-column{
+    background:#141420;
+    padding:15px;
+    border-radius:12px;
+    width:220px;
+}
+
+.tier-column h2{
+    text-align:center;
+}
+
+.tier-player{
+    background:#1c1c2b;
+    padding:8px;
+    margin:6px 0;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.tier-player img{
+    width:32px;
+    border-radius:6px;
+}
 
 .player:hover{
     transform:scale(1.02);
