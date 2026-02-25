@@ -1,10 +1,15 @@
 body{
     margin:0;
-    background:#0b0b12;
-    font-family:Arial;
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:
+    radial-gradient(circle at top,
+    #101827 0%,
+    #070b14 60%,
+    #05070c 100%);
+
     color:white;
 }
-
 .navbar{
     display:flex;
     justify-content:space-between;
