@@ -263,7 +263,7 @@
     "996427837986852994": {
         "mc_username": "Straitgamerz",
         "region": "AS",
-        "total_points": 14,
+        "total_points": 20,
         "gamemodes": {
             "nethpot": {
                 "tier": "LT3",
@@ -276,6 +276,10 @@
             "mace": {
                 "tier": "HT5",
                 "points": 2
+            },
+            "diamond pot": {
+                "tier": "LT3",
+                "points": 6
             }
         }
     },
@@ -339,5 +343,11 @@
                 "points": 10
             }
         }
+    },
+    "1117353686620983378": {
+        "mc_username": "Thanasis76",
+        "region": "EU",
+        "total_points": 0,
+        "gamemodes": {}
     }
 }
