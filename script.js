@@ -31,7 +31,8 @@ fetch("player_points.json")
         row.innerHTML = `
             <div class="rank">${index+1}.</div>
 
-            <img src="https://mc-heads.net/avatar/${player.mc_username}">
+            <img class="skin"
+            src="https://render.crafty.gg/3d/bust/${player.mc_username}">
 
             <div class="info">
                 <h3>
