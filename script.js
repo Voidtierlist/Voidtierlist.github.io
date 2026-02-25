@@ -1,59 +1,59 @@
-let ALL_PLAYERS = [];
-let currentMode = "all";
+// ===============================
+// LOAD PLAYER DATA FROM JSON
+// ===============================
 
 fetch("player_points.json")
-.then(r=>r.json())
-.then(data=>{
+.then(response => response.json())
 
-    ALL_PLAYERS = Object.values(data);
-    render();
-});
+.then(data => {
 
-function filterMode(mode){
-    currentMode = mode;
-    render();
-}
+    // ===============================
+    // THIS IS WHERE PLAYERS ARE DISPLAYED
+    // ===============================
 
-function render(){
+    const playersContainer = document.getElementById("players");
 
-    const board = document.getElementById("leaderboard");
-    board.innerHTML="";
+    // convert JSON object → list of players
+    const players = Object.values(data);
 
-    let players=[...ALL_PLAYERS];
+    // sort players by points (highest first)
+    players.sort((a, b) => b.total_points - a.total_points);
 
-    players.sort((a,b)=>b.total_points-a.total_points);
+    // loop through every player
+    players.forEach((player, index) => {
 
-    players.forEach((p,index)=>{
+        // create player card
+        const card = document.createElement("div");
 
-        Object.entries(p.gamemodes).forEach(([mode,info])=>{
+        card.className = "player-card";
 
-            if(currentMode!="all" && mode!=currentMode) return;
+        // ===============================
+        // PLAYER VISUAL DISPLAY
+        // ===============================
+        card.innerHTML = `
+            <div class="rank">#${index + 1}</div>
 
-            const skin=`https://mc-heads.net/avatar/${p.mc_username}/100`;
-
-            const div=document.createElement("div");
-            div.className="player";
-
-            div.innerHTML=`
-            <div class="rank">#${index+1}</div>
-
-            <img src="${skin}">
+            <img 
+                src="https://mc-heads.net/avatar/${player.mc_username}"
+                width="50"
+                height="50"
+            >
 
             <div class="info">
-                <h3>${p.mc_username}</h3>
-                <p>${mode.toUpperCase()}</p>
-            </div>
+                <a href="player.html?user=${player.mc_username}">
+                    <strong>${player.mc_username}</strong>
+                </a>
 
-            <div class="tier ${info.tier}">
-                ${info.tier}
+                <p>${player.region}</p>
+                <p>${player.total_points} Points</p>
             </div>
+        `;
 
-            <div>
-                ${info.points} pts
-            </div>
-            `;
+        // ===============================
+        // 🔥 THIS LINE ADDS PLAYER TO WEBSITE
+        // ===============================
+        playersContainer.appendChild(card);
 
-            board.appendChild(div);
-        });
     });
-}
+
+});
