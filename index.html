@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PvP Tiers Leaderboard</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>PvP Tiers</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<h1>🏆 PvP Tiers Leaderboard</h1>
+<div class="navbar">
+    <h1>⚔ PvP Tiers</h1>
+
+    <div class="filters">
+        <button onclick="filterMode('all')">All</button>
+        <button onclick="filterMode('sword')">Sword</button>
+        <button onclick="filterMode('axe')">Axe</button>
+        <button onclick="filterMode('nethpot')">NethPot</button>
+        <button onclick="filterMode('uhc')">UHC</button>
+    </div>
+</div>
+
+<h2 class="title">Global Leaderboard</h2>
 
 <div id="leaderboard"></div>
 
