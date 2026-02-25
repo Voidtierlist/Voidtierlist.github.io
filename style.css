@@ -217,14 +217,13 @@ body{
 }
 .divider-line{
     height:1px;
-    margin:18px 0;
+    width:100%;
+    margin:20px 0;
 
-    background:linear-gradient(
-        to right,
-        transparent,
-        rgba(120,140,255,.35),
-        transparent
-    );
+    background:rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 0 8px rgba(120,140,255,0.25);
 }
 a{
     color:white;
