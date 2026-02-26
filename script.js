@@ -114,8 +114,7 @@ function openPlayerModal(player){
             const gmData =
                 player.gamemodes[gm];
 
-            const key =
-                gm.toLowerCase().replace(/\s/g,"");
+            const key = normalizeGamemode(gm);
 
             const icon =
                 GAMEMODE_ICONS[key];
