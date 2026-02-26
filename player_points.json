@@ -353,11 +353,35 @@
     "1224975402553053185": {
         "mc_username": "ExplosionAlso_",
         "region": "AS",
-        "total_points": 60,
+        "total_points": 26,
         "gamemodes": {
             "nethpot": {
-                "tier": "HT1",
-                "points": 60
+                "tier": "LT3",
+                "points": 6
+            },
+            "axe": {
+                "tier": "LT4",
+                "points": 3
+            },
+            "sword": {
+                "tier": "LT4",
+                "points": 3
+            },
+            "mace": {
+                "tier": "LT4",
+                "points": 3
+            },
+            "uhc": {
+                "tier": "HT4",
+                "points": 4
+            },
+            "diamond smp": {
+                "tier": "HT4",
+                "points": 4
+            },
+            "diamond pot": {
+                "tier": "LT4",
+                "points": 3
             }
         }
     },
