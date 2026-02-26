@@ -3,7 +3,7 @@ const GAMEMODE_ICONS = {
     sword: "https://mctiers.com/tier_icons/sword.svg",
     nethpot: "https://mctiers.com/tier_icons/nethop.svg",
     mace: "https://mctiers.com/tier_icons/mace.svg",
-    pot: "https://mctiers.com/tier_icons/pot.svg",
+    diamondpot: "https://mctiers.com/tier_icons/pot.svg",
     crystal: "https://mctiers.com/tier_icons/vanilla.svg",
     uhc: "https://mctiers.com/tier_icons/uhc.svg",
     axe: "https://mctiers.com/tier_icons/axe.svg",
