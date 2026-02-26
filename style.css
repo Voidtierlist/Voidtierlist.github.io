@@ -237,3 +237,17 @@ a:visited{
 a:hover{
     color:#cbd5ff;
 }
+.content-box{
+    margin-top:25px;
+    padding:25px;
+
+    background:#0d1526;
+
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,0.05);
+
+    box-shadow:
+        0 0 0 1px rgba(120,140,255,0.05),
+        0 10px 40px rgba(0,0,0,0.6);
+}
