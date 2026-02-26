@@ -39,17 +39,7 @@ body{
     margin-top:20px;
 }
 
-.player{
-    width:750px;
-    margin:12px auto;
-    background:#161622;
-    padding:15px;
-    border-radius:12px;
-    display:flex;
-    align-items:center;
-    gap:15px;
-    transition:.2s;
-}
+
 .tiers-container{
     display:flex;
     gap:20px;
