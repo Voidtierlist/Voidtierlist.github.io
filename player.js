@@ -1,7 +1,7 @@
 const params = new URLSearchParams(window.location.search);
 const name = params.get("user");
 
-fetch("https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/player_points.json")
+fetch("player_points.json")
 .then(res => res.json())
 .then(data => {
 
