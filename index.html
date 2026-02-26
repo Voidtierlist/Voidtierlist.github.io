@@ -6,46 +6,28 @@
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<!-- PLAYER MODAL -->
-<div id="playerModal" class="modal">
-  <div class="modal-card">
+<!-- PLAYER PROFILE MODAL -->
+<div id="playerModal" class="modal hidden">
 
-    <span class="close-modal">&times;</span>
+    <div class="modal-card">
 
-    <img id="modalSkin" class="modal-skin">
+        <button id="closeModal" class="close-btn">✕</button>
 
-    <h2 id="modalName"></h2>
-    <div id="modalRank" class="modal-rank"></div>
-    <div class="section-title">POSITION</div>
-    <div id="modal-position"></div>
+        <img id="modal-skin" class="modal-avatar">
 
-    <div class="modal-section">
-        <h3>POSITION</h3>
-        <div id="modalPosition"></div>
+        <h2 id="modal-name"></h2>
+
+        <div id="modal-region" class="modal-region"></div>
+
+        <div class="section-title">POSITION</div>
+        <div id="modal-position"></div>
+
+        <div class="section-title">TIERS</div>
+        <div id="modal-tiers" class="modal-tiers"></div>
+
     </div>
 
-    <div class="modal-section">
-        <h3>TIERS</h3>
-        <div id="modalTiers" class="tiers-row"></div>
-    </div>
-
-  </div>
 </div>
-<div id="playerModal" class="modal">
-  <div class="modal-card">
-
-    <span id="closeModal">&times;</span>
-
-    <img id="modalSkin" class="modal-skin">
-
-    <h2 id="modalName"></h2>
-    <p id="modalRegion"></p>
-    <p id="modalPoints"></p>
-
-    <div id="modalTiers" class="tiers"></div>
-
-  </div>
-</div>  
 <body>
 
 
