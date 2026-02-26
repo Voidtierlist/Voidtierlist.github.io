@@ -1,3 +1,18 @@
+// ===============================
+// GAMEMODE ICONS
+// ===============================
+
+const GAMEMODE_ICONS = {
+    smp: "https://mctiers.com/tier_icons/smp.svg",
+    sword: "https://mctiers.com/tier_icons/sword.svg",
+    nethpot: "https://mctiers.com/tier_icons/nethop.svg",
+    mace: "https://mctiers.com/tier_icons/mace.svg",
+    pot: "https://mctiers.com/tier_icons/pot.svg",
+    crystal: "https://mctiers.com/tier_icons/vanilla.svg",
+    uhc: "https://mctiers.com/tier_icons/uhc.svg",
+    axe: "https://mctiers.com/tier_icons/axe.svg",
+    diasmp: "https://subtiers.net/assets/dia_smp-523efa38.svg"
+};
 function createTierBadges(player){
 
     let html = "";
