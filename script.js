@@ -77,3 +77,54 @@ fetch("player_points.json")
     });
 
 });
+const modal = document.getElementById("playerModal");
+
+function openPlayerModal(player){
+
+    modal.style.display = "flex";
+
+    document.getElementById("modalName").textContent =
+        player.mc_username;
+
+    document.getElementById("modalRank").textContent =
+        player.rank || "Unranked";
+
+    document.getElementById("modalPosition").innerHTML =
+        `🏆 #${player.position} Overall`;
+
+    const skin = document.getElementById("modalSkin");
+
+    skin.src =
+    `https://render.crafty.gg/3d/bust/${player.mc_username}`;
+
+    skin.onerror = function(){
+        this.src =
+        `https://mc-heads.net/body/${player.mc_username}/100`;
+    };
+
+    /* TIERS */
+    const tiersContainer =
+        document.getElementById("modalTiers");
+
+    tiersContainer.innerHTML = "";
+
+    player.tiers?.forEach(tier=>{
+        const icon = document.createElement("img");
+        icon.src = tier.icon;
+        icon.width = 34;
+        tiersContainer.appendChild(icon);
+    });
+}
+
+/* CLOSE */
+document.querySelector(".close-modal")
+.addEventListener("click",()=>{
+    modal.style.display="none";
+});
+
+/* CLICK OUTSIDE CLOSE */
+window.onclick = function(e){
+    if(e.target === modal){
+        modal.style.display="none";
+    }
+};
