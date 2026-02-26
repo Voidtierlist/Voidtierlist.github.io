@@ -27,7 +27,7 @@ fetch("player_points.json")
 
         const card = document.createElement("div");
         card.innerHTML = `
-        <div class="rank">#${index + 1}</div>
+        
 
         <img class="skin"
         src="https://render.crafty.gg/3d/bust/${player.mc_username}">
