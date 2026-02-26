@@ -13,36 +13,13 @@ const GAMEMODE_ICONS = {
     axe: "https://mctiers.com/tier_icons/axe.svg",
     diasmp: "https://subtiers.net/assets/dia_smp-523efa38.svg"
 };
-function createTierBadges(player){
 
-    let html = "";
-
-    for (const gm in player.gamemodes) {
-
-    const tier = player.gamemodes[gm].tier;
-
-    const key = gm.toLowerCase().replace(/\s/g,"");
-
-    const icon = GAMEMODE_ICONS[key];
-
-    if(!icon) continue;
-
-    tiersHTML += `
-        <div class="tier-icon" title="${gm} ${tier}">
-            <img src="${icon}">
-        </div>
-    `;
-}
-
-
-
-    return html;
-}
 fetch("player_points.json")
 .then(res => res.json())
 .then(data => {
 
     const container = document.getElementById("leaderboard");
+    container.innerHTML = "";
 
     const players = Object.values(data);
 
@@ -54,23 +31,24 @@ fetch("player_points.json")
         const row = document.createElement("div");
         row.className = "player";
 
-        // =====================
-        // GAMEMODE BADGES
-        // =====================
         let tiersHTML = "";
 
         for(const gm in player.gamemodes){
+
             const tier = player.gamemodes[gm].tier;
 
-            const icon = GAMEMODE_ICONS[gm];
+            const key = gm.toLowerCase().replace(/\s/g,"");
+
+            const icon = GAMEMODE_ICONS[key];
+
+            if(!icon) continue;
 
             tiersHTML += `
-            <div class="tier-icon" title="${gm} ${tier}">
-                <img src="${icon}">
-            </div>
+                <div class="tier-icon" title="${gm} ${tier}">
+                    <img src="${icon}">
+                </div>
             `;
-
-
+        }
 
         row.innerHTML = `
             <div class="rank">${index+1}.</div>
