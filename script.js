@@ -22,8 +22,7 @@ const GAMEMODE_ICONS = {
 function normalizeGamemode(name){
     return name
         .toLowerCase()
-        .replace(/_/g,"")
-        .replace(/\s/g,"");
+        .replace(/[^a-z]/g,""); // removes spaces, _, -, etc
 }
 /* ===========================
    LOAD PLAYERS
