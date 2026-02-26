@@ -75,8 +75,13 @@ body{
 }
 
 .player:hover{
-    transform:scale(1.02);
-    box-shadow:0 0 15px #5f6fff;
+    transform:translateY(-3px);
+
+    border-color:rgba(120,140,255,0.35);
+
+    box-shadow:
+        0 6px 25px rgba(0,0,0,.6),
+        0 0 0 1px rgba(120,140,255,.15);
 }
 
 .player img{
@@ -133,10 +138,19 @@ body{
 
 .region{
     margin-left:auto;
-    background:#1f2937;
-    padding:6px 10px;
-    border-radius:6px;
-    font-weight:bold;
+
+    background:#0f182c;
+
+    border:1px solid rgba(255,255,255,0.06);
+
+    padding:6px 12px;
+
+    border-radius:8px;
+
+    font-size:13px;
+    font-weight:600;
+
+    color:#aab4d6;
 }
 
 .tiers{
@@ -356,4 +370,9 @@ a:hover{
 .tier-icon:hover{
     transform:translateY(-2px);
     box-shadow:0 0 12px rgba(120,140,255,.4);
+}
+.player h3{
+    margin:0;
+    font-weight:600;
+    color:white;
 }
