@@ -156,3 +156,4 @@ document.getElementById("playerModal")
         e.target.classList.add("hidden");
     }
 });
+});
