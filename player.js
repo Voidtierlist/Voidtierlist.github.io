@@ -9,6 +9,7 @@ const GAMEMODE_ICONS = {
     axe: "https://mctiers.com/tier_icons/axe.svg",
     diasmp: "https://subtiers.net/assets/dia_smp-523efa38.svg"
 };
+
 const params = new URLSearchParams(window.location.search);
 const name = params.get("user");
 
@@ -29,50 +30,23 @@ fetch("player_points.json")
     document.getElementById("points").innerText = player.total_points;
 
     document.getElementById("skin").src =
-        `https://mc-heads.net/body/${player.mc_username}/256`;
+        `https://render.crafty.gg/3d/bust/${player.mc_username}`;
 
     const gmDiv = document.getElementById("gamemodes");
 
     for(const gm in player.gamemodes){
-        const info = player.gamemodes[gm];
 
-        const card = document.createElement("div");
-        card.innerHTML = `
-        
-
-        <img class="skin"
-        src="https://render.crafty.gg/3d/bust/${player.mc_username}">
-
-        <div class="info">
-        <a href="player.html?user=${player.mc_username}">
-        <strong>${player.mc_username}</strong>
-        </a>
-
-        <p>${player.region}</p>
-        <p>${player.total_points} Points</p>
-
-        <div class="tiers">
-        ${
-        Object.entries(player.gamemodes).map(([gm,data])=>`
-        <div class="tier-icon">
         const key = gm.toLowerCase().replace(/\s/g,"");
         const icon = GAMEMODE_ICONS[key];
 
-        if(!icon) return "";
+        if(!icon) continue;
 
-        return `
-        <div class="tier-icon">
+        const card = document.createElement("div");
+        card.className = "tier-icon";
+
+        card.innerHTML = `
             <img src="${icon}" title="${gm}">
-        </div>
         `;
-        </div>
-        `).join("")
-        }
-        </div>
-
-        </div>
-        `;
-            
 
         gmDiv.appendChild(card);
     }
