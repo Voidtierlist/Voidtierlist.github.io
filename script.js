@@ -50,11 +50,15 @@ fetch("player_points.json")
         for(const gm in player.gamemodes){
             const tier = player.gamemodes[gm].tier;
 
-            tiersHTML +=
-                `<span class="tier ${tier}">
-                    ${tier}
-                 </span>`;
-        }
+            const icon = GAMEMODE_ICONS[gm];
+
+            tiersHTML += `
+            <div class="tier-icon" title="${gm} ${tier}">
+                <img src="${icon}">
+            </div>
+            `;
+
+
 
         row.innerHTML = `
             <div class="rank">${index+1}.</div>
