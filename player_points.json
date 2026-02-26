@@ -349,5 +349,22 @@
         "region": "EU",
         "total_points": 0,
         "gamemodes": {}
+    },
+    "1224975402553053185": {
+        "mc_username": "ExplosionAlso_",
+        "region": "AS",
+        "total_points": 60,
+        "gamemodes": {
+            "nethpot": {
+                "tier": "HT1",
+                "points": 60
+            }
+        }
+    },
+    "845966796808257547": {
+        "mc_username": "Zypher0n",
+        "region": "EU",
+        "total_points": 0,
+        "gamemodes": {}
     }
 }
