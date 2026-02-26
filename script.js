@@ -17,12 +17,24 @@ function createTierBadges(player){
 
     let html = "";
 
-    for(const gm in player.gamemodes){
+    for (const gm in player.gamemodes) {
 
-        const tier = player.gamemodes[gm].tier;
+    const tier = player.gamemodes[gm].tier;
 
-        html += `<span class="tier ${tier}">${tier}</span>`;
-    }
+    const key = gm.toLowerCase().replace(/\s/g,"");
+
+    const icon = GAMEMODE_ICONS[key];
+
+    if(!icon) continue;
+
+    tiersHTML += `
+        <div class="tier-icon" title="${gm} ${tier}">
+            <img src="${icon}">
+        </div>
+    `;
+}
+
+
 
     return html;
 }
