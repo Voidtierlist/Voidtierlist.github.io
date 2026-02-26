@@ -216,7 +216,9 @@ body{
 }
 
 .mode:hover{
-    background:#16213d;
+    transform:translateY(-1px);
+
+    background:rgba(255,255,255,0.08);
 }
 
 .mode.active{
