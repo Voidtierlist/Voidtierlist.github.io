@@ -464,3 +464,7 @@ a:hover{
     font-weight:700;
     color:#f5c84c;
 }
+.modal-avatar{
+    border:3px solid #f5c84c;
+    border-radius:50%;
+}
