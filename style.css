@@ -272,3 +272,32 @@ a:hover{
         0 0 0 1px rgba(120,140,255,0.05),
         0 10px 40px rgba(0,0,0,0.6);
 }
+.mode{
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    padding:8px 14px;
+    border-radius:999px;
+
+    background:#0f182c;
+    border:1px solid rgba(255,255,255,0.06);
+
+    cursor:pointer;
+    transition:.25s;
+}
+
+.mode img{
+    width:18px;
+    height:18px;
+}
+
+.mode span{
+    font-weight:600;
+}
+
+.mode.active{
+    background:linear-gradient(135deg,#4f7cff,#7c8cff);
+    color:white;
+    box-shadow:0 0 14px rgba(100,120,255,.4);
+}
