@@ -7,7 +7,7 @@ const GAMEMODE_ICONS = {
     sword: "https://mctiers.com/tier_icons/sword.svg",
     nethpot: "https://mctiers.com/tier_icons/nethop.svg",
     mace: "https://mctiers.com/tier_icons/mace.svg",
-    pot: "https://mctiers.com/tier_icons/pot.svg",
+    diamondpot: "https://mctiers.com/tier_icons/pot.svg",
     crystal: "https://mctiers.com/tier_icons/vanilla.svg",
     uhc: "https://mctiers.com/tier_icons/uhc.svg",
     axe: "https://mctiers.com/tier_icons/axe.svg",
@@ -87,16 +87,16 @@ function openPlayerModal(player){
     document.getElementById("modalName").textContent =
         player.mc_username;
 
-    document.getElementById("modalRank").textContent =
-        player.rank || "Unranked";
+    document.getElementById("modalRegion").textContent =
+        "Region: " + player.region;
 
-    document.getElementById("modalPosition").innerHTML =
-        `🏆 #${player.position} Overall`;
+    document.getElementById("modalPoints").textContent =
+        "Points: " + player.total_points;
 
     const skin = document.getElementById("modalSkin");
 
     skin.src =
-    `https://render.crafty.gg/3d/bust/${player.mc_username}`;
+        `https://render.crafty.gg/3d/bust/${player.mc_username}`;
 
     skin.onerror = function(){
         this.src =
@@ -104,28 +104,29 @@ function openPlayerModal(player){
     };
 
     /* TIERS */
-    const tiersContainer =
-        document.getElementById("modalTiers");
+    const tierBox = document.getElementById("modalTiers");
+    tierBox.innerHTML = "";
 
-    tiersContainer.innerHTML = "";
+    for(const gm in player.gamemodes){
 
-    player.tiers?.forEach(tier=>{
-        const icon = document.createElement("img");
-        icon.src = tier.icon;
-        icon.width = 34;
-        tiersContainer.appendChild(icon);
-    });
+        const key = gm.toLowerCase().replace(/\s/g,"");
+        const icon = GAMEMODE_ICONS[key];
+
+        if(!icon) continue;
+
+        tierBox.innerHTML += `
+            <div class="tier-icon">
+                <img src="${icon}" title="${gm}">
+            </div>
+        `;
+    }
 }
 
 /* CLOSE */
-document.querySelector(".close-modal")
-.addEventListener("click",()=>{
-    modal.style.display="none";
-});
+document.getElementById("closeModal").onclick = () =>
+    modal.style.display = "none";
 
-/* CLICK OUTSIDE CLOSE */
-window.onclick = function(e){
-    if(e.target === modal){
-        modal.style.display="none";
-    }
+window.onclick = (e)=>{
+    if(e.target === modal)
+        modal.style.display = "none";
 };
