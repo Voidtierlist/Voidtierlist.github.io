@@ -316,3 +316,33 @@ a:hover{
     width:16px;
     height:16px;
 }
+/* ============================= */
+/* TIER BADGE (MCTIERS STYLE) */
+/* ============================= */
+
+.tier-icon{
+    display:flex;
+    align-items:center;
+    gap:6px;
+
+    background:#0b1222;
+    border:1px solid rgba(255,255,255,0.08);
+
+    padding:4px 10px;
+    border-radius:999px;
+
+    font-size:13px;
+    font-weight:600;
+
+    transition:.2s;
+}
+
+.tier-icon img{
+    width:16px;
+    height:16px;
+}
+
+.tier-icon:hover{
+    transform:translateY(-2px);
+    box-shadow:0 0 12px rgba(120,140,255,.4);
+}
