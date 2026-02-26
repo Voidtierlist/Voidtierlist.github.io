@@ -220,8 +220,19 @@ body{
 }
 
 .mode.active{
-    background:#16213d;
     color:white;
+
+    background:
+    linear-gradient(
+        135deg,
+        #3b82f6,
+        #6366f1
+    );
+
+    border:none;
+
+    box-shadow:
+        0 0 18px rgba(99,102,241,.45);
 }
 .divider-line{
     height:1px;
