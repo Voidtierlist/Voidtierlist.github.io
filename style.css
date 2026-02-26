@@ -112,13 +112,23 @@ body{
 .HT1{background:#ef4444;}
 .player{
     width:1000px;
-    margin:10px auto;
-    background:#141420;
-    padding:15px;
-    border-radius:14px;
+    margin:12px auto;
+
     display:flex;
     align-items:center;
     gap:20px;
+
+    padding:18px 22px;
+
+    background:rgba(18,24,44,0.75);
+
+    border-radius:16px;
+
+    border:1px solid rgba(255,255,255,0.06);
+
+    backdrop-filter: blur(6px);
+
+    transition:all .25s ease;
 }
 
 .region{
