@@ -1,131 +1,134 @@
-// ===============================
-// GAMEMODE ICONS
-// ===============================
+let allPlayersData = [];
+
+/* ===========================
+   GAMEMODE ICONS
+=========================== */
 
 const GAMEMODE_ICONS = {
-    smp: "https://mctiers.com/tier_icons/smp.svg",
-    sword: "https://mctiers.com/tier_icons/sword.svg",
-    nethpot: "https://mctiers.com/tier_icons/nethop.svg",
-    mace: "https://mctiers.com/tier_icons/mace.svg",
-    diamondpot: "https://mctiers.com/tier_icons/pot.svg",
-    crystal: "https://mctiers.com/tier_icons/vanilla.svg",
-    uhc: "https://mctiers.com/tier_icons/uhc.svg",
-    axe: "https://mctiers.com/tier_icons/axe.svg",
-    diasmp: "https://subtiers.net/assets/dia_smp-523efa38.svg"
+    smp:"https://mctiers.com/tier_icons/smp.svg",
+    sword:"https://mctiers.com/tier_icons/sword.svg",
+    crystal:"https://mctiers.com/tier_icons/vanilla.svg",
+    nethpot:"https://mctiers.com/tier_icons/nethop.svg",
+    uhc:"https://mctiers.com/tier_icons/uhc.svg",
+    axe:"https://mctiers.com/tier_icons/axe.svg",
+    mace:"https://mctiers.com/tier_icons/mace.svg",
+    diamondpot:"https://mctiers.com/tier_icons/pot.svg",
+    diasmp:"https://subtiers.net/assets/dia_smp-523efa38.svg"
 };
 
+/* ===========================
+   LOAD PLAYERS
+=========================== */
+
 fetch("player_points.json")
-.then(res => res.json())
-.then(data => {
+.then(res=>res.json())
+.then(data=>{
 
     const container = document.getElementById("leaderboard");
-    container.innerHTML = "";
 
-    const players = Object.values(data);
+    const players = Object.values(data)
+        .sort((a,b)=>b.total_points-a.total_points);
 
-    // sort leaderboard
-    players.sort((a,b)=>b.total_points-a.total_points);
+    allPlayersData = players;
 
     players.forEach((player,index)=>{
 
         const row = document.createElement("div");
-        row.className = "player";
-        row.addEventListener("click", () => openPlayerModal(player));
+        row.className="player";
 
-        let tiersHTML = "";
-
-        for(const gm in player.gamemodes){
-
-            const tier = player.gamemodes[gm].tier;
-
-            const key = gm.toLowerCase().replace(/\s/g,"");
-
-            const icon = GAMEMODE_ICONS[key];
-
-            if(!icon) continue;
-
-            tiersHTML += `
-                <div class="tier-icon" title="${gm} ${tier}">
-                    <img src="${icon}">
-                    <span>${tier}</span>
-                </div>
-            `;
-        }
-
-        row.innerHTML = `
+        row.innerHTML=`
             <div class="rank">${index+1}.</div>
 
             <img class="skin"
             src="https://render.crafty.gg/3d/bust/${player.mc_username}">
 
             <div class="info">
-                 <h3 class="player-name">
-                     ${player.mc_username}
-                 </h3>
-            
+                <h3>${player.mc_username}</h3>
                 <p>${player.total_points} Points</p>
             </div>
 
             <div class="region">${player.region}</div>
-
-            <div class="tiers">
-                ${tiersHTML}
-            </div>
         `;
+
+        /* CLICK WHOLE CARD */
+        row.addEventListener("click",()=>{
+            openPlayerModal(player);
+        });
 
         container.appendChild(row);
     });
 
 });
-const modal = document.getElementById("playerModal");
+
+/* ===========================
+   OPEN MODAL
+=========================== */
 
 function openPlayerModal(player){
 
-    modal.style.display = "flex";
+    const modal=document.getElementById("playerModal");
 
-    document.getElementById("modalName").textContent =
+    modal.classList.remove("hidden");
+
+    document.getElementById("modal-name").textContent=
         player.mc_username;
 
-    document.getElementById("modalRegion").textContent =
-        "Region: " + player.region;
+    document.getElementById("modal-region").textContent=
+        player.region;
 
-    document.getElementById("modalPoints").textContent =
-        "Points: " + player.total_points;
-
-    const skin = document.getElementById("modalSkin");
-
-    skin.src =
+    document.getElementById("modal-skin").src=
         `https://render.crafty.gg/3d/bust/${player.mc_username}`;
 
-    skin.onerror = function(){
-        this.src =
-        `https://mc-heads.net/body/${player.mc_username}/100`;
-    };
+    /* POSITION */
+    const position =
+        allPlayersData.findIndex(
+            p=>p.mc_username===player.mc_username
+        )+1;
+
+    document.getElementById("modal-position").textContent=
+        `#${position} Overall (${player.total_points} points)`;
+
 
     /* TIERS */
-    const tierBox = document.getElementById("modalTiers");
-    tierBox.innerHTML = "";
+    let tiersHTML="";
 
     for(const gm in player.gamemodes){
 
-        const key = gm.toLowerCase().replace(/\s/g,"");
-        const icon = GAMEMODE_ICONS[key];
+        const data=player.gamemodes[gm];
+
+        const key=gm.toLowerCase().replace(/\s/g,"");
+
+        const icon=GAMEMODE_ICONS[key];
 
         if(!icon) continue;
 
-        tierBox.innerHTML += `
-            <div class="tier-icon">
-                <img src="${icon}" title="${gm}">
-            </div>
+        tiersHTML+=`
+        <div class="tier-item">
+            <img src="${icon}">
+            <span>${data.tier}</span>
+        </div>
         `;
     }
+
+    document.getElementById("modal-tiers").innerHTML=tiersHTML;
 }
 
-/* CLOSE */
-document.getElementById("closeModal").onclick = () =>
-    modal.style.display = "none";
+/* ===========================
+   CLOSE MODAL
+=========================== */
 
-window.onclick = (e)=>{
-    if(e.target === modal)
-        modal.style.display = "none";
-};
+document.getElementById("closeModal")
+.addEventListener("click",()=>{
+    document
+        .getElementById("playerModal")
+        .classList.add("hidden");
+});
+
+/* CLICK OUTSIDE TO CLOSE */
+
+document.getElementById("playerModal")
+.addEventListener("click",(e)=>{
+    if(e.target.id==="playerModal"){
+        e.target.classList.add("hidden");
+    }
+});
