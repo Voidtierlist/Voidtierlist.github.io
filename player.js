@@ -55,7 +55,16 @@ fetch("player_points.json")
         ${
         Object.entries(player.gamemodes).map(([gm,data])=>`
         <div class="tier-icon">
-        <img src="${GAMEMODE_ICONS[gm]}" title="${gm}">
+        const key = gm.toLowerCase().replace(/\s/g,"");
+        const icon = GAMEMODE_ICONS[key];
+
+        if(!icon) return "";
+
+        return `
+        <div class="tier-icon">
+            <img src="${icon}" title="${gm}">
+        </div>
+        `;
         </div>
         `).join("")
         }
