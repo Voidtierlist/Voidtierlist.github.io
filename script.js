@@ -46,6 +46,7 @@ fetch("player_points.json")
             tiersHTML += `
                 <div class="tier-icon" title="${gm} ${tier}">
                     <img src="${icon}">
+                    <span>${tier}</span>
                 </div>
             `;
         }
