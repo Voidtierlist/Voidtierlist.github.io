@@ -30,6 +30,7 @@ fetch("player_points.json")
 
         const row = document.createElement("div");
         row.className = "player";
+        row.addEventListener("click", () => openPlayerModal(player));
 
         let tiersHTML = "";
 
