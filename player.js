@@ -26,8 +26,33 @@ fetch("player_points.json")
         const info = player.gamemodes[gm];
 
         const card = document.createElement("div");
-        card.innerHTML =
-            `<b>${gm.toUpperCase()}</b> — ${info.tier} (${info.points} pts)`;
+        card.innerHTML = `
+        <div class="rank">#${index + 1}</div>
+
+        <img class="skin"
+        src="https://render.crafty.gg/3d/bust/${player.mc_username}">
+
+        <div class="info">
+        <a href="player.html?user=${player.mc_username}">
+        <strong>${player.mc_username}</strong>
+        </a>
+
+        <p>${player.region}</p>
+        <p>${player.total_points} Points</p>
+
+        <div class="tiers">
+        ${
+        Object.entries(player.gamemodes).map(([gm,data])=>`
+        <div class="tier-icon">
+        <img src="${GAMEMODE_ICONS[gm]}" title="${gm}">
+        </div>
+        `).join("")
+        }
+        </div>
+
+        </div>
+        `;
+            
 
         gmDiv.appendChild(card);
     }
