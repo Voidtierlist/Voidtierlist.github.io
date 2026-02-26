@@ -376,3 +376,74 @@ a:hover{
     font-weight:600;
     color:white;
 }
+/* BACKGROUND BLUR */
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(5,10,20,0.85);
+    backdrop-filter: blur(8px);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+/* CARD */
+.modal-card{
+    background:#111827;
+    border-radius:16px;
+    padding:40px;
+    width:420px;
+    text-align:center;
+    box-shadow:0 0 40px rgba(0,0,0,0.6);
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+/* CLOSE BUTTON */
+.close-modal{
+    position:absolute;
+    right:25px;
+    top:20px;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* SKIN */
+.modal-skin{
+    width:110px;
+    border-radius:50%;
+    border:3px solid gold;
+    margin-bottom:15px;
+}
+
+/* NAME */
+#modalName{
+    color:white;
+    font-size:24px;
+}
+
+/* RANK BADGE */
+.modal-rank{
+    background:#eab308;
+    color:black;
+    padding:6px 14px;
+    border-radius:999px;
+    display:inline-block;
+    margin:10px 0;
+    font-weight:bold;
+}
+
+/* SECTION */
+.modal-section{
+    margin-top:20px;
+    text-align:left;
+}
+
+.tiers-row{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+}
