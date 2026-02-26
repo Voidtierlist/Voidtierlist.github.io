@@ -59,11 +59,10 @@ fetch("player_points.json")
             src="https://render.crafty.gg/3d/bust/${player.mc_username}">
 
             <div class="info">
-                <h3>
-                <a href="player.html?user=${player.mc_username}">
-                    ${player.mc_username}
-                </a>
-                </h3>
+                 <h3 class="player-name">
+                     ${player.mc_username}
+                 </h3>
+            
                 <p>${player.total_points} Points</p>
             </div>
 
