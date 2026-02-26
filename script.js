@@ -16,6 +16,14 @@ const GAMEMODE_ICONS = {
     diasmp:"https://subtiers.net/assets/dia_smp-523efa38.svg"
 };
 
+
+/* NORMALIZE ANY GAMEMODE NAME */
+function normalizeGamemode(name){
+    return name
+        .toLowerCase()
+        .replace(/_/g,"")
+        .replace(/\s/g,"");
+}
 /* ===========================
    LOAD PLAYERS
 =========================== */
