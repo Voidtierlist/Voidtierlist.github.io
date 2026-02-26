@@ -8,9 +8,10 @@ body{
     color:white;
 
     background:
-    radial-gradient(circle at top,
-    #111a2f,
-    #070c16 60%);
+        radial-gradient(1200px at 50% -200px,
+        #1a2540,
+        #0b1222 40%,
+        #070c16 80%);
 }
 .navbar{
     display:flex;
