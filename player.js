@@ -1,14 +1,23 @@
 const GAMEMODE_ICONS = {
-    smp: "https://mctiers.com/tier_icons/smp.svg",
-    sword: "https://mctiers.com/tier_icons/sword.svg",
-    nethpot: "https://mctiers.com/tier_icons/nethop.svg",
-    mace: "https://mctiers.com/tier_icons/mace.svg",
-    diamondpot: "https://mctiers.com/tier_icons/pot.svg",
-    crystal: "https://mctiers.com/tier_icons/vanilla.svg",
-    uhc: "https://mctiers.com/tier_icons/uhc.svg",
-    axe: "https://mctiers.com/tier_icons/axe.svg",
-    diasmp: "https://subtiers.net/assets/dia_smp-523efa38.svg"
+    smp:"https://mctiers.com/tier_icons/smp.svg",
+    sword:"https://mctiers.com/tier_icons/sword.svg",
+    crystal:"https://mctiers.com/tier_icons/vanilla.svg",
+    nethpot:"https://mctiers.com/tier_icons/nethop.svg",
+    uhc:"https://mctiers.com/tier_icons/uhc.svg",
+    axe:"https://mctiers.com/tier_icons/axe.svg",
+    mace:"https://mctiers.com/tier_icons/mace.svg",
+    diamondpot:"https://mctiers.com/tier_icons/pot.svg",
+    diasmp:"https://subtiers.net/assets/dia_smp-523efa38.svg"
 };
+
+
+/* NORMALIZE ANY GAMEMODE NAME */
+function normalizeGamemode(name){
+    return name
+        .toLowerCase()
+        .replace(/_/g,"")
+        .replace(/\s/g,"");
+}
 
 const params = new URLSearchParams(window.location.search);
 const name = params.get("user");
