@@ -77,58 +77,50 @@ fetch("player_points.json")
 
 function openPlayerModal(player){
 
-    const modal =
-        document.getElementById("playerModal");
-
+    const modal=document.getElementById("playerModal");
     modal.classList.remove("hidden");
 
-    document.getElementById("modal-name")
-        .textContent = player.mc_username;
+    document.getElementById("modal-name").textContent =
+        player.mc_username;
 
-    document.getElementById("modal-region")
-        .textContent = player.region;
+    document.getElementById("modal-region").textContent =
+        player.region;
 
     document.getElementById("modal-skin").src =
         `https://render.crafty.gg/3d/bust/${player.mc_username}`;
-
-    /* POSITION */
 
     const position =
         allPlayersData.findIndex(
             p=>p.mc_username===player.mc_username
         )+1;
 
-    document.getElementById("modal-position")
-        .textContent =
+    document.getElementById("modal-position").textContent =
         `#${position} Overall (${player.total_points} points)`;
 
+    const tiersDiv =
+        document.getElementById("modal-tiers");
 
-    /* ===== TIERS ===== */
-
-    let tiersHTML="";
+    tiersDiv.innerHTML="";
 
     if(player.gamemodes){
 
         for(const gm in player.gamemodes){
 
-            const gmData =
-                player.gamemodes[gm];
+            const gmData=player.gamemodes[gm];
 
-            const key = normalizeGamemode(gm);
-
-            const icon =
-                GAMEMODE_ICONS[key];
+            const key=normalizeGamemode(gm);
+            const icon=GAMEMODE_ICONS[key];
 
             if(!icon) continue;
 
-            tiersHTML+=`
+            tiersDiv.innerHTML+=`
             <div class="tier-item">
                 <img src="${icon}">
                 <span>${gmData.tier}</span>
-            </div>
-            `;
+            </div>`;
         }
     }
+}
 
     document.getElementById("modal-tiers")
         .innerHTML = tiersHTML;
