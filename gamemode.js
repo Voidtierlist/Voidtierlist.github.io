@@ -4,7 +4,7 @@ fetch("player_points.json")
 
     const players = Object.values(data);
 
-    players.forEach(player => {
+    players.forEach((player,index)=>{
 
         const mode = player.gamemodes["vanilla"];
         if(!mode) return;
