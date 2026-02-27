@@ -10,281 +10,295 @@
 .HT1{background:#ef4444;}
 /* ===============================
    GLOBAL
-================================ */
 /* ===============================
-   BASE
-================================= */
+   GLOBAL
+================================ */
 
 body{
     margin:0;
-    background:#0b0b0b;
-    font-family:Inter,Arial;
+    font-family:'Inter',sans-serif;
     color:white;
+
+    background:
+    radial-gradient(1200px at 50% -200px,
+    #1a2540,
+    #0b1222 40%,
+    #070c16 80%);
 }
 
-#leaderboard{
-    width:95%;
-    max-width:1100px;
-    margin:auto;
-    padding-top:40px;
-}
-
-/* ===============================
-   PLAYER CARD
-================================= */
-
-.player-card{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    background:#111;
-    border-radius:10px;
-    padding:10px 18px;
-    margin-bottom:8px;
-    cursor:pointer;
-    transition:.2s;
-}
-
-.player-card:hover{
-    background:#181818;
-}
-
-/* LEFT SIDE */
-
-.player-left{
-    display:flex;
-    align-items:center;
-    gap:14px;
-}
-
-/* RANK */
-
-.rank{
-    font-size:28px;
-    font-weight:800;
-    color:#cfcfcf;
-    width:55px;
-}
-
-/* SKIN */
-
-.player-render{
-    width:48px;
-    height:48px;
-}
-
-/* NAME + POINTS */
-
-.player-info h3{
-    margin:0;
-    font-size:18px;
-}
-
-.player-info p{
-    margin:0;
-    font-size:13px;
-    color:#9c9c9c;
-}
-
-/* ===============================
-   RIGHT SIDE
-================================= */
-
-.player-right{
-    display:flex;
-    align-items:center;
-    gap:14px;
-}
-
-/* TIERS */
-
-.tiers{
-    display:flex;
-    gap:6px;
-}
-
-.tier{
-    display:flex;
-    align-items:center;
-    gap:4px;
-    background:#1b1b1b;
-    padding:4px 8px;
-    border-radius:6px;
-    font-size:13px;
-}
-
-.tier img{
-    width:16px;
-}
-
-/* REGION COLORS */
-
-.region{
-    font-weight:700;
-    font-size:13px;
-    padding:4px 8px;
-    border-radius:6px;
-}
-
-.region.EU{background:#245cff;}
-.region.NA{background:#ff4040;}
-.region.AS{background:#2ecc71;}
-.region.SA{background:#f39c12;}
-
-
-/* ===============================
-   MODAL
-================================= */
-
-#playerModal{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.75);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.hidden{
-    display:none !important;
-}
-
-.modal-box{
-    background:#121212;
-    padding:30px;
-    border-radius:12px;
-    width:500px;
-    position:relative;
-}
-
-.close{
-    position:absolute;
-    right:15px;
-    top:10px;
-    font-size:24px;
-    cursor:pointer;
-}
-.content-box{
-    max-width:1100px;
+.page{
+    max-width:1200px;
     margin:auto;
 }
+
+/* ===============================
+   TOPBAR
+================================ */
 
 .topbar{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 30px;
-    background:#0f0f0f;
+    padding:18px 30px;
+    background:#0b1322;
+    border-bottom:1px solid #1a2438;
 }
 
 .logo{
     font-weight:700;
-    font-size:20px;
+    font-size:22px;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
 }
 
 .nav-links a{
-    color:white;
-    margin-right:20px;
+    color:#9aa4c3;
     text-decoration:none;
 }
 
-.search{
-    background:#1a1a1a;
-    border:none;
-    padding:8px 12px;
+.nav-links .active{
     color:white;
-    border-radius:6px;
 }
+
+.search{
+    background:#111a2e;
+    border:none;
+    padding:10px 15px;
+    border-radius:10px;
+    color:white;
+}
+
 /* ===============================
-   GAMEMODE BAR (MCTIERS STYLE)
+   GAMEMODE BAR
 ================================ */
 
 .gamemode-bar{
     display:flex;
-    gap:10px;
-    padding:15px 20px;
-    overflow-x:auto;
-    border-bottom:1px solid #1b1b1b;
+    gap:12px;
+    margin-top:12px;
 }
-
-/* BUTTON */
 
 .mode{
     display:flex;
     align-items:center;
     gap:8px;
-
-    padding:6px 12px;
+    padding:8px 14px;
     border-radius:999px;
-
-    background:#151515;
-    border:1px solid #222;
-
+    background:#0f182c;
+    border:1px solid rgba(255,255,255,.06);
     cursor:pointer;
-    white-space:nowrap;
-
-    font-size:14px;
-    font-weight:600;
-
-    transition:.2s;
 }
-
-.mode:hover{
-    background:#1d1d1d;
-}
-
-/* ICON SIZE */
 
 .mode img{
     width:18px;
-    height:18px;
 }
-
-/* ACTIVE BUTTON */
 
 .mode.active{
-    background:#2a2a2a;
-    border-color:#3b82f6;
+    background:linear-gradient(135deg,#4f7cff,#7c8cff);
 }
-/* PLAYER CARD LAYOUT */
 
-.player-card,
+/* ===============================
+   CONTENT BOX
+================================ */
+
+.content-box{
+    margin-top:25px;
+    padding:25px;
+    background:#0d1526;
+    border-radius:18px;
+}
+
+/* ===============================
+   PLAYER CARD (MCTIERS STYLE)
+================================ */
+
 .player{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
+    width:900px;
+    margin:10px auto;
 
-/* LEFT SIDE */
-
-.player-left{
     display:flex;
     align-items:center;
-    gap:14px;
+    gap:18px;
+
+    padding:14px 18px;
+
+    background:
+        linear-gradient(180deg,
+        rgba(20,26,45,.85),
+        rgba(10,14,28,.85));
+
+    border-radius:14px;
+    border:1px solid rgba(255,255,255,.05);
+
+    transition:.25s;
 }
 
-/* RIGHT SIDE */
-
-.player-right{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    margin-left:auto;
+.player:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 30px rgba(0,0,0,.6);
 }
-
-/* RANK STYLE */
 
 .rank{
-    font-size:30px;
-    font-weight:800;
-    color:#dcdcdc;
-    width:60px;
+    width:40px;
+    color:#9aa4c3;
 }
 
-/* KEEP TIERS INLINE */
+.skin{
+    width:60px;
+    height:60px;
+    border-radius:10px;
+}
+
+.info{
+    flex:1;
+}
+
+.info h3{
+    margin:0;
+}
+
+.region{
+    background:#0c152a;
+    padding:6px 12px;
+    border-radius:8px;
+    font-size:12px;
+    color:#aab4d6;
+}
+
+/* ===============================
+   MCTIERS CIRCLES
+================================ */
 
 .tiers{
     display:flex;
+    gap:14px;
+}
+
+.tier-circle{
+    display:flex;
+    flex-direction:column;
     align-items:center;
     gap:6px;
+}
+
+.tier-bubble{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+
+    background:
+        radial-gradient(circle at 30% 30%,
+        #1d2945,#0b1222);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    box-shadow:
+        inset 0 0 10px rgba(0,0,0,.6),
+        0 0 10px rgba(120,140,255,.2);
+}
+
+.tier-bubble img{
+    width:20px;
+    height:20px;
+}
+
+.tier-label{
+    font-size:12px;
+    color:#c9d2ff;
+}
+
+/* ===============================
+   MODAL
+================================ */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(5,10,20,.85);
+    backdrop-filter:blur(8px);
+    justify-content:center;
+    align-items:center;
+}
+
+.modal.show{
+    display:flex;
+}
+
+.modal-card{
+    background:#111827;
+    border-radius:16px;
+    padding:40px;
+    width:420px;
+    text-align:center;
+}
+
+.close-btn{
+    position:absolute;
+    right:20px;
+    top:20px;
+    background:none;
+    border:none;
+    color:white;
+    font-size:24px;
+    cursor:pointer;
+}
+
+.modal-avatar{
+    width:110px;
+    border-radius:50%;
+    border:3px solid gold;
+}
+
+.modal-tiers{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    justify-content:center;
+}
+
+/* ===============================
+   PROFILE PAGE
+================================ */
+
+.profile{
+    max-width:1000px;
+    margin:60px auto;
+
+    display:grid;
+    grid-template-columns:200px 1fr;
+    gap:40px;
+
+    background:#0d1526;
+    border-radius:16px;
+    padding:40px;
+}
+
+#gamemodes{
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
+}
+
+.tier-item{
+    width:90px;
+    height:90px;
+    background:#161a22;
+    border-radius:10px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.tier-item img{
+    width:38px;
 }
