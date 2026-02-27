@@ -1,26 +1,24 @@
 document.addEventListener("DOMContentLoaded",()=>{
 
-let allPlayers=[];
+let allPlayersData=[];
 
 const GAMEMODE_ICONS={
-smp:"https://mctiers.com/tier_icons/smp.svg",
-sword:"https://mctiers.com/tier_icons/sword.svg",
-crystal:"https://mctiers.com/tier_icons/vanilla.svg",
-nethpot:"https://mctiers.com/tier_icons/nethop.svg",
-uhc:"https://mctiers.com/tier_icons/uhc.svg",
-axe:"https://mctiers.com/tier_icons/axe.svg",
-mace:"https://mctiers.com/tier_icons/mace.svg",
-diamondpot:"https://mctiers.com/tier_icons/pot.svg",
-diasmp:"https://subtiers.net/assets/dia_smp-523efa38.svg"
+    smp:"https://mctiers.com/tier_icons/smp.svg",
+    sword:"https://mctiers.com/tier_icons/sword.svg",
+    crystal:"https://mctiers.com/tier_icons/vanilla.svg",
+    nethpot:"https://mctiers.com/tier_icons/nethop.svg",
+    uhc:"https://mctiers.com/tier_icons/uhc.svg",
+    axe:"https://mctiers.com/tier_icons/axe.svg",
+    mace:"https://mctiers.com/tier_icons/mace.svg",
+    diamondpot:"https://mctiers.com/tier_icons/pot.svg",
+    diasmp:"https://subtiers.net/assets/dia_smp-523efa38.svg"
 };
 
-function normalize(name){
-return name.toLowerCase().replace(/_| /g,"");
+function normalizeGamemode(name){
+    return name.toLowerCase().replace(/[^a-z]/g,"");
 }
 
-/* ======================
-   LOAD PLAYERS
-====================== */
+/* LOAD PLAYERS */
 
 fetch("player_points.json")
 .then(r=>r.json())
@@ -29,110 +27,116 @@ fetch("player_points.json")
 const container=document.getElementById("leaderboard");
 container.innerHTML="";
 
-allPlayers=Object.values(data)
+const players=Object.values(data)
 .sort((a,b)=>b.total_points-a.total_points);
 
-allPlayers.forEach((player,index)=>{
+allPlayersData=players;
+
+players.forEach((player,index)=>{
 
 let tiersHTML="";
 
 if(player.gamemodes){
 for(const gm in player.gamemodes){
 
-const icon=GAMEMODE_ICONS[normalize(gm)];
+const gmData=player.gamemodes[gm];
+const key=normalizeGamemode(gm);
+const icon=GAMEMODE_ICONS[key];
+
 if(!icon) continue;
 
 tiersHTML+=`
-<div class="tier">
-<img src="${icon}">
-<span>${player.gamemodes[gm].tier}</span>
+<div class="tier-circle">
+    <div class="tier-bubble">
+        <img src="${icon}">
+    </div>
+    <div class="tier-label">${gmData.tier}</div>
 </div>`;
 }
 }
 
-const card=document.createElement("div");
-card.className="player-card";
+const row=document.createElement("div");
+row.className="player";
 
-card.innerHTML=`
+row.innerHTML=`
+<div class="rank">${index+1}</div>
 
-<div class="player-left">
-
-<div class="rank">${index+1}.</div>
-
-<img class="player-render"
+<img class="skin"
 src="https://render.crafty.gg/3d/bust/${player.mc_username}">
 
-<div class="player-info">
+<div class="info">
 <h3>${player.mc_username}</h3>
 <p>${player.total_points} Points</p>
-</div>
-
-</div>
-
-<div class="player-right">
-
 <div class="tiers">${tiersHTML}</div>
-
-<div class="region ${player.region}">
-${player.region}
 </div>
 
-</div>
+<div class="region">${player.region}</div>
 `;
 
-card.onclick=()=>openModal(player);
+row.onclick=()=>openPlayerModal(player);
 
-container.appendChild(card);
+container.appendChild(row);
+
 });
+
 });
 
-/* ======================
-   MODAL
-====================== */
+/* MODAL */
 
-function openModal(player){
+function openPlayerModal(player){
 
 const modal=document.getElementById("playerModal");
-modal.classList.remove("hidden");
+modal.classList.add("show");
 
-document.getElementById("modal-name").textContent=player.mc_username;
-document.getElementById("modal-region").textContent=player.region;
+document.getElementById("modal-name").textContent=
+player.mc_username;
+
+document.getElementById("modal-region").textContent=
+player.region;
+
 document.getElementById("modal-skin").src=
 `https://render.crafty.gg/3d/bust/${player.mc_username}`;
 
-let tiers="";
+const pos=allPlayersData.findIndex(
+p=>p.mc_username===player.mc_username)+1;
 
-if(player.gamemodes){
+document.getElementById("modal-position")
+.textContent=`#${pos} Overall (${player.total_points})`;
+
+let tiersHTML="";
+
 for(const gm in player.gamemodes){
 
-const icon=GAMEMODE_ICONS[normalize(gm)];
+const gmData=player.gamemodes[gm];
+const key=normalizeGamemode(gm);
+const icon=GAMEMODE_ICONS[key];
+
 if(!icon) continue;
 
-tiers+=`
-<div class="tier">
+tiersHTML+=`
+<div class="tier-circle">
+<div class="tier-bubble">
 <img src="${icon}">
-<span>${player.gamemodes[gm].tier}</span>
+</div>
+<div class="tier-label">${gmData.tier}</div>
 </div>`;
 }
+
+document.getElementById("modal-tiers").innerHTML=tiersHTML;
 }
 
-document.getElementById("modal-tiers").innerHTML=tiers;
-}
-
-/* CLOSE BUTTON */
+/* CLOSE MODAL */
 
 document.getElementById("closeModal")
 .onclick=()=>{
 document.getElementById("playerModal")
-.classList.add("hidden");
+.classList.remove("show");
 };
 
-/* CLICK OUTSIDE */
-
 document.getElementById("playerModal")
-.onclick=e=>{
+.onclick=(e)=>{
 if(e.target.id==="playerModal")
-e.target.classList.add("hidden");
+e.target.classList.remove("show");
 };
 
 });
