@@ -471,3 +471,29 @@ a:hover{
     border:3px solid #f5c84c;
     border-radius:50%;
 }
+/* PLAYER PROFILE TIERS */
+
+#gamemodes{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:20px;
+}
+
+.tier-item{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:6px;
+}
+
+.tier-item img{
+    width:40px;
+    height:40px;
+}
+
+.tier-item span{
+    font-weight:700;
+    color:#f5c84c;
+}
