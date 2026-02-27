@@ -512,3 +512,16 @@ a:hover{
 
     box-shadow:0 0 30px rgba(0,0,0,0.6);
 }
+#skin{
+    width:180px;
+    image-rendering:pixelated;
+}
+.profile h1{
+    margin:0;
+    font-size:32px;
+}
+
+.profile h3{
+    margin:4px 0 12px 0;
+    color:#9aa0a6;
+}
