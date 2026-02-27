@@ -195,3 +195,54 @@ body{
     color:white;
     border-radius:6px;
 }
+/* ===============================
+   GAMEMODE BAR (MCTIERS STYLE)
+================================ */
+
+.gamemode-bar{
+    display:flex;
+    gap:10px;
+    padding:15px 20px;
+    overflow-x:auto;
+    border-bottom:1px solid #1b1b1b;
+}
+
+/* BUTTON */
+
+.mode{
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    padding:6px 12px;
+    border-radius:999px;
+
+    background:#151515;
+    border:1px solid #222;
+
+    cursor:pointer;
+    white-space:nowrap;
+
+    font-size:14px;
+    font-weight:600;
+
+    transition:.2s;
+}
+
+.mode:hover{
+    background:#1d1d1d;
+}
+
+/* ICON SIZE */
+
+.mode img{
+    width:18px;
+    height:18px;
+}
+
+/* ACTIVE BUTTON */
+
+.mode.active{
+    background:#2a2a2a;
+    border-color:#3b82f6;
+}
