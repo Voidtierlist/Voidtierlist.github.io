@@ -416,5 +416,20 @@
         "region": "NA",
         "total_points": 0,
         "gamemodes": {}
+    },
+    "1085913320336396419": {
+        "mc_username": "AD_Sami220",
+        "region": "AS",
+        "total_points": 64,
+        "gamemodes": {
+            "nethpot": {
+                "tier": "HT1",
+                "points": 60
+            },
+            "sword": {
+                "tier": "HT4",
+                "points": 4
+            }
+        }
     }
 }
