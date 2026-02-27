@@ -263,7 +263,7 @@
     "996427837986852994": {
         "mc_username": "Straitgamerz",
         "region": "AS",
-        "total_points": 20,
+        "total_points": 39,
         "gamemodes": {
             "nethpot": {
                 "tier": "LT3",
@@ -280,6 +280,26 @@
             "diamond pot": {
                 "tier": "LT3",
                 "points": 6
+            },
+            "axe": {
+                "tier": "HT4",
+                "points": 4
+            },
+            "crystal": {
+                "tier": "LT4",
+                "points": 3
+            },
+            "uhc": {
+                "tier": "HT4",
+                "points": 4
+            },
+            "diamond smp": {
+                "tier": "HT4",
+                "points": 4
+            },
+            "SMP": {
+                "tier": "HT4",
+                "points": 4
             }
         }
     },
@@ -388,6 +408,12 @@
     "845966796808257547": {
         "mc_username": "Zypher0n",
         "region": "EU",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1455344976153149544": {
+        "mc_username": "R3CoiiLz",
+        "region": "NA",
         "total_points": 0,
         "gamemodes": {}
     }
