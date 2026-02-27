@@ -403,12 +403,15 @@ a:hover{
 }
 
 /* CLOSE BUTTON */
-.close-modal{
+.close-btn{
     position:absolute;
     right:25px;
     top:20px;
     font-size:28px;
     cursor:pointer;
+    background:none;
+    border:none;
+    color:white;
 }
 
 /* SKIN */
