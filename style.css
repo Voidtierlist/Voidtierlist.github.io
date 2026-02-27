@@ -552,3 +552,15 @@ a:hover{
 .player:hover{
     background:#171c26;
 }
+.info{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    flex:1;
+}
+.info{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    flex:1;
+}
