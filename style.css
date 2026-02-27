@@ -246,3 +246,45 @@ body{
     background:#2a2a2a;
     border-color:#3b82f6;
 }
+/* PLAYER CARD LAYOUT */
+
+.player-card,
+.player{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* LEFT SIDE */
+
+.player-left{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+/* RIGHT SIDE */
+
+.player-right{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-left:auto;
+}
+
+/* RANK STYLE */
+
+.rank{
+    font-size:30px;
+    font-weight:800;
+    color:#dcdcdc;
+    width:60px;
+}
+
+/* KEEP TIERS INLINE */
+
+.tiers{
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
