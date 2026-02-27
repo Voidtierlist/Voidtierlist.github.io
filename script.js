@@ -1,8 +1,12 @@
-document.addEventListener("DOMContentLoaded",()=>{
+document.addEventListener("DOMContentLoaded", () => {
 
-let allPlayersData=[];
+let allPlayersData = [];
 
-const GAMEMODE_ICONS={
+/* ===============================
+   GAMEMODE ICONS
+================================ */
+
+const GAMEMODE_ICONS = {
     smp:"https://mctiers.com/tier_icons/smp.svg",
     sword:"https://mctiers.com/tier_icons/sword.svg",
     crystal:"https://mctiers.com/tier_icons/vanilla.svg",
@@ -18,7 +22,96 @@ function normalizeGamemode(name){
     return name.toLowerCase().replace(/[^a-z]/g,"");
 }
 
-/* LOAD PLAYERS */
+/* ===============================
+   REGION COLORS
+================================ */
+
+function getRegionClass(region){
+    if(!region) return "";
+
+    region = region.toLowerCase();
+
+    if(region==="na") return "region-na";
+    if(region==="eu") return "region-eu";
+    if(region==="as") return "region-as";
+
+    return "";
+}
+
+/* ===============================
+   BUILD TIERS (RIGHT SIDE)
+================================ */
+
+function buildTiers(player){
+
+    if(!player.gamemodes) return "";
+
+    let html="";
+
+    for(const gm in player.gamemodes){
+
+        const gmData = player.gamemodes[gm];
+        const key = normalizeGamemode(gm);
+        const icon = GAMEMODE_ICONS[key];
+
+        if(!icon) continue;
+
+        html += `
+        <div class="tier-circle">
+            <img src="${icon}">
+            <span>${gmData.tier}</span>
+        </div>`;
+    }
+
+    return html;
+}
+
+/* ===============================
+   CREATE PLAYER CARD
+================================ */
+
+function createPlayer(player,index){
+
+const card=document.createElement("div");
+card.className="player-card";
+
+card.innerHTML=`
+
+<div class="rank">${index+1}.</div>
+
+<div class="player-left">
+
+<img class="player-render"
+src="https://render.crafty.gg/3d/bust/${player.mc_username}">
+
+<div class="player-info">
+<div class="player-name">${player.mc_username}</div>
+<div class="player-points">${player.total_points} points</div>
+</div>
+
+</div>
+
+<div class="player-right">
+
+<div class="region ${getRegionClass(player.region)}">
+${player.region || ""}
+</div>
+
+<div class="tiers">
+${buildTiers(player)}
+</div>
+
+</div>
+`;
+
+card.onclick=()=>openPlayerModal(player);
+
+return card;
+}
+
+/* ===============================
+   LOAD PLAYERS
+================================ */
 
 fetch("player_points.json")
 .then(r=>r.json())
@@ -27,61 +120,20 @@ fetch("player_points.json")
 const container=document.getElementById("leaderboard");
 container.innerHTML="";
 
-const players=Object.values(data)
+const players = Object.values(data)
 .sort((a,b)=>b.total_points-a.total_points);
 
-allPlayersData=players;
+allPlayersData = players;
 
 players.forEach((player,index)=>{
-
-let tiersHTML="";
-
-if(player.gamemodes){
-for(const gm in player.gamemodes){
-
-const gmData=player.gamemodes[gm];
-const key=normalizeGamemode(gm);
-const icon=GAMEMODE_ICONS[key];
-
-if(!icon) continue;
-
-tiersHTML+=`
-<div class="tier-circle">
-    <div class="tier-bubble">
-        <img src="${icon}">
-    </div>
-    <div class="tier-label">${gmData.tier}</div>
-</div>`;
-}
-}
-
-const row=document.createElement("div");
-row.className="player";
-
-row.innerHTML=`
-<div class="rank">${index+1}</div>
-
-<img class="skin"
-src="https://render.crafty.gg/3d/bust/${player.mc_username}">
-
-<div class="info">
-<h3>${player.mc_username}</h3>
-<p>${player.total_points} Points</p>
-<div class="tiers">${tiersHTML}</div>
-</div>
-
-<div class="region">${player.region}</div>
-`;
-
-row.onclick=()=>openPlayerModal(player);
-
-container.appendChild(row);
-
+container.appendChild(createPlayer(player,index));
 });
 
 });
 
-/* MODAL */
+/* ===============================
+   PLAYER MODAL
+================================ */
 
 function openPlayerModal(player){
 
@@ -103,38 +155,18 @@ p=>p.mc_username===player.mc_username)+1;
 document.getElementById("modal-position")
 .textContent=`#${pos} Overall (${player.total_points})`;
 
-let tiersHTML="";
-
-for(const gm in player.gamemodes){
-
-const gmData=player.gamemodes[gm];
-const key=normalizeGamemode(gm);
-const icon=GAMEMODE_ICONS[key];
-
-if(!icon) continue;
-
-tiersHTML+=`
-<div class="tier-circle">
-<div class="tier-bubble">
-<img src="${icon}">
-</div>
-<div class="tier-label">${gmData.tier}</div>
-</div>`;
-}
-
-document.getElementById("modal-tiers").innerHTML=tiersHTML;
+document.getElementById("modal-tiers")
+.innerHTML = buildTiers(player);
 }
 
 /* CLOSE MODAL */
 
-document.getElementById("closeModal")
-.onclick=()=>{
+document.getElementById("closeModal").onclick=()=>{
 document.getElementById("playerModal")
 .classList.remove("show");
 };
 
-document.getElementById("playerModal")
-.onclick=(e)=>{
+document.getElementById("playerModal").onclick=(e)=>{
 if(e.target.id==="playerModal")
 e.target.classList.remove("show");
 };
