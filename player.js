@@ -10,53 +10,58 @@ const GAMEMODE_ICONS = {
     diasmp:"https://subtiers.net/assets/dia_smp-523efa38.svg"
 };
 
-
-/* NORMALIZE ANY GAMEMODE NAME */
 function normalizeGamemode(name){
-    return name
-        .toLowerCase()
-        .replace(/_/g,"")
-        .replace(/\s/g,"");
+    return name.toLowerCase().replace(/[^a-z]/g,"");
 }
 
 const params = new URLSearchParams(window.location.search);
 const name = params.get("user");
 
 fetch("player_points.json")
-.then(res => res.json())
-.then(data => {
+.then(res=>res.json())
+.then(data=>{
 
     const player = Object.values(data)
-        .find(p => p.mc_username.toLowerCase() === name.toLowerCase());
+    .find(p=>p.mc_username.toLowerCase()===name.toLowerCase());
 
     if(!player){
-        document.body.innerHTML = "<h1>Player not found</h1>";
+        document.body.innerHTML="<h1>Player not found</h1>";
         return;
     }
 
-    document.getElementById("username").innerText = player.mc_username;
-    document.getElementById("region").innerText = "Region: " + player.region;
-    document.getElementById("points").innerText = player.total_points;
+    document.getElementById("username").textContent =
+        player.mc_username;
+
+    document.getElementById("region").textContent =
+        player.region || "NA";
+
+    document.getElementById("points").textContent =
+        player.total_points;
 
     document.getElementById("skin").src =
         `https://render.crafty.gg/3d/bust/${player.mc_username}`;
 
-    const gmDiv = document.getElementById("gamemodes");
+    const gmDiv=document.getElementById("gamemodes");
+    gmDiv.innerHTML="";
 
     for(const gm in player.gamemodes){
 
-        const key = gm.toLowerCase().replace(/\s/g,"");
-        const icon = GAMEMODE_ICONS[key];
+        const gmData=player.gamemodes[gm];
 
-        if(!icon) continue;
+        const key=normalizeGamemode(gm);
+        const icon=GAMEMODE_ICONS[key];
 
-        const card = document.createElement("div");
-        card.className = "tier-icon";
+        if(!icon || !gmData.tier) continue;
 
-        card.innerHTML = `
-            <img src="${icon}" title="${gm}">
+        const card=document.createElement("div");
+        card.className="tier-item";
+
+        card.innerHTML=`
+            <img src="${icon}">
+            <span>${gmData.tier}</span>
         `;
 
         gmDiv.appendChild(card);
     }
+
 });
