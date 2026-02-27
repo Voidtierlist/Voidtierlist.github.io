@@ -45,19 +45,25 @@ fetch("player_points.json")
         const row=document.createElement("div");
         row.className="player";
 
-        row.innerHTML=`
-        <div class="rank">${index+1}</div>
+       row.innerHTML=`
+       <div class="rank">${index+1}</div>
 
-        <img class="skin"
-        src="https://render.crafty.gg/3d/bust/${player.mc_username}">
+       <img class="skin"
+       src="https://render.crafty.gg/3d/bust/${player.mc_username}">
 
-        <div class="info">
-            <h3>${player.mc_username}</h3>
-            <p>${player.total_points} Points</p>
-        </div>
+       <div class="info">
+           <h3>${player.mc_username}</h3>
+           <p>${player.total_points} Points</p>
 
-        <div class="region">${player.region || "NA"}</div>
-        `;
+           <div class="tiers">
+               ${createTierBadges(player)}
+           </div>
+       </div>
+
+       <div class="region">${player.region || "NA"}</div>
+       `;
+
+
 
         row.addEventListener("click",()=>{
             openPlayerModal(player);
