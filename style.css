@@ -300,3 +300,158 @@ body{
 .tier-item img{
     width:38px;
 }
+/* ============================
+LEADERBOARD CONTAINER
+============================ */
+
+#leaderboard {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+/* ============================
+PLAYER CARD
+============================ */
+
+.player-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #0b1628;
+    border-radius: 14px;
+
+    padding: 12px 18px;
+    margin-bottom: 10px;
+
+    height: 72px;
+    transition: 0.25s ease;
+}
+
+.player-card:hover {
+    background: #0f1e35;
+}
+
+/* ============================
+LEFT SIDE
+============================ */
+
+.left-side {
+    display: flex;
+    align-items: center;
+}
+
+/* RANK NUMBER */
+
+.rank {
+    font-size: 32px;
+    font-weight: 800;
+    width: 60px;
+    color: #ffffffcc;
+    font-family: Inter, sans-serif;
+}
+
+/* PLAYER HEAD */
+
+.player-head {
+    width: 46px;
+    height: 46px;
+    margin-right: 14px;
+    border-radius: 6px;
+}
+
+/* PLAYER INFO */
+
+.player-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.player-name {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.player-points {
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+/* ============================
+RIGHT SIDE
+============================ */
+
+.right-side {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* ============================
+REGION COLORS
+============================ */
+
+.region {
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.region-na {
+    background: #5c1e1e;
+    color: #ff6b6b;
+}
+
+.region-eu {
+    background: #1e5c2b;
+    color: #6bff95;
+}
+
+.region-as {
+    background: #1e3b5c;
+    color: #6bbcff;
+}
+
+/* ============================
+TIERS
+============================ */
+
+.tiers {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tier-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #101e36;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tier-icon img {
+    width: 18px;
+}
+
+/* ============================
+TOP 3 COLORS (LIKE MCTIERS)
+============================ */
+
+.player-card:nth-child(1) .rank {
+    color: gold;
+}
+
+.player-card:nth-child(2) .rank {
+    color: silver;
+}
+
+.player-card:nth-child(3) .rank {
+    color: #cd7f32;
+}
