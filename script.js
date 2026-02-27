@@ -22,7 +22,30 @@ const GAMEMODE_ICONS = {
 function normalizeGamemode(name){
     return name.toLowerCase().replace(/[^a-z]/g,"");
 }
+function createTierBadges(player){
 
+    if(!player.gamemodes) return "";
+
+    let html="";
+
+    for(const gm in player.gamemodes){
+
+        const gmData = player.gamemodes[gm];
+
+        const key = normalizeGamemode(gm);
+        const icon = GAMEMODE_ICONS[key];
+
+        if(!icon || !gmData.tier) continue;
+
+        html += `
+        <div class="tier-icon">
+            <img src="${icon}">
+            <span>${gmData.tier}</span>
+        </div>`;
+    }
+
+    return html;
+}
 /* ===========================
    LOAD PLAYERS
 =========================== */
