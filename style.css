@@ -13,445 +13,134 @@
 ================================ */
 
 body{
-    margin:0;
-    font-family:'Inter',sans-serif;
-    color:white;
-
-    background:
-    radial-gradient(1200px at 50% -200px,
-    #1a2540,
-    #0b1222 40%,
-    #070c16 80%);
+margin:0;
+font-family:Inter,sans-serif;
+color:white;
+background:
+radial-gradient(1200px at 50% -200px,
+#1a2540,#0b1222 40%,#070c16 80%);
 }
 
-.page{
-    max-width:1200px;
-    margin:auto;
+/* LEADERBOARD */
+
+#leaderboard{
+width:95%;
+max-width:1200px;
+margin:40px auto;
 }
 
-/* ===============================
-   TOPBAR
-================================ */
+/* PLAYER CARD */
 
-.topbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 30px;
-    background:#0b1322;
-    border-bottom:1px solid #1a2438;
+.player-card{
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+padding:14px 20px;
+margin-bottom:12px;
+
+background:linear-gradient(90deg,#0b1324,#09101f);
+
+border-radius:14px;
+border:1px solid rgba(255,255,255,.05);
+
+transition:.25s;
 }
 
-.logo{
-    font-weight:700;
-    font-size:22px;
+.player-card:hover{
+background:#0f1a33;
 }
 
-.nav-links{
-    display:flex;
-    gap:25px;
-}
-
-.nav-links a{
-    color:#9aa4c3;
-    text-decoration:none;
-}
-
-.nav-links .active{
-    color:white;
-}
-
-.search{
-    background:#111a2e;
-    border:none;
-    padding:10px 15px;
-    border-radius:10px;
-    color:white;
-}
-
-/* ===============================
-   GAMEMODE BAR
-================================ */
-
-.gamemode-bar{
-    display:flex;
-    gap:12px;
-    margin-top:12px;
-}
-
-.mode{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    padding:8px 14px;
-    border-radius:999px;
-    background:#0f182c;
-    border:1px solid rgba(255,255,255,.06);
-    cursor:pointer;
-}
-
-.mode img{
-    width:18px;
-}
-
-.mode.active{
-    background:linear-gradient(135deg,#4f7cff,#7c8cff);
-}
-
-/* ===============================
-   CONTENT BOX
-================================ */
-
-.content-box{
-    margin-top:25px;
-    padding:25px;
-    background:#0d1526;
-    border-radius:18px;
-}
-
-/* ===============================
-   PLAYER CARD (MCTIERS STYLE)
-================================ */
-
-.player{
-    width:900px;
-    margin:10px auto;
-
-    display:flex;
-    align-items:center;
-    gap:18px;
-
-    padding:14px 18px;
-
-    background:
-        linear-gradient(180deg,
-        rgba(20,26,45,.85),
-        rgba(10,14,28,.85));
-
-    border-radius:14px;
-    border:1px solid rgba(255,255,255,.05);
-
-    transition:.25s;
-}
-
-.player:hover{
-    transform:translateY(-2px);
-    box-shadow:0 10px 30px rgba(0,0,0,.6);
-}
+/* RANK */
 
 .rank{
-    width:40px;
-    color:#9aa4c3;
+font-size:34px;
+font-weight:800;
+width:70px;
+color:#d1d5db;
 }
 
-.skin{
-    width:60px;
-    height:60px;
-    border-radius:10px;
+/* LEFT */
+
+.player-left{
+display:flex;
+align-items:center;
+gap:18px;
+flex:1;
 }
 
-.info{
-    flex:1;
+.player-render{
+height:64px;
+image-rendering:pixelated;
 }
 
-.info h3{
-    margin:0;
+/* TEXT */
+
+.player-name{
+font-size:18px;
+font-weight:700;
 }
+
+.player-points{
+font-size:14px;
+color:#94a3b8;
+}
+
+/* RIGHT SIDE */
+
+.player-right{
+display:flex;
+align-items:center;
+gap:14px;
+}
+
+/* REGION */
 
 .region{
-    background:#0c152a;
-    padding:6px 12px;
-    border-radius:8px;
-    font-size:12px;
-    color:#aab4d6;
+padding:6px 12px;
+border-radius:8px;
+font-weight:700;
+font-size:13px;
 }
 
-/* ===============================
-   MCTIERS CIRCLES
-================================ */
+.region-na{background:#7f1d1d;}
+.region-eu{background:#14532d;}
+.region-as{background:#1e3a8a;}
+
+/* TIERS */
 
 .tiers{
-    display:flex;
-    gap:14px;
+display:flex;
+gap:10px;
 }
 
 .tier-circle{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:6px;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:3px;
 }
 
-.tier-bubble{
-    width:42px;
-    height:42px;
-    border-radius:50%;
+.tier-circle img{
+width:30px;
+height:30px;
 
-    background:
-        radial-gradient(circle at 30% 30%,
-        #1d2945,#0b1222);
+background:#0b1222;
+border-radius:50%;
+padding:6px;
 
-    border:1px solid rgba(255,255,255,.12);
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    box-shadow:
-        inset 0 0 10px rgba(0,0,0,.6),
-        0 0 10px rgba(120,140,255,.2);
+border:2px solid rgba(255,215,0,.35);
+box-shadow:0 0 10px rgba(255,215,0,.25);
 }
 
-.tier-bubble img{
-    width:20px;
-    height:20px;
+.tier-circle span{
+font-size:11px;
+color:#f5c84c;
+font-weight:700;
 }
 
-.tier-label{
-    font-size:12px;
-    color:#c9d2ff;
-}
+/* TOP 3 COLORS */
 
-/* ===============================
-   MODAL
-================================ */
-
-.modal{
-    display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(5,10,20,.85);
-    backdrop-filter:blur(8px);
-    justify-content:center;
-    align-items:center;
-}
-
-.modal.show{
-    display:flex;
-}
-
-.modal-card{
-    background:#111827;
-    border-radius:16px;
-    padding:40px;
-    width:420px;
-    text-align:center;
-}
-
-.close-btn{
-    position:absolute;
-    right:20px;
-    top:20px;
-    background:none;
-    border:none;
-    color:white;
-    font-size:24px;
-    cursor:pointer;
-}
-
-.modal-avatar{
-    width:110px;
-    border-radius:50%;
-    border:3px solid gold;
-}
-
-.modal-tiers{
-    display:flex;
-    flex-wrap:wrap;
-    gap:14px;
-    justify-content:center;
-}
-
-/* ===============================
-   PROFILE PAGE
-================================ */
-
-.profile{
-    max-width:1000px;
-    margin:60px auto;
-
-    display:grid;
-    grid-template-columns:200px 1fr;
-    gap:40px;
-
-    background:#0d1526;
-    border-radius:16px;
-    padding:40px;
-}
-
-#gamemodes{
-    display:flex;
-    flex-wrap:wrap;
-    gap:18px;
-}
-
-.tier-item{
-    width:90px;
-    height:90px;
-    background:#161a22;
-    border-radius:10px;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-}
-
-.tier-item img{
-    width:38px;
-}
-/* ============================
-LEADERBOARD CONTAINER
-============================ */
-
-#leaderboard {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    margin-top: 40px;
-}
-
-/* ============================
-PLAYER CARD
-============================ */
-
-.player-card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    background: #0b1628;
-    border-radius: 14px;
-
-    padding: 12px 18px;
-    margin-bottom: 10px;
-
-    height: 72px;
-    transition: 0.25s ease;
-}
-
-.player-card:hover {
-    background: #0f1e35;
-}
-
-/* ============================
-LEFT SIDE
-============================ */
-
-.left-side {
-    display: flex;
-    align-items: center;
-}
-
-/* RANK NUMBER */
-
-.rank {
-    font-size: 32px;
-    font-weight: 800;
-    width: 60px;
-    color: #ffffffcc;
-    font-family: Inter, sans-serif;
-}
-
-/* PLAYER HEAD */
-
-.player-head {
-    width: 46px;
-    height: 46px;
-    margin-right: 14px;
-    border-radius: 6px;
-}
-
-/* PLAYER INFO */
-
-.player-info {
-    display: flex;
-    flex-direction: column;
-}
-
-.player-name {
-    font-size: 18px;
-    font-weight: 700;
-}
-
-.player-points {
-    font-size: 13px;
-    opacity: 0.6;
-}
-
-/* ============================
-RIGHT SIDE
-============================ */
-
-.right-side {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-}
-
-/* ============================
-REGION COLORS
-============================ */
-
-.region {
-    padding: 5px 10px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: 700;
-}
-
-.region-na {
-    background: #5c1e1e;
-    color: #ff6b6b;
-}
-
-.region-eu {
-    background: #1e5c2b;
-    color: #6bff95;
-}
-
-.region-as {
-    background: #1e3b5c;
-    color: #6bbcff;
-}
-
-/* ============================
-TIERS
-============================ */
-
-.tiers {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.tier-icon {
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background: #101e36;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.tier-icon img {
-    width: 18px;
-}
-
-/* ============================
-TOP 3 COLORS (LIKE MCTIERS)
-============================ */
-
-.player-card:nth-child(1) .rank {
-    color: gold;
-}
-
-.player-card:nth-child(2) .rank {
-    color: silver;
-}
-
-.player-card:nth-child(3) .rank {
-    color: #cd7f32;
-}
+.player-card:nth-child(1) .rank{color:gold;}
+.player-card:nth-child(2) .rank{color:silver;}
+.player-card:nth-child(3) .rank{color:#cd7f32;}
