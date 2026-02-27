@@ -497,3 +497,18 @@ a:hover{
     font-weight:700;
     color:#f5c84c;
 }
+.profile{
+    max-width:900px;
+    margin:auto;
+    margin-top:60px;
+
+    display:flex;
+    gap:40px;
+    align-items:flex-start;
+
+    background:#0f1117;
+    border-radius:14px;
+    padding:40px;
+
+    box-shadow:0 0 30px rgba(0,0,0,0.6);
+}
