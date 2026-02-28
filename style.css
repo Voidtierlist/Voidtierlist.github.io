@@ -14,6 +14,10 @@
    GLOBAL
 ================================ */
 
+/* =====================================
+   GLOBAL
+===================================== */
+
 body{
     margin:0;
     font-family:'Inter',sans-serif;
@@ -31,9 +35,9 @@ body{
     margin:auto;
 }
 
-/* ===============================
+/* =====================================
    TOPBAR
-================================ */
+===================================== */
 
 .topbar{
     display:flex;
@@ -45,8 +49,8 @@ body{
 }
 
 .logo{
-    font-weight:700;
     font-size:22px;
+    font-weight:700;
 }
 
 .nav-links{
@@ -71,133 +75,188 @@ body{
     color:white;
 }
 
-/* ===============================
-   GAMEMODE BAR
-================================ */
+/* =====================================
+   GAMEMODE BAR (FIXED SIZE)
+===================================== */
 
 .gamemode-bar{
     display:flex;
-    gap:12px;
-    margin-top:12px;
+    gap:10px;
+    padding:15px 25px;
+    flex-wrap:wrap;
 }
 
 .mode{
     display:flex;
     align-items:center;
-    gap:8px;
-    padding:8px 14px;
+    gap:6px;
+
+    padding:6px 12px;
     border-radius:999px;
+
     background:#0f182c;
     border:1px solid rgba(255,255,255,.06);
+
+    font-size:13px;
+    font-weight:600;
+    color:#aab4d6;
+
     cursor:pointer;
+    transition:.25s;
 }
 
 .mode img{
-    width:18px;
+    width:16px;
+    height:16px;
+}
+
+.mode:hover{
+    background:#16213b;
 }
 
 .mode.active{
     background:linear-gradient(135deg,#4f7cff,#7c8cff);
+    color:white;
 }
 
-/* ===============================
+/* =====================================
    CONTENT BOX
-================================ */
+===================================== */
 
 .content-box{
-    margin-top:25px;
+    margin-top:10px;
     padding:25px;
-    background:#0d1526;
-    border-radius:18px;
 }
 
-/* ===============================
-   PLAYER CARD (MCTIERS STYLE)
-================================ */
+/* =====================================
+   LEADERBOARD
+===================================== */
 
-.player{
-    width:900px;
-    margin:10px auto;
+#leaderboard{
+    width:100%;
+}
 
+/* PLAYER CARD — MCTIERS STYLE */
+
+.player-card{
     display:flex;
     align-items:center;
-    gap:18px;
-
-    padding:14px 18px;
+    justify-content:space-between;
 
     background:
-        linear-gradient(180deg,
+    linear-gradient(
+        180deg,
         rgba(20,26,45,.85),
-        rgba(10,14,28,.85));
+        rgba(10,14,28,.85)
+    );
 
-    border-radius:14px;
+    border-radius:12px;
+    padding:10px 18px;
+    margin-bottom:8px;
+
     border:1px solid rgba(255,255,255,.05);
+
+    height:68px;
+    cursor:pointer;
 
     transition:.25s;
 }
 
-.player:hover{
+.player-card:hover{
     transform:translateY(-2px);
-    box-shadow:0 10px 30px rgba(0,0,0,.6);
+    box-shadow:0 8px 25px rgba(0,0,0,.6);
 }
+
+/* LEFT SIDE */
+
+.player-left{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+/* RANK */
 
 .rank{
-    width:40px;
-    color:#9aa4c3;
+    width:55px;
+    font-size:28px;
+    font-weight:800;
+    color:#d0d7ff;
 }
 
-.skin{
-    width:60px;
-    height:60px;
+/* SKIN */
+
+.player-render{
+    width:52px;
+    height:52px;
     border-radius:10px;
 }
 
-.info{
-    flex:1;
+/* NAME */
+
+.player-info h3{
+    margin:0;
+    font-size:17px;
 }
 
-.info h3{
+.player-info p{
     margin:0;
+    font-size:12px;
+    color:#9aa4c3;
 }
+
+/* RIGHT SIDE */
+
+.player-right{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+/* REGION COLORS */
 
 .region{
-    background:#0c152a;
-    padding:6px 12px;
-    border-radius:8px;
     font-size:12px;
-    color:#aab4d6;
+    font-weight:700;
+    padding:5px 10px;
+    border-radius:6px;
 }
 
-/* ===============================
-   MCTIERS CIRCLES
-================================ */
+.region.NA{background:#3b1f1f;color:#ff7b7b;}
+.region.EU{background:#1f3b1f;color:#7bff9e;}
+.region.AS{background:#1f2d3b;color:#7bbcff;}
+.region.SA{background:#3b2a1f;color:#ffb47b;}
+.region.OC{background:#2e1f3b;color:#d47bff;}
+
+/* =====================================
+   TIER CIRCLES (REAL MCTIERS LOOK)
+===================================== */
 
 .tiers{
     display:flex;
-    gap:14px;
+    gap:8px;
 }
 
 .tier-circle{
     display:flex;
     flex-direction:column;
     align-items:center;
-    gap:6px;
 }
 
 .tier-bubble{
-    width:42px;
-    height:42px;
+    width:36px;
+    height:36px;
     border-radius:50%;
 
     background:
-        radial-gradient(circle at 30% 30%,
-        #1d2945,#0b1222);
+    radial-gradient(circle at 30% 30%,
+    #1d2945,#0b1222);
 
     border:1px solid rgba(255,255,255,.12);
 
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
 
     box-shadow:
         inset 0 0 10px rgba(0,0,0,.6),
@@ -205,45 +264,48 @@ body{
 }
 
 .tier-bubble img{
-    width:20px;
-    height:20px;
+    width:18px;
+    height:18px;
 }
 
 .tier-label{
-    font-size:12px;
+    font-size:11px;
+    margin-top:3px;
     color:#c9d2ff;
 }
 
-/* ===============================
+/* =====================================
    MODAL
-================================ */
+===================================== */
 
-.modal{
-    display:none;
+#playerModal{
     position:fixed;
     inset:0;
     background:rgba(5,10,20,.85);
     backdrop-filter:blur(8px);
+
+    display:flex;
     justify-content:center;
     align-items:center;
 }
 
-.modal.show{
-    display:flex;
+.hidden{
+    display:none !important;
 }
 
 .modal-card{
     background:#111827;
+    padding:35px;
     border-radius:16px;
-    padding:40px;
     width:420px;
     text-align:center;
+    position:relative;
 }
 
-.close-btn{
+.close{
     position:absolute;
     right:20px;
-    top:20px;
+    top:15px;
     background:none;
     border:none;
     color:white;
@@ -255,18 +317,19 @@ body{
     width:110px;
     border-radius:50%;
     border:3px solid gold;
+    margin-bottom:10px;
 }
 
 .modal-tiers{
     display:flex;
     flex-wrap:wrap;
-    gap:14px;
     justify-content:center;
+    gap:12px;
 }
 
-/* ===============================
+/* =====================================
    PROFILE PAGE
-================================ */
+===================================== */
 
 .profile{
     max-width:1000px;
@@ -300,5 +363,5 @@ body{
 }
 
 .tier-item img{
-    width:38px;
+    width:36px;
 }
