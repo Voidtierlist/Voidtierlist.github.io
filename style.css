@@ -389,3 +389,44 @@ gap:12px;
     font-weight:bold;
     font-size:18px;
 }
+/* ======================
+   SEARCH BAR FIX
+====================== */
+
+.search-wrapper{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin:25px 0;
+}
+
+#searchInput{
+    background:#111;
+    border:1px solid #2a2a2a;
+    color:white;
+    padding:10px 14px;
+    border-radius:8px;
+    font-size:14px;
+    width:260px;
+    outline:none;
+    transition:.2s;
+}
+
+#searchInput:focus{
+    border-color:#3b82f6;
+    box-shadow:0 0 8px rgba(59,130,246,.3);
+}
+
+#searchBtn{
+    background:#1a1a1a;
+    border:1px solid #2a2a2a;
+    color:white;
+    padding:10px 16px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+#searchBtn:hover{
+    background:#242424;
+}
