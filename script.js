@@ -171,3 +171,29 @@ e.target.classList.add("hidden");
 });
 
 });
+/* =====================
+   PLAYER SEARCH SYSTEM
+===================== */
+
+const searchInput = document.getElementById("searchInput");
+const searchBtn = document.getElementById("searchBtn");
+
+function searchPlayer(){
+
+    const name = searchInput.value.trim();
+
+    if(!name) return;
+
+    window.location.href =
+        `player.html?user=${encodeURIComponent(name)}`;
+}
+
+/* Click button */
+searchBtn.addEventListener("click", searchPlayer);
+
+/* Press ENTER */
+searchInput.addEventListener("keypress", e=>{
+    if(e.key==="Enter"){
+        searchPlayer();
+    }
+});
