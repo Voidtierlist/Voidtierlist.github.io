@@ -430,3 +430,57 @@ gap:12px;
 #searchBtn:hover{
     background:#242424;
 }
+/* ======================
+   PLAYER PAGE FIX
+====================== */
+
+body{
+    background:#0b0b0b;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    margin:0;
+}
+
+/* profile container */
+.profile{
+    max-width:900px;
+    margin:auto;
+    padding:40px 20px;
+    text-align:center;
+}
+
+/* player skin */
+#skin{
+    margin-bottom:20px;
+}
+/* ======================
+   PLAYER TIERS STYLE
+====================== */
+
+#gamemodes{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:20px;
+}
+
+.tier-item{
+    background:#111;
+    border:1px solid #2a2a2a;
+    border-radius:12px;
+    padding:15px 20px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    min-width:120px;
+}
+
+.tier-item img{
+    width:28px;
+    height:28px;
+}
+
+.tier-item span{
+    font-weight:600;
+}
