@@ -54,12 +54,14 @@ fetch("player_points.json")
         if(!icon || !gmData.tier) continue;
 
         const card=document.createElement("div");
-        card.className="tier-item";
+        card.className="tier-card";
 
         card.innerHTML=`
-            <img src="${icon}">
-            <span>${gmData.tier}</span>
+            <img class="tier-icon" src="${icon}">
+            <span class="tier-rank">${gmData.tier}</span>
         `;
+
+
 
         gmDiv.appendChild(card);
     }
