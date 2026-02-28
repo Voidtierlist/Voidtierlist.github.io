@@ -2,23 +2,29 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 let allPlayersData=[];
 
+/* ===============================
+   GAMEMODE ICONS
+================================ */
+
 const GAMEMODE_ICONS={
-    smp:"https://mctiers.com/tier_icons/smp.svg",
-    sword:"https://mctiers.com/tier_icons/sword.svg",
-    crystal:"https://mctiers.com/tier_icons/vanilla.svg",
-    nethpot:"https://mctiers.com/tier_icons/nethop.svg",
-    uhc:"https://mctiers.com/tier_icons/uhc.svg",
-    axe:"https://mctiers.com/tier_icons/axe.svg",
-    mace:"https://mctiers.com/tier_icons/mace.svg",
-    diamondpot:"https://mctiers.com/tier_icons/pot.svg",
-    diasmp:"https://subtiers.net/assets/dia_smp-523efa38.svg"
+smp:"https://mctiers.com/tier_icons/smp.svg",
+sword:"https://mctiers.com/tier_icons/sword.svg",
+crystal:"https://mctiers.com/tier_icons/vanilla.svg",
+nethpot:"https://mctiers.com/tier_icons/nethop.svg",
+uhc:"https://mctiers.com/tier_icons/uhc.svg",
+axe:"https://mctiers.com/tier_icons/axe.svg",
+mace:"https://mctiers.com/tier_icons/mace.svg",
+diamondpot:"https://mctiers.com/tier_icons/pot.svg",
+diasmp:"https://subtiers.net/assets/dia_smp-523efa38.svg"
 };
 
 function normalizeGamemode(name){
-    return name.toLowerCase().replace(/[^a-z]/g,"");
+return name.toLowerCase().replace(/[^a-z]/g,"");
 }
 
-/* LOAD PLAYERS */
+/* ===============================
+   LOAD PLAYERS
+================================ */
 
 fetch("player_points.json")
 .then(r=>r.json())
@@ -34,6 +40,8 @@ allPlayersData=players;
 
 players.forEach((player,index)=>{
 
+/* ---------- BUILD TIERS ---------- */
+
 let tiersHTML="";
 
 if(player.gamemodes){
@@ -47,18 +55,21 @@ if(!icon) continue;
 
 tiersHTML+=`
 <div class="tier-circle">
-    <div class="tier-bubble">
-        <img src="${icon}">
-    </div>
-    <div class="tier-label">${gmData.tier}</div>
+<div class="tier-bubble">
+<img src="${icon}">
+</div>
+<div class="tier-label">${gmData.tier}</div>
 </div>`;
 }
 }
+
+/* ---------- PLAYER ROW ---------- */
 
 const row=document.createElement("div");
 row.className="player";
 
 row.innerHTML=`
+
 <div class="rank">${index+1}.</div>
 
 <img class="skin"
@@ -86,30 +97,40 @@ container.appendChild(row);
 
 });
 
-/* MODAL */
+/* ===============================
+   OPEN PLAYER MODAL
+================================ */
 
 function openPlayerModal(player){
 
 const modal=document.getElementById("playerModal");
-modal.classList.add("show");
 
+modal.classList.remove("hidden");
+
+/* NAME */
 document.getElementById("modal-name").textContent=
 player.mc_username;
 
+/* REGION */
 document.getElementById("modal-region").textContent=
 player.region;
 
+/* SKIN */
 document.getElementById("modal-skin").src=
 `https://render.crafty.gg/3d/bust/${player.mc_username}`;
 
+/* POSITION */
 const pos=allPlayersData.findIndex(
 p=>p.mc_username===player.mc_username)+1;
 
 document.getElementById("modal-position")
-.textContent=`#${pos} Overall (${player.total_points})`;
+.textContent=`#${pos} Overall • ${player.total_points} Points`;
+
+/* TIERS */
 
 let tiersHTML="";
 
+if(player.gamemodes){
 for(const gm in player.gamemodes){
 
 const gmData=player.gamemodes[gm];
@@ -126,22 +147,27 @@ tiersHTML+=`
 <div class="tier-label">${gmData.tier}</div>
 </div>`;
 }
-
-document.getElementById("modal-tiers").innerHTML=tiersHTML;
 }
 
-/* CLOSE MODAL */
+document.getElementById("modal-tiers").innerHTML=tiersHTML;
+
+}
+
+/* ===============================
+   CLOSE MODAL
+================================ */
 
 document.getElementById("closeModal")
-.onclick=()=>{
+.addEventListener("click",()=>{
 document.getElementById("playerModal")
-.classList.remove("show");
-};
+.classList.add("hidden");
+});
 
 document.getElementById("playerModal")
-.onclick=(e)=>{
-if(e.target.id==="playerModal")
-e.target.classList.remove("show");
-};
+.addEventListener("click",(e)=>{
+if(e.target.id==="playerModal"){
+e.target.classList.add("hidden");
+}
+});
 
 });
