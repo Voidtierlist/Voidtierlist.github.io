@@ -3,32 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <title>Void Tierlist</title>
+
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-
-
 <div class="page">
 
-    <!-- NAVBAR -->
-    <div class="topbar">
+<!-- =========================
+        TOP NAVBAR
+========================= -->
 
-        <div class="logo">Void Tierlist</div>
+<div class="topbar">
 
-        <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#" class="active">Rankings</a>
-            <a href="#">Discords</a>
-            <a href="#">API Docs</a>
-        </div>
+    <div class="logo">Void Tierlist</div>
 
-        <input class="search" placeholder="Search player...">
-
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#" class="active">Rankings</a>
+        <a href="#">Discords</a>
+        <a href="#">API Docs</a>
     </div>
 
+    <input class="search" placeholder="Search player...">
+
+</div>
+
+
+<!-- =========================
+        GAMEMODE BAR
+========================= -->
 
 <div class="gamemode-bar">
 
@@ -60,7 +68,7 @@
 <div class="mode" data-mode="diamondpot">
 <img src="https://mctiers.com/tier_icons/pot.svg">
 <span>Diamond Pot</span>
-</div>     
+</div>
 
 <div class="mode" data-mode="uhc">
 <img src="https://mctiers.com/tier_icons/uhc.svg">
@@ -75,45 +83,55 @@
 <div class="mode" data-mode="diasmp">
 <img src="https://subtiers.net/assets/dia_smp-523efa38.svg">
 <span>Diamond SMP</span>
-</div>    
+</div>
 
-    
 <div class="mode" data-mode="mace">
 <img src="https://mctiers.com/tier_icons/mace.svg">
 <span>Mace</span>
-</div>    
+</div>
 
 </div>
+
 <div class="divider-line"></div>
+
+
+<!-- =========================
+        LEADERBOARD AREA
+========================= -->
 
 <div class="content-box">
     <div id="leaderboard"></div>
 </div>
 
 </div>
-<!-- PLAYER PROFILE MODAL -->
-<!-- PLAYER PROFILE MODAL -->
+
+
+<!-- =========================
+        PLAYER MODAL
+========================= -->
+
 <div id="playerModal" class="hidden">
 
-    <div class="modal-box">
+    <div class="modal-card">
 
         <div id="closeModal" class="close">✕</div>
 
-        <img id="modal-skin">
+        <img id="modal-skin" class="modal-avatar">
 
         <h2 id="modal-name"></h2>
 
-        <div id="modal-region"></div>
+        <div id="modal-region" class="modal-region"></div>
 
-        <div id="modal-position"></div>
+        <div id="modal-position" class="modal-position"></div>
 
-        <div id="modal-tiers"></div>
+        <div id="modal-tiers" class="modal-tiers"></div>
 
     </div>
 
 </div>
+
+
 <script src="script.js"></script>
 
 </body>
 </html>
-
