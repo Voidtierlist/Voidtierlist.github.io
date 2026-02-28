@@ -178,10 +178,11 @@ body{
 /* RANK */
 
 .rank{
-    width:55px;
-    font-size:28px;
-    font-weight:800;
-    color:#d0d7ff;
+font-size:26px;
+font-weight:800;
+color:#cfcfcf;
+width:55px;
+text-align:right;
 }
 
 /* SKIN */
