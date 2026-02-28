@@ -59,7 +59,7 @@ const row=document.createElement("div");
 row.className="player";
 
 row.innerHTML=`
-<div class="rank">${index+1}</div>
+<div class="rank">${index+1}.</div>
 
 <img class="skin"
 src="https://render.crafty.gg/3d/bust/${player.mc_username}">
@@ -67,10 +67,15 @@ src="https://render.crafty.gg/3d/bust/${player.mc_username}">
 <div class="info">
 <h3>${player.mc_username}</h3>
 <p>${player.total_points} Points</p>
-<div class="tiers">${tiersHTML}</div>
 </div>
 
-<div class="region">${player.region}</div>
+<div class="region region-${player.region}">
+${player.region}
+</div>
+
+<div class="tiers">
+${tiersHTML}
+</div>
 `;
 
 row.onclick=()=>openPlayerModal(player);
