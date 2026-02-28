@@ -7,17 +7,29 @@
 
 <body>
 
-<div class="profile">
+<div class="profile-container">
 
-<img id="skin" width="200">
+    <div class="player-card">
 
-<h1 id="username"></h1>
-<h3 id="region"></h3>
+        <img id="skin" class="player-skin">
 
-<h2>Total Points: <span id="points"></span></h2>
+        <div class="player-info">
+            <h1 id="username"></h1>
 
-<h2>Gamemodes</h2>
-<div id="gamemodes"></div>
+            <div class="meta">
+                <span class="region-tag" id="region"></span>
+                <span class="points-tag">
+                    ⭐ <span id="points"></span> Points
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tiers-section">
+        <h2>Gamemodes</h2>
+        <div id="gamemodes" class="tier-list"></div>
+    </div>
 
 </div>
 
