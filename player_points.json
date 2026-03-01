@@ -373,11 +373,11 @@
     "1224975402553053185": {
         "mc_username": "ExplosionAlso_",
         "region": "AS",
-        "total_points": 26,
+        "total_points": 140,
         "gamemodes": {
             "nethpot": {
-                "tier": "LT3",
-                "points": 6
+                "tier": "HT1",
+                "points": 60
             },
             "axe": {
                 "tier": "LT4",
@@ -402,6 +402,10 @@
             "diamond pot": {
                 "tier": "LT4",
                 "points": 3
+            },
+            "crystal": {
+                "tier": "HT1",
+                "points": 60
             }
         }
     },
@@ -443,5 +447,29 @@
                 "points": 6
             }
         }
+    },
+    "953199568516960326": {
+        "mc_username": "ht3_Sachin1",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1347794710194028567": {
+        "mc_username": "Devilsggs",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1093072100870340650": {
+        "mc_username": "Thunder_Furyy7",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1388400982878322759": {
+        "mc_username": "Mahfuzfether",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
     }
 }
