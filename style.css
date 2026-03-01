@@ -520,3 +520,26 @@ gap:12px;
     margin-left:auto;
     opacity:.7;
 }
+/* ===============================
+   TOPBAR FIX
+================================ */
+
+.topbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:18px 40px;
+
+    background:linear-gradient(
+        to bottom,
+        #05070c,
+        #070b14
+    );
+
+    border-bottom:1px solid rgba(255,255,255,0.05);
+}
