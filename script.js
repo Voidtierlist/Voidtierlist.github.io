@@ -107,26 +107,20 @@ const modal=document.getElementById("playerModal");
 
 modal.classList.remove("hidden");
 
-/* NAME */
 document.getElementById("modal-name").textContent=
 player.mc_username;
 
-/* REGION */
 document.getElementById("modal-region").textContent=
 player.region;
 
-/* SKIN */
 document.getElementById("modal-skin").src=
 `https://render.crafty.gg/3d/bust/${player.mc_username}`;
 
-/* POSITION */
 const pos=allPlayersData.findIndex(
 p=>p.mc_username===player.mc_username)+1;
 
 document.getElementById("modal-position")
 .textContent=`#${pos} Overall • ${player.total_points} Points`;
-
-/* TIERS */
 
 let tiersHTML="";
 
@@ -170,43 +164,22 @@ e.target.classList.add("hidden");
 }
 });
 
-});
 /* =====================
    PLAYER SEARCH SYSTEM
 ===================== */
 
-const searchInput = document.getElementById("searchInput");
-const searchBtn = document.getElementById("searchBtn");
-const searchInput = document.getElementById("searchInput");
-const searchBtn = document.getElementById("searchBtn");
-const searchResults = document.getElementById("searchResults");
-function searchPlayer(){
+const searchInput=document.getElementById("searchInput");
+const searchBtn=document.getElementById("searchBtn");
+const searchResults=document.getElementById("searchResults");
 
-    const name = searchInput.value.trim();
-
-    if(!name) return;
-
-    window.location.href =
-        `player.html?user=${encodeURIComponent(name)}`;
-}
-
-/* Click button */
-searchBtn.addEventListener("click", searchPlayer);
-
-/* Press ENTER */
-searchInput.addEventListener("keypress", e=>{
-    if(e.key==="Enter"){
-        searchPlayer();
-    }
-});
 function showSearchResults(query){
 
 searchResults.innerHTML="";
 
 if(!query) return;
 
-const matches = allPlayersData.filter(p =>
-    p.mc_username.toLowerCase().includes(query.toLowerCase())
+const matches=allPlayersData.filter(p=>
+p.mc_username.toLowerCase().includes(query.toLowerCase())
 );
 
 matches.slice(0,10).forEach(player=>{
@@ -229,3 +202,22 @@ searchResults.appendChild(card);
 
 });
 }
+
+/* CLICK BUTTON */
+searchBtn.addEventListener("click",()=>{
+showSearchResults(searchInput.value);
+});
+
+/* LIVE SEARCH */
+searchInput.addEventListener("input",()=>{
+showSearchResults(searchInput.value);
+});
+
+/* ENTER KEY */
+searchInput.addEventListener("keypress",e=>{
+if(e.key==="Enter"){
+showSearchResults(searchInput.value);
+}
+});
+
+});
