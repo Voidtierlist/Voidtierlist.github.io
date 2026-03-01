@@ -434,12 +434,7 @@ gap:12px;
    PLAYER PAGE FIX
 ====================== */
 
-body{
-    background:#0b0b0b;
-    color:white;
-    font-family:Arial, Helvetica, sans-serif;
-    margin:0;
-}
+
 
 /* profile container */
 .profile{
