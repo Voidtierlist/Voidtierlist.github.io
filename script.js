@@ -40,8 +40,6 @@ allPlayersData=players;
 
 players.forEach((player,index)=>{
 
-/* ---------- BUILD TIERS ---------- */
-
 let tiersHTML="";
 
 if(player.gamemodes){
@@ -62,8 +60,6 @@ tiersHTML+=`
 </div>`;
 }
 }
-
-/* ---------- PLAYER ROW ---------- */
 
 const row=document.createElement("div");
 row.className="player";
@@ -164,19 +160,13 @@ e.target.classList.add("hidden");
 }
 });
 
-/* =====================
-   PLAYER SEARCH SYSTEM
-===================== */
+/* ===============================
+   MCTIERS LIVE SEARCH FILTER
+================================ */
 
 const searchInput=document.getElementById("searchInput");
-const searchBtn=document.getElementById("searchBtn");
-const searchResults=document.getElementById("searchResults");
 
-/* =====================
-   MCTIERS STYLE SEARCH
-===================== */
-
-const searchInput=document.getElementById("searchInput");
+if(searchInput){
 
 searchInput.addEventListener("input",()=>{
 
@@ -189,12 +179,13 @@ players.forEach(player=>{
 const name=player.querySelector("h3")
 .textContent.toLowerCase();
 
-if(name.includes(query)){
-player.style.display="flex";
-}else{
-player.style.display="none";
-}
+player.style.display=
+name.includes(query) ? "flex" : "none";
 
 });
+
+});
+
+}
 
 });
