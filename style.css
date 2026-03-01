@@ -65,10 +65,14 @@ color:white;
 ===================================== */
 
 .gamemode-bar{
-display:flex;
-gap:10px;
-padding:15px 25px;
-flex-wrap:wrap;
+    display:flex;
+    gap:10px;
+    padding:18px 40px;
+    align-items:center;
+    flex-wrap:wrap;
+
+    background:#070b14;
+    border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
 .mode{
@@ -540,6 +544,8 @@ gap:12px;
         #05070c,
         #070b14
     );
-
+.page{
+    padding-top:10px;
+}
     border-bottom:1px solid rgba(255,255,255,0.05);
 }
