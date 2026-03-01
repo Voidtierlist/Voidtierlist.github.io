@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded",()=>{
-
+const searchInput = document.getElementById("searchInput");
+const searchBtn = document.getElementById("searchBtn");
+const searchResults = document.getElementById("searchResults");
 let allPlayersData=[];
 
 /* ===============================
@@ -197,3 +199,33 @@ searchInput.addEventListener("keypress", e=>{
         searchPlayer();
     }
 });
+function showSearchResults(query){
+
+searchResults.innerHTML="";
+
+if(!query) return;
+
+const matches = allPlayersData.filter(p =>
+    p.mc_username.toLowerCase().includes(query.toLowerCase())
+);
+
+matches.slice(0,10).forEach(player=>{
+
+const card=document.createElement("div");
+card.className="search-card";
+
+card.innerHTML=`
+<img src="https://render.crafty.gg/3d/bust/${player.mc_username}">
+<div class="search-name">${player.mc_username}</div>
+<div class="search-region">${player.region}</div>
+`;
+
+card.onclick=()=>{
+window.location.href=
+`player.html?user=${player.mc_username}`;
+};
+
+searchResults.appendChild(card);
+
+});
+}
