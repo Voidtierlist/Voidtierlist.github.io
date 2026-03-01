@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded",()=>{
-const searchInput = document.getElementById("searchInput");
-const searchBtn = document.getElementById("searchBtn");
-const searchResults = document.getElementById("searchResults");
+
 let allPlayersData=[];
 
 /* ===============================
@@ -179,7 +177,9 @@ e.target.classList.add("hidden");
 
 const searchInput = document.getElementById("searchInput");
 const searchBtn = document.getElementById("searchBtn");
-
+const searchInput = document.getElementById("searchInput");
+const searchBtn = document.getElementById("searchBtn");
+const searchResults = document.getElementById("searchResults");
 function searchPlayer(){
 
     const name = searchInput.value.trim();
