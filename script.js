@@ -5,7 +5,17 @@ let allPlayersData=[];
 /* ===============================
    GAMEMODE ICONS
 ================================ */
-
+const ALL_GAMEMODES = [
+    "smp",
+    "sword",
+    "crystal",
+    "nethpot",
+    "diamondpot",
+    "uhc",
+    "axe",
+    "diamondsmp",
+    "mace"
+];
 const GAMEMODE_ICONS={
 smp:"https://mctiers.com/tier_icons/smp.svg",
 sword:"https://mctiers.com/tier_icons/sword.svg",
