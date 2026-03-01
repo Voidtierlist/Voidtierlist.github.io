@@ -172,52 +172,29 @@ const searchInput=document.getElementById("searchInput");
 const searchBtn=document.getElementById("searchBtn");
 const searchResults=document.getElementById("searchResults");
 
-function showSearchResults(query){
+/* =====================
+   MCTIERS STYLE SEARCH
+===================== */
 
-searchResults.innerHTML="";
+const searchInput=document.getElementById("searchInput");
 
-if(!query) return;
-
-const matches=allPlayersData.filter(p=>
-p.mc_username.toLowerCase().includes(query.toLowerCase())
-);
-
-matches.slice(0,10).forEach(player=>{
-
-const card=document.createElement("div");
-card.className="search-card";
-
-card.innerHTML=`
-<img src="https://render.crafty.gg/3d/bust/${player.mc_username}">
-<div class="search-name">${player.mc_username}</div>
-<div class="search-region">${player.region}</div>
-`;
-
-card.onclick=()=>{
-window.location.href=
-`player.html?user=${player.mc_username}`;
-};
-
-searchResults.appendChild(card);
-
-});
-}
-
-/* CLICK BUTTON */
-searchBtn.addEventListener("click",()=>{
-showSearchResults(searchInput.value);
-});
-
-/* LIVE SEARCH */
 searchInput.addEventListener("input",()=>{
-showSearchResults(searchInput.value);
-});
 
-/* ENTER KEY */
-searchInput.addEventListener("keypress",e=>{
-if(e.key==="Enter"){
-showSearchResults(searchInput.value);
+const query=searchInput.value.toLowerCase();
+
+const players=document.querySelectorAll(".player");
+
+players.forEach(player=>{
+
+const name=player.querySelector("h3")
+.textContent.toLowerCase();
+
+if(name.includes(query)){
+player.style.display="flex";
+}else{
+player.style.display="none";
 }
+
 });
 
 });
