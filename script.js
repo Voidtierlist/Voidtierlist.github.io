@@ -29,7 +29,10 @@ diamondsmp:"https://subtiers.net/assets/dia_smp-523efa38.svg"
 };
 
 function normalizeGamemode(name){
-return name.toLowerCase().replace(/[^a-z]/g,"");
+return name
+.toLowerCase()
+.replace(/[\s_-]/g,"")   // remove spaces underscore dash
+.replace("pvp","");      // fixes mace pvp naming
 }
 
 /* ===============================
