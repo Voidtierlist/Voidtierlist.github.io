@@ -196,7 +196,7 @@ box-shadow:0 8px 25px rgba(0,0,0,.6);
 /* RANK */
 
 .rank{
-width:70px;
+text-align:left;
 font-size:26px;
 font-weight:800;
 color:#cfd6ff;
