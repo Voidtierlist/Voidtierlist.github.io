@@ -162,7 +162,7 @@ padding:25px;
 .player{
 display:flex;
 align-items:center;
-
+position:relative;
 background:
 linear-gradient(
 180deg,
