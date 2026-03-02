@@ -74,11 +74,15 @@ gap:12px;
 .search{
 background:#0c111b;
 border:1px solid rgba(255,255,255,0.08);
+
 color:white;
+
 padding:10px 14px;
 border-radius:8px;
+
 outline:none;
 width:220px;
+
 transition:.2s;
 }
 
@@ -101,6 +105,7 @@ gap:10px;
 padding:18px 40px;
 align-items:center;
 flex-wrap:wrap;
+
 background:#070b14;
 border-bottom:1px solid rgba(255,255,255,0.05);
 }
@@ -109,13 +114,17 @@ border-bottom:1px solid rgba(255,255,255,0.05);
 display:flex;
 align-items:center;
 gap:6px;
+
 padding:6px 12px;
 border-radius:999px;
+
 background:#0f182c;
 border:1px solid rgba(255,255,255,.06);
+
 font-size:13px;
 font-weight:600;
 color:#aab4d6;
+
 cursor:pointer;
 transition:.25s;
 }
@@ -149,25 +158,32 @@ padding:25px;
 }
 
 /* =====================================
-   PLAYER CARD
+   PLAYER CARD (FIXED)
 ===================================== */
 
 .player{
 display:flex;
 align-items:center;
+
 background:
 linear-gradient(
 180deg,
 rgba(20,26,45,.85),
 rgba(10,14,28,.85)
 );
+
 border:1px solid rgba(255,255,255,.05);
 border-radius:12px;
+
 height:72px;
 padding:0 18px;
+
 margin-bottom:10px;
+
 cursor:pointer;
 transition:.25s;
+
+/* ===== FIXES ===== */
 min-width:0;
 overflow:hidden;
 }
@@ -177,16 +193,22 @@ transform:translateY(-2px);
 box-shadow:0 8px 25px rgba(0,0,0,.6);
 }
 
+/* RANK */
+
 .rank{
 width:70px;
 font-size:26px;
 font-weight:800;
 color:#cfd6ff;
+
 display:flex;
 align-items:center;
 justify-content:flex-start;
+
 flex-shrink:0;
 }
+
+/* PLAYER SKIN */
 
 .skin{
 width:48px;
@@ -196,9 +218,11 @@ margin-right:12px;
 flex-shrink:0;
 }
 
+/* NAME AREA */
+
 .info{
 flex:1;
-min-width:0;
+min-width:0; /* CRITICAL FIX */
 }
 
 .info h3{
@@ -220,15 +244,14 @@ color:#9aa4c3;
 
 .region{
 width:90px;
-height:28px;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:0;
-border-radius:6px;
-flex-shrink:0;
+text-align:center;
+
 font-size:12px;
 font-weight:700;
+padding:5px 10px;
+border-radius:6px;
+
+flex-shrink:0;
 }
 
 .region-AS{background:#1f2d3b;color:#7bbcff;}
@@ -238,7 +261,7 @@ font-weight:700;
 .region-OC{background:#2e1f3b;color:#d47bff;}
 
 /* =====================================
-   TIERS
+   TIERS (FIXED ALIGNMENT)
 ===================================== */
 
 .tiers{
@@ -246,8 +269,9 @@ display:flex;
 gap:8px;
 width:320px;
 justify-content:flex-start;
-flex-shrink:0;
-min-width:0;
+
+flex-shrink:0;     /* FIX */
+min-width:0;       /* FIX */
 }
 
 .tier-circle{
@@ -262,13 +286,17 @@ flex-shrink:0;
 width:36px;
 height:36px;
 border-radius:50%;
+
 background:
 radial-gradient(circle at 30% 30%,
 #1d2945,#0b1222);
+
 border:1px solid rgba(255,255,255,.12);
+
 display:flex;
 justify-content:center;
 align-items:center;
+
 box-shadow:
 inset 0 0 10px rgba(0,0,0,.6),
 0 0 10px rgba(120,140,255,.2);
@@ -296,6 +324,7 @@ position:fixed;
 inset:0;
 background:rgba(5,10,20,.85);
 backdrop-filter:blur(8px);
+
 display:flex;
 justify-content:center;
 align-items:center;
@@ -347,9 +376,9 @@ justify-content:center;
 gap:12px;
 }
 
-/* =====================================
+/* =========================
    PLAYER PROFILE
-===================================== */
+========================= */
 
 .profile-container{
 max-width:900px;
@@ -429,7 +458,9 @@ font-weight:bold;
 font-size:18px;
 }
 
-/* SEARCH BAR */
+/* ======================
+   SEARCH BAR
+====================== */
 
 .search-wrapper{
 display:flex;
@@ -469,7 +500,9 @@ transition:.2s;
 background:#141a26;
 }
 
-/* PLAYER PAGE */
+/* ======================
+   PLAYER PAGE
+====================== */
 
 .profile{
 max-width:900px;
@@ -482,7 +515,9 @@ text-align:center;
 margin-bottom:20px;
 }
 
-/* PLAYER TIERS STYLE */
+/* ======================
+   PLAYER TIERS STYLE
+====================== */
 
 #gamemodes{
 display:flex;
@@ -512,7 +547,9 @@ height:28px;
 font-weight:600;
 }
 
-/* SEARCH RESULTS */
+/* ======================
+   SEARCH RESULTS
+====================== */
 
 .search-results{
 max-width:900px;
@@ -552,35 +589,39 @@ margin-left:auto;
 opacity:.7;
 }
 
-/* LEADERBOARD HEADER */
+/* ===============================
+   LEADERBOARD HEADER
+================================ */
 
 .leaderboard-header{
 display:flex;
 align-items:center;
+
 padding:0 18px 10px 18px;
-margin:18px 0 12px 0;
+margin-bottom:10px;
+
 font-size:12px;
 letter-spacing:1px;
 color:#6f7aa5;
 font-weight:700;
 }
 
-.col-rank{
+.leaderboard-header .col-rank{
 width:70px;
 text-align:left;
 }
 
-.col-player{
+.leaderboard-header .col-player{
 flex:1;
 min-width:0;
 }
 
-.col-region{
+.leaderboard-header .col-region{
 width:90px;
 text-align:center;
 }
 
-.col-tiers{
+.leaderboard-header .col-tiers{
 width:320px;
 text-align:left;
 }
