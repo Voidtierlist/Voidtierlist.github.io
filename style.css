@@ -63,12 +63,14 @@ font-weight:600;
 .nav-links .active{
 color:white;
 }
+
 .nav-right{
 margin-left:auto;
 display:flex;
 align-items:center;
 gap:12px;
 }
+
 .search{
 background:#0c111b;
 border:1px solid rgba(255,255,255,0.08);
@@ -162,7 +164,7 @@ padding:25px;
 .player{
 display:flex;
 align-items:center;
-position:relative;
+
 background:
 linear-gradient(
 180deg,
@@ -173,16 +175,13 @@ rgba(10,14,28,.85)
 border:1px solid rgba(255,255,255,.05);
 border-radius:12px;
 
-height:64px;
-padding:0 22px;
+height:72px;
+padding:0 18px;
 
 margin-bottom:10px;
 
 cursor:pointer;
 transition:.25s;
-
-/* FIX */
-justify-content:space-between;
 }
 
 .player:hover{
@@ -194,7 +193,7 @@ box-shadow:0 8px 25px rgba(0,0,0,.6);
 
 .rank{
 width:70px;
-font-size:28px;
+font-size:26px;
 font-weight:800;
 color:#cfd6ff;
 
@@ -209,6 +208,7 @@ justify-content:flex-start;
 width:48px;
 height:48px;
 border-radius:8px;
+margin-right:12px;
 }
 
 /* NAME AREA */
@@ -240,6 +240,7 @@ font-weight:700;
 padding:5px 10px;
 border-radius:6px;
 }
+
 .region-AS{background:#1f2d3b;color:#7bbcff;}
 .region-NA{background:#3b1f1f;color:#ff7b7b;}
 .region-EU{background:#1f3b1f;color:#7bff9e;}
@@ -261,6 +262,7 @@ justify-content:flex-start;
 display:flex;
 flex-direction:column;
 align-items:center;
+min-width:40px;
 }
 
 .tier-bubble{
@@ -356,7 +358,7 @@ gap:12px;
 }
 
 /* =========================
-   PLAYER PROFILE (MCTIERS STYLE)
+   PLAYER PROFILE
 ========================= */
 
 .profile-container{
@@ -438,7 +440,7 @@ font-size:18px;
 }
 
 /* ======================
-   SEARCH BAR FIX
+   SEARCH BAR
 ====================== */
 
 .search-wrapper{
@@ -480,7 +482,7 @@ background:#141a26;
 }
 
 /* ======================
-   PLAYER PAGE FIX
+   PLAYER PAGE
 ====================== */
 
 .profile{
@@ -567,61 +569,7 @@ font-size:16px;
 margin-left:auto;
 opacity:.7;
 }
-.tier-circle{
-display:flex;
-flex-direction:column;
-align-items:center;
-min-width:40px;
-}
-/* ===============================
-   LEADERBOARD HEADER (MCTIERS STYLE)
-================================ */
 
-.leaderboard-header{
-display:flex;
-align-items:center;
-padding:0 18px;
-margin-bottom:12px;
-
-font-size:12px;
-letter-spacing:.12em;
-font-weight:700;
-color:#7e8bb6;
-opacity:.8;
-}
-
-.col-rank{
-width:60px;
-text-align:right;
-}
-
-.col-player{
-flex:1;
-margin-left:70px;
-}
-
-.col-region{
-width:80px;
-text-align:center;
-}
-
-.col-tiers{
-width:320px;
-text-align:left;
-}
-
-/* ===============================
-   RANK POSITION FIX
-================================ */
-
-.rank{
-width:60px;
-text-align:right;
-font-size:26px;
-font-weight:800;
-color:#cfd6ff;
-margin-right:5px;
-}
 /* ===============================
    LEADERBOARD HEADER (MCTIERS)
 ================================ */
