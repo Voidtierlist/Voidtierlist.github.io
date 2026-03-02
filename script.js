@@ -52,25 +52,32 @@ players.forEach((player,index)=>{
 
 let tiersHTML="";
 
+ALL_GAMEMODES.forEach(mode=>{
+
+const icon=GAMEMODE_ICONS[mode];
+if(!icon) return;
+
+let tier="-";
+let opacity="0.35";
+
 if(player.gamemodes){
 for(const gm in player.gamemodes){
 
-const gmData=player.gamemodes[gm];
-const key=normalizeGamemode(gm);
-const icon=GAMEMODE_ICONS[key];
-
-if(!icon) continue;
+if(normalizeGamemode(gm)===mode){
+tier=player.gamemodes[gm].tier;
+opacity="1";
+}
+}
+}
 
 tiersHTML+=`
 <div class="tier-circle">
-<div class="tier-bubble">
+<div class="tier-bubble" style="opacity:${opacity}">
 <img src="${icon}">
 </div>
-<div class="tier-label">${gmData.tier}</div>
+<div class="tier-label">${tier}</div>
 </div>`;
-}
-}
-
+});
 const row=document.createElement("div");
 row.className="player";
 
@@ -130,24 +137,32 @@ document.getElementById("modal-position")
 
 let tiersHTML="";
 
+ALL_GAMEMODES.forEach(mode=>{
+
+const icon=GAMEMODE_ICONS[mode];
+if(!icon) return;
+
+let tier="-";
+let opacity="0.35";
+
 if(player.gamemodes){
 for(const gm in player.gamemodes){
 
-const gmData=player.gamemodes[gm];
-const key=normalizeGamemode(gm);
-const icon=GAMEMODE_ICONS[key];
-
-if(!icon) continue;
+if(normalizeGamemode(gm)===mode){
+tier=player.gamemodes[gm].tier;
+opacity="1";
+}
+}
+}
 
 tiersHTML+=`
 <div class="tier-circle">
-<div class="tier-bubble">
+<div class="tier-bubble" style="opacity:${opacity}">
 <img src="${icon}">
 </div>
-<div class="tier-label">${gmData.tier}</div>
+<div class="tier-label">${tier}</div>
 </div>`;
-}
-}
+});
 
 document.getElementById("modal-tiers").innerHTML=tiersHTML;
 
