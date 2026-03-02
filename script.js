@@ -25,7 +25,7 @@ uhc:"https://mctiers.com/tier_icons/uhc.svg",
 axe:"https://mctiers.com/tier_icons/axe.svg",
 mace:"https://mctiers.com/tier_icons/mace.svg",
 diamondpot:"https://mctiers.com/tier_icons/pot.svg",
-diasmp:"https://subtiers.net/assets/dia_smp-523efa38.svg"
+diamondsmp:"https://subtiers.net/assets/dia_smp-523efa38.svg"
 };
 
 function normalizeGamemode(name){
