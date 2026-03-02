@@ -593,6 +593,10 @@ opacity:.7;
    LEADERBOARD HEADER
 ================================ */
 
+/* ===============================
+   LEADERBOARD HEADER (FIXED)
+================================ */
+
 .leaderboard-header{
 display:flex;
 align-items:center;
@@ -606,9 +610,12 @@ color:#6f7aa5;
 font-weight:700;
 }
 
+/* MUST MATCH PLAYER CARD */
+
 .leaderboard-header .col-rank{
 width:70px;
-text-align:left;
+display:flex;
+align-items:center;
 }
 
 .leaderboard-header .col-player{
@@ -618,10 +625,12 @@ min-width:0;
 
 .leaderboard-header .col-region{
 width:90px;
-text-align:center;
+display:flex;
+justify-content:center;
 }
 
 .leaderboard-header .col-tiers{
 width:320px;
-text-align:left;
+display:flex;
+align-items:center;
 }
