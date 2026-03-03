@@ -82,6 +82,7 @@ return Object.values(data)
 function renderLeaderboard(players){
 const container=document.getElementById("leaderboard");
 container.innerHTML="";
+document.querySelector(".leaderboard-header")?.classList.remove("hidden");
 
 players.forEach((player,index)=>{
 
@@ -125,14 +126,80 @@ container.appendChild(row);
 applySearchFilter();
 }
 
+function renderTierMenu(players,mode){
+const container=document.getElementById("leaderboard");
+container.innerHTML="";
+document.querySelector(".leaderboard-header")?.classList.add("hidden");
+
+const tierMenu=document.createElement("div");
+tierMenu.className="tier-menu-grid";
+
+[1,2,3,4,5].forEach(tierNumber=>{
+const tierColumn=document.createElement("section");
+tierColumn.className=`tier-menu-column tier-${tierNumber}`;
+
+const title=document.createElement("h3");
+title.className="tier-menu-title";
+title.textContent=`Tier ${tierNumber}`;
+tierColumn.appendChild(title);
+
+const playersInTier=players
+.filter(player=>{
+const tier=getTierForMode(player,mode);
+if(!tier) return false;
+
+const normalizedTier=tier.toUpperCase();
+const isAllowedPrefix=normalizedTier.startsWith("HT") || normalizedTier.startsWith("LT");
+
+return isAllowedPrefix && normalizedTier.endsWith(String(tierNumber));
+})
+.sort((a,b)=>b.total_points-a.total_points);
+
+if(!playersInTier.length){
+const empty=document.createElement("div");
+empty.className="tier-empty";
+empty.textContent="No players";
+tierColumn.appendChild(empty);
+}else{
+playersInTier.forEach(player=>{
+const tier=getTierForMode(player,mode);
+const card=document.createElement("article");
+card.className="tier-player-card";
+card.dataset.username=player.mc_username.toLowerCase();
+
+card.innerHTML=`
+<div class="tier-player-main">
+<img class="tier-player-skin" src="https://render.crafty.gg/3d/bust/${player.mc_username}" alt="${player.mc_username}">
+<div class="tier-player-meta">
+<h4>${player.mc_username}</h4>
+<p>${tier} • ${player.total_points} pts</p>
+</div>
+</div>
+<div class="region tier-region region-${player.region}">${player.region}</div>
+`;
+
+card.addEventListener("click",()=>openPlayerModal(player));
+tierColumn.appendChild(card);
+});
+}
+
+tierMenu.appendChild(tierColumn);
+});
+
+container.appendChild(tierMenu);
+applySearchFilter();
+}
+
 function applyModeFilter(mode){
 currentMode=mode;
 
-const players=(mode==="overall")
-? [...allPlayersData]
-: allPlayersData.filter(player=>getTierForMode(player,mode));
+if(mode==="overall"){
+renderLeaderboard([...allPlayersData]);
+return;
+}
 
-renderLeaderboard(players);
+const players=allPlayersData.filter(player=>getTierForMode(player,mode));
+renderTierMenu(players,mode);
 }
 
 /* ===============================
@@ -230,7 +297,7 @@ function applySearchFilter(){
 if(!searchInput) return;
 
 const query=searchInput.value.trim().toLowerCase();
-const players=document.querySelectorAll(".player");
+const players=document.querySelectorAll(".player, .tier-player-card");
 
 players.forEach(player=>{
 const name=player.dataset.username || "";
