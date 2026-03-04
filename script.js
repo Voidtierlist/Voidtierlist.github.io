@@ -52,6 +52,16 @@ const COMBAT_RANKS = [
 { minPoints: 0, title: "Rookie", icon: "https://mctiers.com/titles/rookie.svg" }
 ];
 
+const COMBAT_RANK_THEMES = {
+"Combat Grandmaster":"gold",
+"Combat Master":"yellow",
+"Combat Ace":"red",
+"Combat Specialist":"purple",
+"Combat Cadet":"blue",
+"Combat Novice":"indigo",
+"Rookie":"gray"
+};
+
 function normalizeGamemode(name){
 return name
 .toLowerCase()
@@ -311,8 +321,26 @@ document.getElementById("modal-skin").src=
 const pos=allPlayersData.findIndex(
 p=>p.mc_username===player.mc_username)+1;
 
-document.getElementById("modal-position")
-.textContent=`#${pos} Overall • ${player.total_points} Points`;
+const rank=getCombatRank(player.total_points || 0);
+const rankTheme=COMBAT_RANK_THEMES[rank.title] || "gray";
+
+const modalCombatRank=document.getElementById("modal-combat-rank");
+const modalCombatRankIcon=document.getElementById("modal-combat-rank-icon");
+const modalCombatRankTitle=document.getElementById("modal-combat-rank-title");
+
+if(hasAnyGamemode(player)){
+modalCombatRank.className=`modal-combat-rank rank-theme-${rankTheme}`;
+modalCombatRankIcon.src=rank.icon;
+modalCombatRankIcon.alt=`${rank.title} icon`;
+modalCombatRankTitle.textContent=rank.title;
+}else{
+modalCombatRank.className="modal-combat-rank hidden";
+}
+
+document.getElementById("modal-position").innerHTML=`
+<span class="modal-position-rank">${pos}.</span>
+<span class="modal-position-overall">🏆 OVERALL</span>
+<span class="modal-position-points">(${player.total_points} points)</span>`;
 
 const tiersHTML=createTiersHTML(player);
 
