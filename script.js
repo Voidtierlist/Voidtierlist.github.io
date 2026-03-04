@@ -221,7 +221,10 @@ card.innerHTML=`
 <p>${tier} • ${player.total_points} pts</p>
 </div>
 </div>
+<div class="tier-region-wrap">
+<div class="tier-region-label">REGION</div>
 <div class="region tier-region region-${player.region}">${player.region}</div>
+</div>
 `;
 
 card.addEventListener("click",()=>openPlayerModal(player));
