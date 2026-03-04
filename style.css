@@ -240,16 +240,48 @@ display:flex;align-items:center;justify-content:center;
 
 .info-text .not-tested{font-size:15px;color:var(--accent);font-weight:700}
 
-#playerModal{position:fixed;inset:0;background:rgba(5,10,20,.86);backdrop-filter:blur(6px);display:flex;justify-content:center;align-items:center}
+#playerModal{position:fixed;inset:0;background:rgba(5,10,20,.86);backdrop-filter:blur(6px);display:flex;justify-content:center;align-items:center;padding:20px}
 .hidden{display:none!important}
-.modal-card{background:#111b2f;border:1px solid #1b2e4f;padding:32px;border-radius:16px;width:420px;text-align:center;position:relative}
-.close{position:absolute;right:18px;top:12px;font-size:24px;cursor:pointer}
-.modal-avatar{width:110px;border-radius:50%;border:3px solid #f2c55d}
-.modal-region-label{margin-top:4px;font-size:11px;letter-spacing:.12em;color:#6f84ad;font-weight:800}
-.modal-region{margin:6px 0 10px;color:#91a5cb;font-weight:700}
-.modal-position{margin-bottom:18px}
-.modal-tiers{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.modal-card{background:linear-gradient(180deg,#0b1730 0%,#081326 100%);border:1px solid #1b2e4f;padding:28px 22px 18px;border-radius:24px;width:min(520px,100%);text-align:center;position:relative;display:flex;flex-direction:column;align-items:center;gap:14px}
+.close{position:absolute;right:18px;top:14px;width:48px;height:48px;border-radius:50%;background:#182a46;color:#9fb0cc;display:flex;align-items:center;justify-content:center;font-size:34px;line-height:1;cursor:pointer}
+.modal-avatar{width:116px;height:116px;border-radius:50%;border:3px solid #7e92b7;background:#172946;object-fit:contain}
+#modal-name{margin:0;font-size:48px;max-width:100%;font-weight:800;line-height:1;overflow-wrap:anywhere}
+.modal-combat-rank{display:flex;align-items:center;gap:10px;padding:10px 18px;border-radius:999px;font-size:36px;font-weight:700;line-height:1.1}
+.modal-combat-rank-icon{width:30px;height:30px;object-fit:contain;flex-shrink:0}
+.rank-theme-gold{background:#4a4725;color:#f0d54d}
+.rank-theme-yellow{background:#595a2f;color:#ffd74c}
+.rank-theme-red{background:#662645;color:#ff9ea8}
+.rank-theme-purple{background:#4d3d6f;color:#dab3ff}
+.rank-theme-blue{background:#36427c;color:#c0c9ff}
+.rank-theme-indigo{background:#4d537a;color:#d5cbff}
+.rank-theme-gray{background:#3e495e;color:#cad3e2}
+.modal-region{margin:0;color:#223558;font-size:44px;font-weight:800;line-height:1.1}
+.modal-section-title{width:100%;text-align:left;color:#bec9db;font-size:42px;font-weight:500;line-height:1;margin-top:8px}
+.modal-position{width:100%;display:flex;align-items:center;border:2px solid #274066;border-radius:14px;overflow:hidden;background:#0f1d34;min-height:74px}
+.modal-position-rank{padding:0 18px;min-width:130px;background:linear-gradient(120deg,#95a8b2 0%,#95a8b2 78%,#7f939e 79%,#7f939e 100%);font-size:54px;font-style:italic;font-weight:900;color:#f5f7fb;display:flex;align-items:center;justify-content:center}
+.modal-position-overall{padding:0 16px;font-size:47px;font-weight:800;color:#fff;display:flex;align-items:center;gap:6px;flex-shrink:0}
+.modal-position-points{font-size:43px;color:#95abcf;font-weight:700;margin-left:auto;padding-right:16px;white-space:nowrap}
+.modal-tiers{width:100%;display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:8px;padding:12px;border:2px solid #284166;border-radius:14px;background:#0f1d34}
+.modal-tiers .tier-circle{min-width:0}
+.modal-tiers .tier-bubble{width:46px;height:46px}
+.modal-tiers .tier-bubble img{width:24px;height:24px}
+.modal-tiers .tier-label{font-size:28px}
 .not-tested-badge{margin-top:8px;padding:6px 10px;border-radius:8px;background:rgba(250,204,21,.12);border:1px solid rgba(250,204,21,.4);color:#facc15;font-size:12px;font-weight:700}
+
+@media (max-width: 700px){
+#modal-name{font-size:34px}
+.modal-combat-rank{font-size:24px;padding:8px 14px}
+.modal-combat-rank-icon{width:22px;height:22px}
+.modal-region{font-size:34px}
+.modal-section-title{font-size:36px}
+.modal-position{min-height:62px}
+.modal-position-rank{min-width:100px;font-size:42px}
+.modal-position-overall{font-size:34px}
+.modal-position-points{font-size:30px}
+.modal-tiers .tier-bubble{width:38px;height:38px}
+.modal-tiers .tier-bubble img{width:20px;height:20px}
+.modal-tiers .tier-label{font-size:22px}
+}
 
 .tier-menu-grid{
 display:grid;
