@@ -243,7 +243,8 @@ display:flex;align-items:center;justify-content:center;
 .modal-card{background:#111b2f;border:1px solid #1b2e4f;padding:32px;border-radius:16px;width:420px;text-align:center;position:relative}
 .close{position:absolute;right:18px;top:12px;font-size:24px;cursor:pointer}
 .modal-avatar{width:110px;border-radius:50%;border:3px solid #f2c55d}
-.modal-region{margin:10px 0;color:#91a5cb;font-weight:700}
+.modal-region-label{margin-top:4px;font-size:11px;letter-spacing:.12em;color:#6f84ad;font-weight:800}
+.modal-region{margin:6px 0 10px;color:#91a5cb;font-weight:700}
 .modal-position{margin-bottom:18px}
 .modal-tiers{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
 .not-tested-badge{margin-top:8px;padding:6px 10px;border-radius:8px;background:rgba(250,204,21,.12);border:1px solid rgba(250,204,21,.4);color:#facc15;font-size:12px;font-weight:700}
@@ -310,6 +311,10 @@ transition:transform .2s ease;
 .tier-player-meta{min-width:0}
 .tier-player-meta h4{margin:0;font-size:clamp(16px,1.1vw,21px);font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .tier-player-meta p{margin:2px 0 0;font-size:11px;color:#88a2cb;font-weight:600}
+
+
+.tier-region-wrap{display:flex;flex-direction:column;align-items:center;gap:4px}
+.tier-region-label{font-size:10px;letter-spacing:.11em;color:#6f84ad;font-weight:800}
 
 .tier-region{min-width:44px;padding:5px 8px;font-size:12px}
 
