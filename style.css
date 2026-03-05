@@ -267,12 +267,12 @@ display:flex;align-items:center;justify-content:center;
 
 #playerModal{position:fixed;inset:0;background:rgba(5,10,20,.86);backdrop-filter:blur(6px);display:flex;justify-content:center;align-items:center;padding:clamp(10px,2.5vh,20px)}
 .hidden{display:none!important}
-.modal-card{background:linear-gradient(180deg,#0b1730 0%,#081326 100%);border:1px solid #1b2e4f;padding:clamp(12px,2.5vw,16px);border-radius:24px;width:min(460px,100%);max-width:460px;max-height:calc(100vh - clamp(20px,5vh,40px));text-align:center;position:relative;display:flex;flex-direction:column;align-items:center;gap:8px;overflow-y:auto;overflow-x:hidden}
-.close{position:absolute;right:12px;top:10px;width:40px;height:40px;border-radius:50%;background:#182a46;color:#9fb0cc;display:flex;align-items:center;justify-content:center;font-size:28px;line-height:1;cursor:pointer}
-.modal-avatar{width:92px;height:92px;border-radius:50%;border:3px solid #dbb542;background:#172946;object-fit:contain}
-#modal-name{margin:0;font-size:clamp(34px,6vw,54px);max-width:100%;font-weight:800;line-height:.95;overflow-wrap:anywhere}
-.modal-combat-rank{display:flex;align-items:center;gap:7px;padding:7px 14px;border-radius:999px;font-size:clamp(24px,4.5vw,30px);font-weight:700;line-height:1.05}
-.modal-combat-rank-icon{width:22px;height:22px;object-fit:contain;flex-shrink:0}
+.modal-card{background:linear-gradient(180deg,#0b1730 0%,#081326 100%);border:1px solid #1b2e4f;padding:clamp(18px,2.8vw,24px);border-radius:24px;width:min(470px,100%);max-width:470px;max-height:calc(100vh - clamp(20px,5vh,40px));text-align:center;position:relative;display:flex;flex-direction:column;align-items:center;gap:11px;overflow-y:auto;overflow-x:hidden}
+.close{position:absolute;right:14px;top:14px;width:46px;height:46px;border-radius:50%;background:#182a46;color:#9fb0cc;display:flex;align-items:center;justify-content:center;font-size:32px;line-height:1;cursor:pointer}
+.modal-avatar{width:98px;height:98px;border-radius:50%;border:2px solid #dbb542;background:#172946;object-fit:contain}
+#modal-name{margin:4px 0 0;font-size:clamp(46px,5.2vw,54px);max-width:100%;font-weight:800;line-height:.96;overflow-wrap:anywhere}
+.modal-combat-rank{display:flex;align-items:center;gap:6px;padding:7px 16px;border-radius:999px;font-size:clamp(18px,3vw,31px);font-weight:700;line-height:1.05}
+.modal-combat-rank-icon{width:20px;height:20px;object-fit:contain;flex-shrink:0}
 .rank-theme-gold{background:#4a4725;color:#f0d54d}
 .rank-theme-yellow{background:#595a2f;color:#ffd74c}
 .rank-theme-red{background:#662645;color:#ff9ea8}
@@ -280,18 +280,18 @@ display:flex;align-items:center;justify-content:center;
 .rank-theme-blue{background:#36427c;color:#c0c9ff}
 .rank-theme-indigo{background:#4d537a;color:#d5cbff}
 .rank-theme-gray{background:#3e495e;color:#cad3e2}
-.modal-region{margin:0;color:#223558;font-size:clamp(26px,5vw,34px);font-weight:800;line-height:1}
-.modal-section-title{width:100%;text-align:left;color:#bec9db;font-size:clamp(28px,5vw,38px);font-weight:500;line-height:1;margin-top:6px}
-.modal-position{width:100%;display:grid;grid-template-columns:auto 1fr auto;align-items:center;border:2px solid #274066;border-radius:12px;overflow:hidden;background:#0f1d34;min-height:58px;min-width:0}
-.modal-position-rank{padding:0 14px;min-width:96px;background:linear-gradient(120deg,#95a8b2 0%,#95a8b2 78%,#7f939e 79%,#7f939e 100%);font-size:clamp(34px,7vw,44px);font-style:italic;font-weight:900;color:#f5f7fb;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.modal-position-overall{padding:0 8px;font-size:clamp(22px,4.6vw,30px);font-weight:800;color:#fff;display:flex;align-items:center;gap:7px;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.modal-overall-icon{width:26px;height:26px;object-fit:contain;flex-shrink:0}
-.modal-position-points{font-size:clamp(15px,3.2vw,22px);color:#95abcf;font-weight:700;padding-right:10px;white-space:nowrap;flex-shrink:0;line-height:1}
-.modal-tiers{width:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(68px,1fr));gap:6px;padding:8px;border:2px solid #284166;border-radius:12px;background:#0f1d34;min-width:0}
+.modal-region{margin:3px 0 8px;color:#223558;font-size:clamp(19px,3.1vw,31px);font-weight:800;line-height:1}
+.modal-section-title{width:100%;text-align:left;color:#bec9db;font-size:clamp(24px,4vw,35px);font-weight:500;line-height:1;margin-top:2px}
+.modal-position{width:100%;display:grid;grid-template-columns:auto 1fr auto;align-items:center;border:2px solid #274066;border-radius:12px;overflow:hidden;background:#0f1d34;min-height:52px;min-width:0}
+.modal-position-rank{padding:0 13px;min-width:90px;background:linear-gradient(120deg,#95a8b2 0%,#95a8b2 78%,#7f939e 79%,#7f939e 100%);font-size:clamp(24px,4.5vw,36px);font-style:italic;font-weight:900;color:#f5f7fb;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.modal-position-overall{padding:0 8px;font-size:clamp(16px,2.8vw,26px);font-weight:800;color:#fff;display:flex;align-items:center;gap:6px;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.modal-overall-icon{width:22px;height:22px;object-fit:contain;flex-shrink:0}
+.modal-position-points{font-size:clamp(14px,2.2vw,20px);color:#95abcf;font-weight:700;padding-right:10px;white-space:nowrap;flex-shrink:0;line-height:1}
+.modal-tiers{width:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(62px,1fr));gap:5px;padding:8px 10px;border:2px solid #284166;border-radius:12px;background:#0f1d34;min-width:0}
 .modal-tiers .tier-circle{min-width:0}
-.modal-tiers .tier-bubble{width:40px;height:40px}
-.modal-tiers .tier-bubble img{width:20px;height:20px}
-.modal-tiers .tier-label{font-size:clamp(20px,4.1vw,24px)}
+.modal-tiers .tier-bubble{width:34px;height:34px}
+.modal-tiers .tier-bubble img{width:16px;height:16px}
+.modal-tiers .tier-label{font-size:clamp(16px,2.4vw,20px)}
 .modal-position-rank.top-1{background:linear-gradient(120deg,#f8d66b 0%,#f3c540 76%,#dfaf2b 77%,#dfaf2b 100%);color:#fff4cc}
 .modal-position-rank.top-2{background:linear-gradient(120deg,#d7e2eb 0%,#c3d1dc 76%,#9aa9b5 77%,#9aa9b5 100%);color:#f5f9ff}
 .modal-position-rank.top-3{background:linear-gradient(120deg,#e4a563 0%,#cf8442 76%,#a15d2b 77%,#a15d2b 100%);color:#fff1df}
