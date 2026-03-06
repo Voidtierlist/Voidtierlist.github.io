@@ -28,8 +28,8 @@ display:grid;
 grid-template-columns:auto 1fr auto;
 align-items:center;
 gap:20px;
-height:82px;
-padding:0 20px;
+min-height:96px;
+padding:10px 20px;
 border-radius:16px;
 background:rgba(8,17,33,.88);
 border:1px solid #122344;
@@ -44,7 +44,7 @@ line-height:1;
 
 .logo img{
 display:block;
-height:190px;
+height:clamp(76px,9vw,112px);
 width:auto;
 max-width:340px;
 object-fit:contain;
