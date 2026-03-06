@@ -531,5 +531,16 @@
                 "points": 3
             }
         }
+    },
+    "1350371142438879313": {
+        "mc_username": "TN_OP_E",
+        "region": "AS",
+        "total_points": 4,
+        "gamemodes": {
+            "crystal": {
+                "tier": "HT4",
+                "points": 4
+            }
+        }
     }
 }
