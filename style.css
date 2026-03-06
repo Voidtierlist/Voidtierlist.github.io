@@ -36,16 +36,17 @@ box-shadow:0 18px 40px rgba(0,0,0,.35);
 }
 
 .logo{
-font-size:24px;
-font-weight:900;
+display:flex;
+align-items:center;
 line-height:1;
-letter-spacing:.02em;
-text-transform:uppercase;
-background:linear-gradient(180deg,#4af66f 0%,#f7d750 35%,#ef9a3e 64%,#6f431f 100%);
--webkit-background-clip:text;
-background-clip:text;
--webkit-text-fill-color:transparent;
-text-shadow:0 6px 12px rgba(0,0,0,.45);
+}
+
+.logo img{
+display:block;
+height:40px;
+width:auto;
+max-width:220px;
+object-fit:contain;
 }
 
 .nav-links{display:flex;gap:24px}
