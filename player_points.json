@@ -49,7 +49,7 @@
         }
     },
     "1419698501285052487": {
-        "mc_username": "Damou45",
+        "mc_username": "Damous45",
         "region": "EU",
         "total_points": 0,
         "gamemodes": {}
@@ -100,21 +100,17 @@
     "1328960846210007127": {
         "mc_username": "Noman0404",
         "region": "AS",
-        "total_points": 5,
+        "total_points": 4,
         "gamemodes": {
-            "mace": {
-                "tier": "HT5",
-                "points": 2
-            },
             "sword": {
                 "tier": "LT5",
                 "points": 1
             },
-            "crystal": {
-                "tier": "LT5",
-                "points": 1
+            "mace": {
+                "tier": "HT5",
+                "points": 2
             },
-            "smp": {
+            "crystal": {
                 "tier": "LT5",
                 "points": 1
             }
@@ -286,6 +282,10 @@
                 "tier": "LT3",
                 "points": 6
             },
+            "axe": {
+                "tier": "HT4",
+                "points": 4
+            },
             "sword": {
                 "tier": "LT3",
                 "points": 6
@@ -293,14 +293,6 @@
             "mace": {
                 "tier": "HT5",
                 "points": 2
-            },
-            "diamond pot": {
-                "tier": "LT3",
-                "points": 6
-            },
-            "axe": {
-                "tier": "HT4",
-                "points": 4
             },
             "crystal": {
                 "tier": "LT4",
@@ -313,6 +305,10 @@
             "diamond smp": {
                 "tier": "HT4",
                 "points": 4
+            },
+            "diamond pot": {
+                "tier": "LT3",
+                "points": 6
             },
             "SMP": {
                 "tier": "HT4",
@@ -334,7 +330,7 @@
     },
     "1383041794572550228": {
         "mc_username": "itz_pillii",
-        "region": "WAT",
+        "region": "EU",
         "total_points": 0,
         "gamemodes": {}
     },
@@ -408,6 +404,10 @@
                 "tier": "LT4",
                 "points": 3
             },
+            "crystal": {
+                "tier": "LT4",
+                "points": 3
+            },
             "uhc": {
                 "tier": "HT4",
                 "points": 4
@@ -417,10 +417,6 @@
                 "points": 4
             },
             "diamond pot": {
-                "tier": "LT4",
-                "points": 3
-            },
-            "crystal": {
                 "tier": "LT4",
                 "points": 3
             },
@@ -445,7 +441,7 @@
     "1085913320336396419": {
         "mc_username": "AD_Sami220",
         "region": "AS",
-        "total_points": 38,
+        "total_points": 18,
         "gamemodes": {
             "nethpot": {
                 "tier": "LT3",
@@ -455,38 +451,26 @@
                 "tier": "LT3",
                 "points": 6
             },
-            "crystal": {
-                "tier": "HT4",
-                "points": 4
-            },
-            "diamond pot": {
-                "tier": "HT3",
-                "points": 10
-            },
             "SMP": {
-                "tier": "LT3",
-                "points": 6
-            },
-            "mace": {
                 "tier": "LT3",
                 "points": 6
             }
         }
     },
     "953199568516960326": {
-        "mc_username": "ht3_Sachin1",
+        "mc_username": "RespawnAgain_",
         "region": "AS",
         "total_points": 22,
         "gamemodes": {
+            "nethpot": {
+                "tier": "LT3",
+                "points": 6
+            },
             "sword": {
                 "tier": "HT3",
                 "points": 10
             },
             "mace": {
-                "tier": "LT3",
-                "points": 6
-            },
-            "nethpot": {
                 "tier": "LT3",
                 "points": 6
             }
