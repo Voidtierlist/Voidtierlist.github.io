@@ -100,11 +100,11 @@
     "1328960846210007127": {
         "mc_username": "Noman0404",
         "region": "AS",
-        "total_points": 3,
+        "total_points": 4,
         "gamemodes": {
             "mace": {
-                "tier": "LT5",
-                "points": 1
+                "tier": "HT5",
+                "points": 2
             },
             "sword": {
                 "tier": "LT5",
