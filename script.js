@@ -647,6 +647,18 @@ searchDebounceTimer=setTimeout(applySearchFilter,150);
 });
 }
 
+document.addEventListener("keydown",(event)=>{
+const isSlashKey=event.key==="/";
+const focusedTag=document.activeElement?.tagName;
+const isTypingField=focusedTag==="INPUT" || focusedTag==="TEXTAREA" || document.activeElement?.isContentEditable;
+
+if(!isSlashKey || isTypingField || !searchInput) return;
+
+event.preventDefault();
+searchInput.focus();
+searchInput.select();
+});
+
 function attachGoldParticles(scope=document){
 const sources=scope.querySelectorAll(".gold-particle-source");
 
