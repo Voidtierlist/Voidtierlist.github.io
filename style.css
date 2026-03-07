@@ -396,10 +396,10 @@ z-index:0;
 .not-tested-badge{margin-top:8px;padding:6px 10px;border-radius:8px;background:rgba(250,204,21,.12);border:1px solid rgba(250,204,21,.4);color:#facc15;font-size:12px;font-weight:700}
 
 @keyframes rank-shine-sweep{
-0%{transform:translateX(-170%);opacity:0}
-15%{opacity:.92}
-70%{opacity:.4}
-100%{transform:translateX(185%);opacity:0}
+0%{transform:translateX(-100%);opacity:0}
+12%{opacity:.92}
+82%{opacity:.32}
+100%{transform:translateX(100%);opacity:0}
 }
 
 @media (max-width: 700px){
