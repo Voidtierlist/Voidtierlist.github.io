@@ -445,7 +445,7 @@
     "1085913320336396419": {
         "mc_username": "AD_Sami220",
         "region": "AS",
-        "total_points": 31,
+        "total_points": 35,
         "gamemodes": {
             "nethpot": {
                 "tier": "LT3",
@@ -470,6 +470,10 @@
             "SMP": {
                 "tier": "LT3",
                 "points": 6
+            },
+            "crystal": {
+                "tier": "HT4",
+                "points": 4
             }
         }
     },
