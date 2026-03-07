@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Void Tierlist - Testers</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="page testers-page">
+    <div class="topbar">
+        <div class="logo">
+            <img src="https://ik.imagekit.io/tb4zlfjcb/voidtierlist%20logo.png" alt="Void Tierlist logo">
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">
+                <img src="https://mctiers.com/nav_icons/home-muted.svg" alt="Home icon" aria-hidden="true">
+                <span>Home</span>
+            </a>
+            <a href="index.html" class="nav-link">
+                <img src="https://mctiers.com/nav_icons/rankings.svg" alt="Rankings icon" aria-hidden="true">
+                <span>Rankings</span>
+            </a>
+            <a href="https://dc.gg/voidtierlist" target="_blank" rel="noopener noreferrer" class="nav-link">
+                <img src="https://mctiers.com/nav_icons/discord.svg" alt="Discord icon" aria-hidden="true">
+                <span>Discord</span>
+            </a>
+            <a href="testers.html" class="nav-link active">
+                <img src="https://mctiers.com/nav_icons/search.svg" alt="Testers icon" aria-hidden="true">
+                <span>Testers</span>
+            </a>
+        </div>
+
+        <div class="nav-right">
+            <div class="search-wrapper">
+                <img src="https://mctiers.com/nav_icons/search.svg" alt="Search" aria-hidden="true" class="search-icon">
+                <input type="text" id="testerSearchInput" placeholder="Search testers...">
+            </div>
+        </div>
+    </div>
+
+    <section class="testers-header">
+        <h1>🏆 Testers</h1>
+        <div class="testers-stats">
+            <div class="status-pill"><span class="dot online"></span><span id="onlineCount">0 Online</span></div>
+            <div class="status-pill">Total: <strong id="totalCount">0</strong></div>
+        </div>
+    </section>
+
+    <div class="divider-line"></div>
+
+    <section id="testersGrid" class="testers-grid" aria-live="polite"></section>
+</div>
+
+<script src="testers.js"></script>
+</body>
+</html>
