@@ -572,11 +572,15 @@
     "1238791706745503795": {
         "mc_username": "ZedzorOwner18",
         "region": "AS",
-        "total_points": 3,
+        "total_points": 4,
         "gamemodes": {
             "nethpot": {
                 "tier": "LT4",
                 "points": 3
+            },
+            "diamond pot": {
+                "tier": "LT5",
+                "points": 1
             }
         }
     }
