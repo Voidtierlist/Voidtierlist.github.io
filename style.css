@@ -915,14 +915,14 @@ flex-shrink: 0;
 }
 
 .testers-page .search-wrapper #testerSearchInput{
-width:300px;
-height:42px;
-border-radius:14px;
+width:250px;
+height:36px;
+border-radius:12px;
 background:#0b172c;
 border:1px solid #284267;
 color:#d6e4ff;
-padding:0 16px 0 42px;
-font-size:28px;
+padding:0 14px 0 38px;
+font-size:18px;
 font-family:var(--font-display);
 font-weight:600;
 transition:border-color .24s ease-in-out,box-shadow .24s ease-in-out,background .24s ease-in-out;
@@ -935,9 +935,9 @@ background:#0c1b33;
 }
 
 .testers-page .search-wrapper .search-icon{
-left:14px;
-width:18px;
-height:18px;
+left:12px;
+width:16px;
+height:16px;
 opacity:.92;
 }
 
