@@ -104,9 +104,11 @@ return `${rankingsPath}/${mode}`;
 
 function syncModeInUrl(mode,{replace=false}={}){
 const nextPath=buildPathForMode(mode);
-const currentPath=normalizePath(window.location.pathname);
+const currentPath=window.location.pathname || "/";
+const normalizedCurrentPath=normalizePath(currentPath);
 
 if(currentPath===nextPath) return;
+if(normalizedCurrentPath===nextPath && !currentPath.endsWith("/")) return;
 
 const nextState={mode};
 if(replace){
