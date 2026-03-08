@@ -598,5 +598,16 @@
                 "points": 3
             }
         }
+    },
+    "1291679137668268034": {
+        "mc_username": "Crexen_",
+        "region": "AS",
+        "total_points": 3,
+        "gamemodes": {
+            "uhc": {
+                "tier": "LT4",
+                "points": 3
+            }
+        }
     }
 }
