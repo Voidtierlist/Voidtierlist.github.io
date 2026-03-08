@@ -153,12 +153,22 @@ gap:14px;
 .mobile-nav-drawer.is-open{transform:translateX(0)}
 
 .mobile-nav-drawer a{
+display:flex;
+align-items:center;
+gap:10px;
 text-decoration:none;
 color:#cfe0ff;
 font-weight:700;
 font-size:18px;
 padding:10px 8px;
 border-radius:10px;
+}
+
+.mobile-nav-drawer a img{
+width:18px;
+height:18px;
+object-fit:contain;
+opacity:.95;
 }
 
 .mobile-nav-drawer a.active{background:#112746;color:#fff}
