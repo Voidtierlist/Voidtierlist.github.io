@@ -568,5 +568,16 @@
         "region": "AS",
         "total_points": 0,
         "gamemodes": {}
+    },
+    "1238791706745503795": {
+        "mc_username": "ZedzorOwner18",
+        "region": "AS",
+        "total_points": 3,
+        "gamemodes": {
+            "nethpot": {
+                "tier": "LT4",
+                "points": 3
+            }
+        }
     }
 }
