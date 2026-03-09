@@ -331,8 +331,13 @@
     "911943905405190205": {
         "mc_username": "LastR3venge",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 3,
+        "gamemodes": {
+            "nethpot": {
+                "tier": "LT4",
+                "points": 3
+            }
+        }
     },
     "1015604669118156830": {
         "mc_username": "ThePhant0mV0id",
