@@ -702,7 +702,7 @@
     "1434456611002257418": {
         "mc_username": "ShulkerRoom",
         "region": "EU",
-        "total_points": 11,
+        "total_points": 14,
         "gamemodes": {
             "axe": {
                 "tier": "HT4",
@@ -715,6 +715,10 @@
             "crystal": {
                 "tier": "HT4",
                 "points": 4
+            },
+            "mace": {
+                "tier": "LT4",
+                "points": 3
             }
         }
     },
