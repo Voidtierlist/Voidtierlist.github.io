@@ -114,7 +114,7 @@
                 "tier": "LT5",
                 "points": 1
             },
-            "SMP": {
+            "smp": {
                 "tier": "LT5",
                 "points": 1
             }
@@ -318,7 +318,7 @@
                 "tier": "LT3",
                 "points": 6
             },
-            "SMP": {
+            "smp": {
                 "tier": "HT4",
                 "points": 4
             }
@@ -356,7 +356,7 @@
     "1372098282863726646": {
         "mc_username": "xMewgical",
         "region": "AS",
-        "total_points": 10,
+        "total_points": 6,
         "gamemodes": {
             "sword": {
                 "tier": "HT4",
@@ -365,10 +365,6 @@
             "crystal": {
                 "tier": "HT5",
                 "points": 2
-            },
-            "uhc": {
-                "tier": "HT4",
-                "points": 4
             }
         }
     },
@@ -432,7 +428,7 @@
                 "tier": "LT3",
                 "points": 6
             },
-            "SMP": {
+            "smp": {
                 "tier": "HT4",
                 "points": 4
             }
@@ -467,6 +463,10 @@
                 "tier": "HT4",
                 "points": 4
             },
+            "crystal": {
+                "tier": "HT4",
+                "points": 4
+            },
             "uhc": {
                 "tier": "LT4",
                 "points": 3
@@ -475,18 +475,14 @@
                 "tier": "LT3",
                 "points": 6
             },
-            "SMP": {
+            "smp": {
                 "tier": "LT3",
                 "points": 6
-            },
-            "crystal": {
-                "tier": "HT4",
-                "points": 4
             }
         }
     },
     "953199568516960326": {
-        "mc_username": "RespawnAgain_",
+        "mc_username": "ht3_sachin1",
         "region": "AS",
         "total_points": 22,
         "gamemodes": {
@@ -582,10 +578,6 @@
                 "tier": "LT4",
                 "points": 3
             },
-            "diamond pot": {
-                "tier": "LT5",
-                "points": 1
-            },
             "sword": {
                 "tier": "LT5",
                 "points": 1
@@ -593,12 +585,16 @@
             "crystal": {
                 "tier": "HT5",
                 "points": 2
+            },
+            "diamond pot": {
+                "tier": "LT5",
+                "points": 1
             }
         }
     },
     "1347849097348124743": {
         "mc_username": "D3ya_TR",
-        "region": "AS",
+        "region": "NA",
         "total_points": 3,
         "gamemodes": {
             "sword": {
@@ -610,12 +606,8 @@
     "1291679137668268034": {
         "mc_username": "Crexen_",
         "region": "AS",
-        "total_points": 6,
+        "total_points": 3,
         "gamemodes": {
-            "uhc": {
-                "tier": "LT4",
-                "points": 3
-            },
             "crystal": {
                 "tier": "LT4",
                 "points": 3
@@ -632,5 +624,116 @@
                 "points": 6
             }
         }
+    },
+    "1439234876761968742": {
+        "mc_username": "dark_everest",
+        "region": "EU",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1376226301802975372": {
+        "mc_username": "PoleDoPokera_",
+        "region": "EU",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1178309268399726647": {
+        "mc_username": "_BetterSafi",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1375052782931021824": {
+        "mc_username": "v2v7049",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "871705510892699668": {
+        "mc_username": "LeadDevils",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1434456611002257418": {
+        "mc_username": "ShulkerRoom",
+        "region": "EU",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1037259086032539678": {
+        "mc_username": "trybeatingme",
+        "region": "SA",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1201843228228198430": {
+        "mc_username": "KInG_oP__",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1334861292812369984": {
+        "mc_username": "VISHGAMING687",
+        "region": "EU",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1067969997093212240": {
+        "mc_username": "mrpeanut2462",
+        "region": "NA",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1309110191047966722": {
+        "mc_username": "NotShadow_67",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1280130936138104940": {
+        "mc_username": "LostInWorld",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1163627145067765770": {
+        "mc_username": "Faithful_playz",
+        "region": "NA",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1394000999630504007": {
+        "mc_username": "UNFAZED_DEVEL",
+        "region": "AS",
+        "total_points": 34,
+        "gamemodes": {
+            "nethpot": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "axe": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "sword": {
+                "tier": "HT3",
+                "points": 10
+            },
+            "mace": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "crystal": {
+                "tier": "LT3",
+                "points": 6
+            }
+        }
+    },
+    "1379503229402087524": {
+        "mc_username": "Allahhhuakhbarrr",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
     }
 }
