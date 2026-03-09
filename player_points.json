@@ -690,8 +690,13 @@
     "1434456611002257418": {
         "mc_username": "ShulkerRoom",
         "region": "EU",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 4,
+        "gamemodes": {
+            "axe": {
+                "tier": "HT4",
+                "points": 4
+            }
+        }
     },
     "1037259086032539678": {
         "mc_username": "trybeatingme",
