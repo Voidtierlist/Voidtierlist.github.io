@@ -234,8 +234,13 @@
     "1252245620341604452": {
         "mc_username": "TurtleFaster",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 1,
+        "gamemodes": {
+            "nethpot": {
+                "tier": "LT5",
+                "points": 1
+            }
+        }
     },
     "1424711007565250650": {
         "mc_username": "lbbu",
