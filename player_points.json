@@ -877,11 +877,15 @@
     "1218230866036391966": {
         "mc_username": "_DarkSiderOP",
         "region": "AS",
-        "total_points": 3,
+        "total_points": 9,
         "gamemodes": {
             "nethpot": {
                 "tier": "LT4",
                 "points": 3
+            },
+            "sword": {
+                "tier": "LT3",
+                "points": 6
             }
         }
     },
