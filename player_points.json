@@ -388,7 +388,7 @@
     "1372098282863726646": {
         "mc_username": "xMewgical",
         "region": "AS",
-        "total_points": 16,
+        "total_points": 17,
         "gamemodes": {
             "sword": {
                 "tier": "LT3",
@@ -399,8 +399,8 @@
                 "points": 6
             },
             "crystal": {
-                "tier": "HT5",
-                "points": 2
+                "tier": "LT4",
+                "points": 3
             },
             "uhc": {
                 "tier": "HT5",
