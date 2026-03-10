@@ -602,11 +602,31 @@
     "1246396951814082648": {
         "mc_username": "VulkanDaGreat",
         "region": "AS",
-        "total_points": 10,
+        "total_points": 31,
         "gamemodes": {
             "nethpot": {
                 "tier": "HT3",
                 "points": 10
+            },
+            "sword": {
+                "tier": "HT4",
+                "points": 4
+            },
+            "crystal": {
+                "tier": "LT4",
+                "points": 3
+            },
+            "diamond smp": {
+                "tier": "HT4",
+                "points": 4
+            },
+            "diamond pot": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "smp": {
+                "tier": "HT4",
+                "points": 4
             }
         }
     },
