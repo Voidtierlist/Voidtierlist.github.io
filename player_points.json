@@ -721,11 +721,11 @@
     "1376226301802975372": {
         "mc_username": "PoleDoPokera_",
         "region": "EU",
-        "total_points": 38,
+        "total_points": 42,
         "gamemodes": {
             "axe": {
-                "tier": "LT3",
-                "points": 6
+                "tier": "HT3",
+                "points": 10
             },
             "sword": {
                 "tier": "LT2",
