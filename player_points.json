@@ -598,8 +598,13 @@
     "1246396951814082648": {
         "mc_username": "VulkanDaGreat",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 6,
+        "gamemodes": {
+            "nethpot": {
+                "tier": "LT3",
+                "points": 6
+            }
+        }
     },
     "1238791706745503795": {
         "mc_username": "ZedzorOwner18",
