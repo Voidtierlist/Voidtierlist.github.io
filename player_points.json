@@ -602,7 +602,7 @@
     "1246396951814082648": {
         "mc_username": "VulkanDaGreat",
         "region": "AS",
-        "total_points": 38,
+        "total_points": 40,
         "gamemodes": {
             "nethpot": {
                 "tier": "HT3",
@@ -613,8 +613,8 @@
                 "points": 3
             },
             "sword": {
-                "tier": "HT4",
-                "points": 4
+                "tier": "LT3",
+                "points": 6
             },
             "crystal": {
                 "tier": "LT4",
