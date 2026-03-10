@@ -351,8 +351,13 @@
     "1015604669118156830": {
         "mc_username": "ThePhant0mV0id",
         "region": "NA",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 6,
+        "gamemodes": {
+            "sword": {
+                "tier": "LT3",
+                "points": 6
+            }
+        }
     },
     "1383041794572550228": {
         "mc_username": "itz_pillii",
