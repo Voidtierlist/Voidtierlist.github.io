@@ -857,5 +857,16 @@
         "region": "AS",
         "total_points": 0,
         "gamemodes": {}
+    },
+    "1218230866036391966": {
+        "mc_username": "_DarkSiderOP",
+        "region": "AS",
+        "total_points": 3,
+        "gamemodes": {
+            "nethpot": {
+                "tier": "LT4",
+                "points": 3
+            }
+        }
     }
 }
