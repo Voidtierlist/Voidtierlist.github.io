@@ -538,9 +538,13 @@
     "1347794710194028567": {
         "mc_username": "Devilsggs",
         "region": "AS",
-        "total_points": 3,
+        "total_points": 6,
         "gamemodes": {
             "sword": {
+                "tier": "LT4",
+                "points": 3
+            },
+            "nethpot": {
                 "tier": "LT4",
                 "points": 3
             }
