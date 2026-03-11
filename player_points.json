@@ -871,11 +871,11 @@
     "1379503229402087524": {
         "mc_username": "Allahhhuakhbarrr",
         "region": "AS",
-        "total_points": 4,
+        "total_points": 3,
         "gamemodes": {
             "nethpot": {
-                "tier": "HT5",
-                "points": 2
+                "tier": "LT5",
+                "points": 1
             },
             "sword": {
                 "tier": "HT5",
