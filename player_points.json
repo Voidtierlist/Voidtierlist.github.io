@@ -169,8 +169,13 @@
     "1181643098137317451": {
         "mc_username": "ItzDracu",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 2,
+        "gamemodes": {
+            "mace": {
+                "tier": "HT5",
+                "points": 2
+            }
+        }
     },
     "1351866349520945212": {
         "mc_username": "TheDoomOfMC_",
