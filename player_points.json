@@ -880,6 +880,10 @@
             "sword": {
                 "tier": "HT5",
                 "points": 2
+            },
+            "mace": {
+                "tier": "N/A",
+                "points": 0
             }
         }
     },
