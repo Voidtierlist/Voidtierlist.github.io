@@ -772,8 +772,13 @@
     "1375052782931021824": {
         "mc_username": "v2v7049",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 3,
+        "gamemodes": {
+            "mace": {
+                "tier": "LT4",
+                "points": 3
+            }
+        }
     },
     "871705510892699668": {
         "mc_username": "LeadDevils",
