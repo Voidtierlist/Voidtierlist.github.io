@@ -104,7 +104,7 @@
     "1328960846210007127": {
         "mc_username": "Noman0404",
         "region": "AS",
-        "total_points": 5,
+        "total_points": 6,
         "gamemodes": {
             "sword": {
                 "tier": "LT5",
@@ -119,6 +119,10 @@
                 "points": 1
             },
             "smp": {
+                "tier": "LT5",
+                "points": 1
+            },
+            "nethpot": {
                 "tier": "LT5",
                 "points": 1
             }
