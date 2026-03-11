@@ -718,9 +718,13 @@
     "1439234876761968742": {
         "mc_username": "dark_everest",
         "region": "EU",
-        "total_points": 6,
+        "total_points": 12,
         "gamemodes": {
             "sword": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "axe": {
                 "tier": "LT3",
                 "points": 6
             }
