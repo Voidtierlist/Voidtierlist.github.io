@@ -576,7 +576,7 @@
     "1093072100870340650": {
         "mc_username": "Thunder_Furyy7",
         "region": "AS",
-        "total_points": 8,
+        "total_points": 14,
         "gamemodes": {
             "mace": {
                 "tier": "HT4",
@@ -585,6 +585,10 @@
             "nethpot": {
                 "tier": "HT4",
                 "points": 4
+            },
+            "crystal": {
+                "tier": "LT3",
+                "points": 6
             }
         }
     },
