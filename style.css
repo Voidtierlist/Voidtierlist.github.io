@@ -282,14 +282,15 @@ pointer-events:none;
 .topbar{
 grid-template-columns:minmax(0,1fr) auto;
 grid-template-areas:
-"logo menu"
+"menu menu"
+"logo logo"
 "search search";
 gap:10px 12px;
 padding:10px 12px;
 }
 
 .logo img{height:42px;max-width:140px}
-.logo{grid-area:logo}
+.logo{grid-area:logo;justify-self:center}
 .nav-links{display:none}
 .mobile-menu-toggle{display:inline-flex;align-items:center;justify-content:center;grid-area:menu;justify-self:end}
 
