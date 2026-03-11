@@ -1045,5 +1045,16 @@
                 "points": 1
             }
         }
+    },
+    "1373190397412642932": {
+        "mc_username": "ValueDaGreat",
+        "region": "AS",
+        "total_points": 6,
+        "gamemodes": {
+            "nethpot": {
+                "tier": "LT3",
+                "points": 6
+            }
+        }
     }
 }
