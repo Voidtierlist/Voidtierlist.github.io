@@ -871,7 +871,7 @@
     "1379503229402087524": {
         "mc_username": "Allahhhuakhbarrr",
         "region": "AS",
-        "total_points": 3,
+        "total_points": 6,
         "gamemodes": {
             "nethpot": {
                 "tier": "LT5",
@@ -882,8 +882,8 @@
                 "points": 2
             },
             "mace": {
-                "tier": "N/A",
-                "points": 0
+                "tier": "LT4",
+                "points": 3
             }
         }
     },
