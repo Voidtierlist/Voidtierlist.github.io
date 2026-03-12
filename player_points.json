@@ -935,11 +935,15 @@
     "1384823976898854923": {
         "mc_username": "SlicerX1",
         "region": "AS",
-        "total_points": 2,
+        "total_points": 3,
         "gamemodes": {
             "nethpot": {
                 "tier": "HT5",
                 "points": 2
+            },
+            "sword": {
+                "tier": "LT5",
+                "points": 1
             }
         }
     },
