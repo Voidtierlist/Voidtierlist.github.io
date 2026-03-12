@@ -1056,8 +1056,13 @@
     "1408796015229669378": {
         "mc_username": "SilentLagend",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 1,
+        "gamemodes": {
+            "mace": {
+                "tier": "LT5",
+                "points": 1
+            }
+        }
     },
     "1471048137584939212": {
         "mc_username": "unfazed_devel",
