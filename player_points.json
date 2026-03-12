@@ -363,7 +363,7 @@
     },
     "1015604669118156830": {
         "mc_username": "ThePhant0mV0id",
-        "region": "AS",
+        "region": "NA",
         "total_points": 6,
         "gamemodes": {
             "sword": {
@@ -847,7 +847,7 @@
         "gamemodes": {}
     },
     "1379503229402087524": {
-        "mc_username": "Allahhhuakhbarrr",
+        "mc_username": "Allahhhuakhbarr",
         "region": "AS",
         "total_points": 10,
         "gamemodes": {
@@ -1120,6 +1120,47 @@
     },
     "1454189819554041876": {
         "mc_username": "gashmeer",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1478722448370438215": {
+        "mc_username": "AscalonXPrime",
+        "region": "AS",
+        "total_points": 40,
+        "gamemodes": {
+            "nethpot": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "axe": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "sword": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "crystal": {
+                "tier": "HT4",
+                "points": 4
+            },
+            "diamond smp": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "diamond pot": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "smp": {
+                "tier": "LT3",
+                "points": 6
+            }
+        }
+    },
+    "1475698419464011880": {
+        "mc_username": "Spydrrrrrrrr",
         "region": "AS",
         "total_points": 0,
         "gamemodes": {}
