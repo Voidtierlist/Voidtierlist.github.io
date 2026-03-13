@@ -1074,8 +1074,13 @@
     "1350781610961801226": {
         "mc_username": "PLAYNGANDCHEATIN",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 6,
+        "gamemodes": {
+            "nethpot": {
+                "tier": "LT3",
+                "points": 6
+            }
+        }
     },
     "1476903480362008677": {
         "mc_username": "prince132",
