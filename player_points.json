@@ -853,15 +853,15 @@
     "1379503229402087524": {
         "mc_username": "Allahhhuakhbarr",
         "region": "AS",
-        "total_points": 10,
+        "total_points": 11,
         "gamemodes": {
             "nethpot": {
                 "tier": "HT5",
                 "points": 2
             },
             "sword": {
-                "tier": "HT5",
-                "points": 2
+                "tier": "LT4",
+                "points": 3
             },
             "mace": {
                 "tier": "LT4",
