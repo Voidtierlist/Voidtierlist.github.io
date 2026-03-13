@@ -788,8 +788,13 @@
     "871705510892699668": {
         "mc_username": "LeadDevils",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 3,
+        "gamemodes": {
+            "sword": {
+                "tier": "LT4",
+                "points": 3
+            }
+        }
     },
     "1434456611002257418": {
         "mc_username": "ShulkerRoom",
