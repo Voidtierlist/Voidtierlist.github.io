@@ -776,11 +776,11 @@
     "871705510892699668": {
         "mc_username": "LeadDevils",
         "region": "AS",
-        "total_points": 2,
+        "total_points": 3,
         "gamemodes": {
             "sword": {
-                "tier": "HT5",
-                "points": 2
+                "tier": "LT4",
+                "points": 3
             }
         }
     },
