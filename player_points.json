@@ -678,7 +678,7 @@
     "1238791706745503795": {
         "mc_username": "ZedzorOwner18",
         "region": "AS",
-        "total_points": 8,
+        "total_points": 10,
         "gamemodes": {
             "nethpot": {
                 "tier": "LT4",
@@ -699,6 +699,10 @@
             "uhc": {
                 "tier": "LT5",
                 "points": 1
+            },
+            "smp": {
+                "tier": "HT5",
+                "points": 2
             }
         }
     },
