@@ -370,11 +370,11 @@
                 "tier": "LT3",
                 "points": 6
             },
-            "smp": {
+            "uhc": {
                 "tier": "LT4",
                 "points": 3
             },
-            "uhc": {
+            "smp": {
                 "tier": "LT4",
                 "points": 3
             }
@@ -593,13 +593,13 @@
         "region": "AS",
         "total_points": 10,
         "gamemodes": {
-            "crystal": {
-                "tier": "LT3",
-                "points": 6
-            },
             "sword": {
                 "tier": "HT4",
                 "points": 4
+            },
+            "crystal": {
+                "tier": "LT3",
+                "points": 6
             }
         }
     },
@@ -704,11 +704,11 @@
                 "tier": "HT5",
                 "points": 2
             },
-            "diamond pot": {
+            "uhc": {
                 "tier": "LT5",
                 "points": 1
             },
-            "uhc": {
+            "diamond pot": {
                 "tier": "LT5",
                 "points": 1
             },
@@ -1223,5 +1223,48 @@
                 "points": 6
             }
         }
+    },
+    "598791409751031818": {
+        "mc_username": "heritics",
+        "region": "NA",
+        "total_points": 18,
+        "gamemodes": {
+            "nethpot": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "diamond pot": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "smp": {
+                "tier": "LT3",
+                "points": 6
+            }
+        }
+    },
+    "1223558150116868137": {
+        "mc_username": "MoosaLegendOp5",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1439728801142800415": {
+        "mc_username": "Error_Rao",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1393192153555144815": {
+        "mc_username": "TidalVoid",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1473951905683083400": {
+        "mc_username": "LeadDevils",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
     }
 }
