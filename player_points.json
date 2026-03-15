@@ -364,13 +364,17 @@
     "1015604669118156830": {
         "mc_username": "ThePhant0mV0id",
         "region": "NA",
-        "total_points": 9,
+        "total_points": 12,
         "gamemodes": {
             "sword": {
                 "tier": "LT3",
                 "points": 6
             },
             "smp": {
+                "tier": "LT4",
+                "points": 3
+            },
+            "uhc": {
                 "tier": "LT4",
                 "points": 3
             }
