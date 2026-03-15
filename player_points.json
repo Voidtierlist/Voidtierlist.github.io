@@ -773,11 +773,15 @@
     "1376226301802975372": {
         "mc_username": "PoleDoPokera_",
         "region": "EU",
-        "total_points": 3,
+        "total_points": 5,
         "gamemodes": {
             "nethpot": {
                 "tier": "LT4",
                 "points": 3
+            },
+            "axe": {
+                "tier": "HT5",
+                "points": 2
             }
         }
     },
