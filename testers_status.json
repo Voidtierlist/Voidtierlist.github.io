@@ -7,6 +7,12 @@
             "status": "idle"
         },
         {
+            "id": 598791409751031818,
+            "name": "kqjf",
+            "avatar": "https://cdn.discordapp.com/avatars/598791409751031818/5719013e165bfe125596df7a0f95feb8.png?size=1024",
+            "status": "dnd"
+        },
+        {
             "id": 1439234876761968742,
             "name": "darkeverest",
             "avatar": "https://cdn.discordapp.com/avatars/1439234876761968742/7bafa55d03e339996b18fca0ada846e5.png?size=1024",
@@ -51,7 +57,7 @@
         {
             "id": 1478722448370438215,
             "name": "ascalonismine",
-            "avatar": "https://cdn.discordapp.com/embed/avatars/4.png",
+            "avatar": "",
             "status": "online"
         },
         {
@@ -77,12 +83,6 @@
             "name": "phat0mv0id",
             "avatar": "https://cdn.discordapp.com/avatars/1015604669118156830/bb42f1c61dbdfc0a21b0d0e68cf1a460.png?size=1024",
             "status": "offline"
-        },
-        {
-            "id": 598791409751031818,
-            "name": "kqjf",
-            "avatar": "https://cdn.discordapp.com/avatars/598791409751031818/5719013e165bfe125596df7a0f95feb8.png?size=1024",
-            "status": "dnd"
         }
     ]
 }
