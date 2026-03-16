@@ -690,11 +690,11 @@
     "1238791706745503795": {
         "mc_username": "ZedzorOwner18",
         "region": "AS",
-        "total_points": 10,
+        "total_points": 9,
         "gamemodes": {
             "nethpot": {
-                "tier": "LT4",
-                "points": 3
+                "tier": "HT5",
+                "points": 2
             },
             "sword": {
                 "tier": "LT5",
