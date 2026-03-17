@@ -882,7 +882,7 @@
         "gamemodes": {}
     },
     "1379503229402087524": {
-        "mc_username": "Allahhhuakhbarr",
+        "mc_username": "VortexOfDooM",
         "region": "AS",
         "total_points": 14,
         "gamemodes": {
@@ -950,6 +950,10 @@
                 "tier": "HT4",
                 "points": 4
             },
+            "axe": {
+                "tier": "LT4",
+                "points": 3
+            },
             "sword": {
                 "tier": "HT4",
                 "points": 4
@@ -959,10 +963,6 @@
                 "points": 3
             },
             "uhc": {
-                "tier": "LT4",
-                "points": 3
-            },
-            "axe": {
                 "tier": "LT4",
                 "points": 3
             }
@@ -1324,5 +1324,23 @@
                 "points": 2
             }
         }
+    },
+    "1458784026503544905": {
+        "mc_username": "ZAFI_BHAI_186",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1354642605056463019": {
+        "mc_username": "trentlab",
+        "region": "NA",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1415231434301505619": {
+        "mc_username": "Jai_J",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
     }
 }
