@@ -1309,5 +1309,16 @@
         "region": "EU",
         "total_points": 0,
         "gamemodes": {}
+    },
+    "1279579716831023135": {
+        "mc_username": "xX_ram2die_Void",
+        "region": "NA",
+        "total_points": 2,
+        "gamemodes": {
+            "sword": {
+                "tier": "HT5",
+                "points": 2
+            }
+        }
     }
 }
