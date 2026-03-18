@@ -203,7 +203,7 @@
     "1464676501759852617": {
         "mc_username": "SxploreMTS",
         "region": "AS",
-        "total_points": 7,
+        "total_points": 9,
         "gamemodes": {
             "sword": {
                 "tier": "HT5",
@@ -214,6 +214,10 @@
                 "points": 3
             },
             "nethpot": {
+                "tier": "HT5",
+                "points": 2
+            },
+            "axe": {
                 "tier": "HT5",
                 "points": 2
             }
