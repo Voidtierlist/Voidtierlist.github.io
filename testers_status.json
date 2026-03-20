@@ -1,18 +1,6 @@
 {
     "testers": [
         {
-            "id": 996427837986852994,
-            "name": "straitgamerz",
-            "avatar": "https://cdn.discordapp.com/avatars/996427837986852994/679b7aad7a5093e2f89bc734d7b9a771.png?size=1024",
-            "status": "idle"
-        },
-        {
-            "id": 598791409751031818,
-            "name": "kqjf",
-            "avatar": "https://cdn.discordapp.com/avatars/598791409751031818/5719013e165bfe125596df7a0f95feb8.png?size=1024",
-            "status": "dnd"
-        },
-        {
             "id": 1439234876761968742,
             "name": "darkeverest",
             "avatar": "https://cdn.discordapp.com/avatars/1439234876761968742/7bafa55d03e339996b18fca0ada846e5.png?size=1024",
@@ -77,6 +65,18 @@
             "name": "fardinamjadgamerpk",
             "avatar": "https://cdn.discordapp.com/avatars/1409911997889253417/d78dabecf0df1778c6c9d178286147da.png?size=1024",
             "status": "offline"
+        },
+        {
+            "id": 996427837986852994,
+            "name": "straitgamerz",
+            "avatar": "https://cdn.discordapp.com/avatars/996427837986852994/679b7aad7a5093e2f89bc734d7b9a771.png?size=1024",
+            "status": "idle"
+        },
+        {
+            "id": 598791409751031818,
+            "name": "kqjf",
+            "avatar": "https://cdn.discordapp.com/avatars/598791409751031818/5719013e165bfe125596df7a0f95feb8.png?size=1024",
+            "status": "dnd"
         },
         {
             "id": 1015604669118156830,
