@@ -378,6 +378,10 @@
         "region": "NA",
         "total_points": 15,
         "gamemodes": {
+            "nethpot": {
+                "tier": "LT4",
+                "points": 3
+            },
             "sword": {
                 "tier": "LT3",
                 "points": 6
@@ -387,10 +391,6 @@
                 "points": 3
             },
             "smp": {
-                "tier": "LT4",
-                "points": 3
-            },
-            "nethpot": {
                 "tier": "LT4",
                 "points": 3
             }
@@ -667,20 +667,8 @@
     "1246396951814082648": {
         "mc_username": "VulkanDaGreat",
         "region": "AS",
-        "total_points": 43,
+        "total_points": 21,
         "gamemodes": {
-            "nethpot": {
-                "tier": "HT3",
-                "points": 10
-            },
-            "axe": {
-                "tier": "LT3",
-                "points": 6
-            },
-            "sword": {
-                "tier": "LT3",
-                "points": 6
-            },
             "crystal": {
                 "tier": "LT4",
                 "points": 3
@@ -716,6 +704,10 @@
                 "tier": "LT5",
                 "points": 1
             },
+            "mace": {
+                "tier": "HT4",
+                "points": 4
+            },
             "crystal": {
                 "tier": "HT5",
                 "points": 2
@@ -731,10 +723,6 @@
             "smp": {
                 "tier": "HT5",
                 "points": 2
-            },
-            "mace": {
-                "tier": "HT4",
-                "points": 4
             }
         }
     },
@@ -743,13 +731,13 @@
         "region": "NA",
         "total_points": 5,
         "gamemodes": {
-            "sword": {
-                "tier": "LT4",
-                "points": 3
-            },
             "nethpot": {
                 "tier": "HT5",
                 "points": 2
+            },
+            "sword": {
+                "tier": "LT4",
+                "points": 3
             }
         }
     },
@@ -866,7 +854,7 @@
     },
     "1334861292812369984": {
         "mc_username": "VISHGAMING687",
-        "region": "EU",
+        "region": "AS",
         "total_points": 0,
         "gamemodes": {}
     },
@@ -1334,7 +1322,7 @@
     },
     "1482044843122364649": {
         "mc_username": "ItzM00n_",
-        "region": "EU",
+        "region": "NA",
         "total_points": 0,
         "gamemodes": {}
     },
@@ -1388,5 +1376,17 @@
                 "points": 1
             }
         }
+    },
+    "1000497633904832612": {
+        "mc_username": "Lyiom",
+        "region": "EU",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1234035948199612426": {
+        "mc_username": "_CHAKU",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
     }
 }
