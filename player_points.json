@@ -303,7 +303,7 @@
     "1409911997889253417": {
         "mc_username": "FardinAmjadGamer",
         "region": "AS",
-        "total_points": 12,
+        "total_points": 18,
         "gamemodes": {
             "sword": {
                 "tier": "HT3",
@@ -312,6 +312,10 @@
             "crystal": {
                 "tier": "HT5",
                 "points": 2
+            },
+            "diamond pot": {
+                "tier": "LT3",
+                "points": 6
             }
         }
     },
