@@ -469,7 +469,7 @@ gap:8px;
 .leaderboard-info{
 padding:8px 14px;
 border-radius:10px;
-background:#12233f;
+background:#1C2634;
 color:#e5efff;
 font-size:15px;
 border:1px solid #1d3357;
@@ -551,7 +551,7 @@ transition:opacity .24s ease-in-out,transform .24s ease-in-out,visibility 0s;
 }
 
 .info-panel-tabs{display:flex;margin-bottom:10px}
-.info-panel-tab{flex:1;padding:7px 10px;border-radius:8px;border:1px solid #314f79;background:#12233f;color:#e8f1ff;font-size:18px;font-weight:700}
+.info-panel-tab{flex:1;padding:7px 10px;border-radius:8px;border:1px solid #314f79;background:#1C2634;color:#e8f1ff;font-size:18px;font-weight:700}
 
 .info-panel h4{margin:0 0 10px;font-size:17px;color:#f2f6ff}
 .info-panel h4 a{color:#f2f6ff}
