@@ -91,16 +91,6 @@ return [
 ];
 }
 
-function getSkinHeadSources(username){
-const safeUsername=encodeURIComponent(username);
-return [
-`https://mc-heads.net/avatar/${safeUsername}/64`,
-`https://crafatar.com/avatars/${safeUsername}?size=64&overlay`,
-`https://minotar.net/avatar/${safeUsername}/64`,
-`https://starlightskins.lunareclipse.studio/avatar/${safeUsername}`
-];
-}
-
 function createInitialFallbackDataUri(username){
 const initial=(username || "?").trim().charAt(0).toUpperCase() || "?";
 const svg=`<svg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'>
