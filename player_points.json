@@ -1396,8 +1396,13 @@
     "1000497633904832612": {
         "mc_username": "Lyiom",
         "region": "EU",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 6,
+        "gamemodes": {
+            "axe": {
+                "tier": "LT3",
+                "points": 6
+            }
+        }
     },
     "1234035948199612426": {
         "mc_username": "_CHAKU",
