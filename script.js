@@ -79,6 +79,34 @@ const COMBAT_RANK_THEMES = {
 
 const VALID_MODES = new Set(["overall",...ALL_GAMEMODES]);
 
+function getSkinBustSources(username){
+const safeUsername=encodeURIComponent(username);
+return [
+`https://render.crafty.gg/3d/bust/${safeUsername}`,
+`https://mc-heads.net/body/${safeUsername}/right`,
+`https://crafatar.com/renders/body/${safeUsername}?overlay`
+];
+}
+
+function setSkinImageWithFallback(img,username){
+if(!img || !username) return;
+
+const sources=getSkinBustSources(username);
+let sourceIndex=0;
+
+img.src=sources[sourceIndex];
+
+img.onerror=()=>{
+sourceIndex+=1;
+if(sourceIndex>=sources.length){
+img.onerror=null;
+return;
+}
+
+img.src=sources[sourceIndex];
+};
+}
+
 function normalizePath(path){
 if(!path) return "/";
 
@@ -292,8 +320,8 @@ row.innerHTML=`
 <div class="rank">${index+1}.</div>
 
 <div class="skin-wrap">
-<img class="skin skin-shadow" src="https://render.crafty.gg/3d/bust/${player.mc_username}" aria-hidden="true">
-<img class="skin" src="https://render.crafty.gg/3d/bust/${player.mc_username}" alt="${player.mc_username} skin">
+<img class="skin skin-shadow" aria-hidden="true">
+<img class="skin" alt="${player.mc_username} skin">
 </div>
 </div>
 </div>
@@ -317,6 +345,9 @@ ${createTiersHTML(player)}
 row.onclick=()=>openPlayerModal(player);
 
 container.appendChild(row);
+
+const skinImages=row.querySelectorAll(".skin");
+skinImages.forEach(img=>setSkinImageWithFallback(img,player.mc_username));
 
 });
 
@@ -374,7 +405,7 @@ card.dataset.username=player.mc_username.toLowerCase();
 
 card.innerHTML=`
 <div class="tier-player-main">
-<img class="tier-player-skin" src="https://render.crafty.gg/3d/bust/${player.mc_username}" alt="${player.mc_username}">
+<img class="tier-player-skin" alt="${player.mc_username}">
 <div class="tier-player-meta">
 <h4>${player.mc_username}</h4>
 </div>
@@ -387,6 +418,9 @@ card.innerHTML=`
 
 card.addEventListener("click",()=>openPlayerModal(player));
 tierColumn.appendChild(card);
+
+const tierPlayerSkin=card.querySelector(".tier-player-skin");
+setSkinImageWithFallback(tierPlayerSkin,player.mc_username);
 });
 }
 
@@ -617,8 +651,7 @@ player.mc_username;
 document.getElementById("modal-region").textContent=
 player.region;
 
-document.getElementById("modal-skin").src=
-`https://render.crafty.gg/3d/bust/${player.mc_username}`;
+setSkinImageWithFallback(document.getElementById("modal-skin"),player.mc_username);
 
 const pos=allPlayersData.findIndex(
 p=>p.mc_username===player.mc_username)+1;
