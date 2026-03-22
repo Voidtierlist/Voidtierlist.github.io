@@ -82,11 +82,12 @@ const VALID_MODES = new Set(["overall",...ALL_GAMEMODES]);
 function getSkinBustSources(username){
 const safeUsername=encodeURIComponent(username);
 return [
-`https://minotar.net/armor/body/${safeUsername}/100.png`,
-`https://minotar.net/body/${safeUsername}/100.png`,
 `https://render.crafty.gg/3d/bust/${safeUsername}`,
 `https://mc-heads.net/body/${safeUsername}/right`,
-`https://crafatar.com/renders/body/${safeUsername}?overlay`
+`https://crafatar.com/renders/body/${safeUsername}?overlay`,
+`https://minotar.net/armor/body/${safeUsername}/100.png`,
+`https://minotar.net/body/${safeUsername}/100.png`,
+`https://starlightskins.lunareclipse.studio/render/default/${safeUsername}/full?renderScale=3`
 ];
 }
 
@@ -113,7 +114,6 @@ const sources=getSkinBustSources(username);
 let sourceIndex=0;
 
 img.classList.remove("skin-fallback");
-img.referrerPolicy="no-referrer";
 img.src=sources[sourceIndex];
 img.onload=()=>img.classList.remove("skin-fallback");
 
