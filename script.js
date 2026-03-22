@@ -107,10 +107,12 @@ const svg=`<svg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBo
 return `data:image/svg+xml;utf8,${svg}`;
 }
 
-function setSkinImageWithFallback(img,username){
+function setSkinImageWithFallback(img,username,{variant="bust"}={}){
 if(!img || !username) return;
 
-const sources=getSkinBustSources(username);
+const sources=variant==="head"
+? getSkinHeadSources(username)
+: getSkinBustSources(username);
 let sourceIndex=0;
 
 img.classList.remove("skin-fallback");
@@ -344,7 +346,6 @@ row.innerHTML=`
 <div class="rank">${index+1}.</div>
 
 <div class="skin-wrap">
-<img class="skin skin-shadow" aria-hidden="true">
 <img class="skin" alt="${player.mc_username} skin">
 </div>
 </div>
@@ -371,7 +372,7 @@ row.onclick=()=>openPlayerModal(player);
 container.appendChild(row);
 
 const skinImages=row.querySelectorAll(".skin");
-skinImages.forEach(img=>setSkinImageWithFallback(img,player.mc_username));
+skinImages.forEach(img=>setSkinImageWithFallback(img,player.mc_username,{variant:"head"}));
 
 });
 
