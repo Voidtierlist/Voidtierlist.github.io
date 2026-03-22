@@ -1335,8 +1335,13 @@
     "1482044843122364649": {
         "mc_username": "ItzM00n_",
         "region": "NA",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 3,
+        "gamemodes": {
+            "axe": {
+                "tier": "LT4",
+                "points": 3
+            }
+        }
     },
     "1279579716831023135": {
         "mc_username": "xX_ram2die_Void",
