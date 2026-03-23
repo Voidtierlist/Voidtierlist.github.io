@@ -1462,5 +1462,16 @@
         "region": "EU",
         "total_points": 0,
         "gamemodes": {}
+    },
+    "1123443834634915861": {
+        "mc_username": "SGP_Mvuong",
+        "region": "AS",
+        "total_points": 2,
+        "gamemodes": {
+            "sword": {
+                "tier": "HT5",
+                "points": 2
+            }
+        }
     }
 }
