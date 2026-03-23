@@ -195,7 +195,7 @@
         "gamemodes": {}
     },
     "1324415637862350999": {
-        "mc_username": "Itzdreamyboy_",
+        "mc_username": "ItzweaksSON",
         "region": "NA",
         "total_points": 0,
         "gamemodes": {}
@@ -765,13 +765,13 @@
                 "tier": "LT3",
                 "points": 6
             },
-            "uhc": {
-                "tier": "LT4",
-                "points": 3
-            },
             "sword": {
                 "tier": "HT5",
                 "points": 2
+            },
+            "uhc": {
+                "tier": "LT4",
+                "points": 3
             }
         }
     },
@@ -831,21 +831,38 @@
         "region": "AS",
         "total_points": 5,
         "gamemodes": {
-            "sword": {
-                "tier": "LT4",
-                "points": 3
-            },
             "axe": {
                 "tier": "HT5",
                 "points": 2
+            },
+            "sword": {
+                "tier": "LT4",
+                "points": 3
             }
         }
     },
     "1434456611002257418": {
         "mc_username": "ShulkerRoom",
         "region": "EU",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 20,
+        "gamemodes": {
+            "axe": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "sword": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "mace": {
+                "tier": "HT4",
+                "points": 4
+            },
+            "crystal": {
+                "tier": "HT4",
+                "points": 4
+            }
+        }
     },
     "1037259086032539678": {
         "mc_username": "trybeatingme",
@@ -1333,8 +1350,8 @@
         "gamemodes": {}
     },
     "1482044843122364649": {
-        "mc_username": "ItzM00n_",
-        "region": "NA",
+        "mc_username": "itzM00n_",
+        "region": "EU",
         "total_points": 3,
         "gamemodes": {
             "axe": {
@@ -1412,6 +1429,24 @@
     "1234035948199612426": {
         "mc_username": "_CHAKU",
         "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1165321478112288899": {
+        "mc_username": "adityasingh24",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "930346167605268530": {
+        "mc_username": "UNIQUEGAMER_1",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1306592276847530005": {
+        "mc_username": "itsrealthebest",
+        "region": "EU",
         "total_points": 0,
         "gamemodes": {}
     }
