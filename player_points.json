@@ -643,11 +643,15 @@
     "1177547416975716453": {
         "mc_username": "ywun",
         "region": "AS",
-        "total_points": 2,
+        "total_points": 5,
         "gamemodes": {
             "sword": {
                 "tier": "HT5",
                 "points": 2
+            },
+            "uhc": {
+                "tier": "LT4",
+                "points": 3
             }
         }
     },
