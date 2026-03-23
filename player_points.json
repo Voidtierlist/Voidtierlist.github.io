@@ -1365,11 +1365,11 @@
     "1482044843122364649": {
         "mc_username": "itzM00n_",
         "region": "EU",
-        "total_points": 3,
+        "total_points": 4,
         "gamemodes": {
             "axe": {
-                "tier": "LT4",
-                "points": 3
+                "tier": "HT4",
+                "points": 4
             }
         }
     },
