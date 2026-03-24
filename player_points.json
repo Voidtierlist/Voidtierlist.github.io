@@ -1292,12 +1292,7 @@
         "mc_username": "NoobDetector_",
         "region": "AS",
         "total_points": 0,
-        "gamemodes": {
-            "nethpot": {
-                "tier": "N/A",
-                "points": 0
-            }
-        }
+        "gamemodes": {}
     },
     "1281843779967385623": {
         "mc_username": "__zra",
@@ -1379,10 +1374,6 @@
             "axe": {
                 "tier": "HT4",
                 "points": 4
-            },
-            "mace": {
-                "tier": "N/A",
-                "points": 0
             }
         }
     },
@@ -1506,11 +1497,11 @@
                 "tier": "LT4",
                 "points": 3
             },
-            "uhc": {
+            "mace": {
                 "tier": "LT5",
                 "points": 1
             },
-            "mace": {
+            "uhc": {
                 "tier": "LT5",
                 "points": 1
             }
@@ -1549,11 +1540,12 @@
         "mc_username": "Spunky_Prime",
         "region": "AS",
         "total_points": 0,
-        "gamemodes": {
-            "mace": {
-                "tier": "N/A",
-                "points": 0
-            }
-        }
+        "gamemodes": {}
+    },
+    "1485895435121070172": {
+        "mc_username": "Dyn0_",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
     }
 }
