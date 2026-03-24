@@ -1551,7 +1551,7 @@
     "1349351806492348508": {
         "mc_username": "MeowwByAladin",
         "region": "AS",
-        "total_points": 72,
+        "total_points": 96,
         "gamemodes": {
             "nethpot": {
                 "tier": "LT2",
@@ -1565,6 +1565,22 @@
                 "tier": "LT2",
                 "points": 20
             },
+            "mace": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "crystal": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "uhc": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "diamond smp": {
+                "tier": "LT3",
+                "points": 6
+            },
             "diamond pot": {
                 "tier": "LT2",
                 "points": 20
@@ -1574,5 +1590,11 @@
                 "points": 6
             }
         }
+    },
+    "879487648547344404": {
+        "mc_username": "torchwolf",
+        "region": "EU",
+        "total_points": 0,
+        "gamemodes": {}
     }
 }
