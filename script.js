@@ -368,14 +368,13 @@ row.innerHTML=`
 <div class="rank-cell">
 <div class="rank-bar">
 <div class="rank">${index+1}.</div>
-
-<div class="skin-wrap">
-<img class="skin" alt="${player.mc_username} skin">
-</div>
 </div>
 </div>
 
 <div class="info">
+<div class="skin-wrap">
+<img class="skin" alt="${player.mc_username} skin">
+</div>
 <div class="info-text">
 <h3>${player.mc_username}</h3>
 ${statusHTML}
