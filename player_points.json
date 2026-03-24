@@ -316,6 +316,10 @@
             "diamond pot": {
                 "tier": "LT3",
                 "points": 6
+            },
+            "mace": {
+                "tier": "N/A",
+                "points": 0
             }
         }
     },
