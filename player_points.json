@@ -1370,6 +1370,10 @@
             "axe": {
                 "tier": "HT4",
                 "points": 4
+            },
+            "mace": {
+                "tier": "N/A",
+                "points": 0
             }
         }
     },
