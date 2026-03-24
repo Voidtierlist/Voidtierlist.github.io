@@ -86,15 +86,15 @@ const retrySuffix=retryToken ? `?retry=${encodeURIComponent(retryToken)}` : "";
 
 if(safeVariant==="bust"){
 return [
-`https://render.crafty.gg/3d/bust/${safeUsername}${retrySuffix}`,
-`https://mc-heads.net/body/${safeUsername}/right`,
+`https://mc-heads.net/body/${safeUsername}/right${retrySuffix}`,
+`https://mc-heads.net/body/${safeUsername}/left`,
 `https://crafatar.com/renders/body/${safeUsername}?overlay`
 ];
 }
 
 return [
-`https://render.crafty.gg/3d/head/${safeUsername}${retrySuffix}`,
-`https://mc-heads.net/avatar/${safeUsername}/64`,
+`https://mc-heads.net/avatar/${safeUsername}/64${retrySuffix}`,
+`https://mc-heads.net/avatar/${safeUsername}/48`,
 `https://crafatar.com/avatars/${safeUsername}?size=64&overlay`
 ];
 }
