@@ -303,11 +303,11 @@
     "1409911997889253417": {
         "mc_username": "FardinAmjadGamer",
         "region": "AS",
-        "total_points": 18,
+        "total_points": 14,
         "gamemodes": {
             "sword": {
-                "tier": "HT3",
-                "points": 10
+                "tier": "LT3",
+                "points": 6
             },
             "crystal": {
                 "tier": "HT5",
@@ -645,15 +645,15 @@
         "region": "AS",
         "total_points": 8,
         "gamemodes": {
+            "axe": {
+                "tier": "LT4",
+                "points": 3
+            },
             "sword": {
                 "tier": "HT5",
                 "points": 2
             },
             "uhc": {
-                "tier": "LT4",
-                "points": 3
-            },
-            "axe": {
                 "tier": "LT4",
                 "points": 3
             }
@@ -1473,5 +1473,11 @@
                 "points": 2
             }
         }
+    },
+    "1244752181563756587": {
+        "mc_username": "Hardy_rek_7",
+        "region": "EU",
+        "total_points": 0,
+        "gamemodes": {}
     }
 }
