@@ -1536,6 +1536,11 @@
         "mc_username": "Spunky_Prime",
         "region": "AS",
         "total_points": 0,
-        "gamemodes": {}
+        "gamemodes": {
+            "mace": {
+                "tier": "N/A",
+                "points": 0
+            }
+        }
     }
 }
