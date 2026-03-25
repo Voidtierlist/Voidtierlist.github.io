@@ -1554,8 +1554,13 @@
     "1485895435121070172": {
         "mc_username": "Dyn0_",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 4,
+        "gamemodes": {
+            "nethpot": {
+                "tier": "HT4",
+                "points": 4
+            }
+        }
     },
     "1349351806492348508": {
         "mc_username": "MeowwByAladin",
