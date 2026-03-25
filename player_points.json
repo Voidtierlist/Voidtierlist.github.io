@@ -1033,9 +1033,13 @@
     "1152853861174882395": {
         "mc_username": "Anc1en7",
         "region": "AS",
-        "total_points": 3,
+        "total_points": 6,
         "gamemodes": {
             "smp": {
+                "tier": "LT4",
+                "points": 3
+            },
+            "nethpot": {
                 "tier": "LT4",
                 "points": 3
             }
