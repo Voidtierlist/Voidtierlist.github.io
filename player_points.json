@@ -1460,8 +1460,13 @@
     "1165321478112288899": {
         "mc_username": "adityasingh24",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 4,
+        "gamemodes": {
+            "nethpot": {
+                "tier": "HT4",
+                "points": 4
+            }
+        }
     },
     "930346167605268530": {
         "mc_username": "UNIQUEGAMER_1",
