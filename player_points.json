@@ -203,7 +203,7 @@
     "1464676501759852617": {
         "mc_username": "SxploreMTS",
         "region": "AS",
-        "total_points": 9,
+        "total_points": 12,
         "gamemodes": {
             "nethpot": {
                 "tier": "HT5",
@@ -218,6 +218,10 @@
                 "points": 2
             },
             "uhc": {
+                "tier": "LT4",
+                "points": 3
+            },
+            "diamond pot": {
                 "tier": "LT4",
                 "points": 3
             }
