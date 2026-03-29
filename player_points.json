@@ -1641,8 +1641,13 @@
     "896612262222114907": {
         "mc_username": "ssytLOL",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 3,
+        "gamemodes": {
+            "sword": {
+                "tier": "LT4",
+                "points": 3
+            }
+        }
     },
     "1332925730316619787": {
         "mc_username": "Gilzzgabut",
