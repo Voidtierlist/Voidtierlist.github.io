@@ -373,7 +373,7 @@
     "911943905405190205": {
         "mc_username": "LastR3venge",
         "region": "AS",
-        "total_points": 8,
+        "total_points": 11,
         "gamemodes": {
             "nethpot": {
                 "tier": "HT4",
@@ -382,6 +382,10 @@
             "sword": {
                 "tier": "HT4",
                 "points": 4
+            },
+            "uhc": {
+                "tier": "LT4",
+                "points": 3
             }
         }
     },
