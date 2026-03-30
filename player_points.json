@@ -203,7 +203,7 @@
     "1464676501759852617": {
         "mc_username": "tx2lore_",
         "region": "AS",
-        "total_points": 14,
+        "total_points": 13,
         "gamemodes": {
             "nethpot": {
                 "tier": "HT5",
@@ -218,8 +218,8 @@
                 "points": 4
             },
             "uhc": {
-                "tier": "LT4",
-                "points": 3
+                "tier": "HT5",
+                "points": 2
             },
             "diamond pot": {
                 "tier": "LT4",
