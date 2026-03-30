@@ -1049,7 +1049,7 @@
     "1152853861174882395": {
         "mc_username": "Anc1en7",
         "region": "AS",
-        "total_points": 6,
+        "total_points": 8,
         "gamemodes": {
             "nethpot": {
                 "tier": "LT4",
@@ -1058,6 +1058,10 @@
             "smp": {
                 "tier": "LT4",
                 "points": 3
+            },
+            "uhc": {
+                "tier": "HT5",
+                "points": 2
             }
         }
     },
