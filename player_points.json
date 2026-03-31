@@ -970,7 +970,7 @@
     "1379503229402087524": {
         "mc_username": "VortexOfDooM",
         "region": "AS",
-        "total_points": 14,
+        "total_points": 15,
         "gamemodes": {
             "nethpot": {
                 "tier": "LT4",
@@ -995,6 +995,10 @@
             "smp": {
                 "tier": "HT5",
                 "points": 2
+            },
+            "axe": {
+                "tier": "LT5",
+                "points": 1
             }
         }
     },
