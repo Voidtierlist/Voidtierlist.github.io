@@ -638,8 +638,13 @@
     "1092107921036427334": {
         "mc_username": "NightHunterzz_",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 4,
+        "gamemodes": {
+            "axe": {
+                "tier": "HT4",
+                "points": 4
+            }
+        }
     },
     "1433510641540530257": {
         "mc_username": "Decal_",
