@@ -787,13 +787,13 @@
                 "tier": "LT5",
                 "points": 1
             },
-            "crystal": {
-                "tier": "LT4",
-                "points": 3
-            },
             "mace": {
                 "tier": "LT5",
                 "points": 1
+            },
+            "crystal": {
+                "tier": "LT4",
+                "points": 3
             }
         }
     },
@@ -976,6 +976,10 @@
                 "tier": "LT4",
                 "points": 3
             },
+            "axe": {
+                "tier": "LT5",
+                "points": 1
+            },
             "sword": {
                 "tier": "LT4",
                 "points": 3
@@ -995,10 +999,6 @@
             "smp": {
                 "tier": "HT5",
                 "points": 2
-            },
-            "axe": {
-                "tier": "LT5",
-                "points": 1
             }
         }
     },
@@ -1067,13 +1067,13 @@
                 "tier": "LT4",
                 "points": 3
             },
-            "smp": {
-                "tier": "LT4",
-                "points": 3
-            },
             "uhc": {
                 "tier": "HT5",
                 "points": 2
+            },
+            "smp": {
+                "tier": "LT4",
+                "points": 3
             }
         }
     },
@@ -1209,7 +1209,7 @@
         }
     },
     "1433765449476214919": {
-        "mc_username": "_Thorfin",
+        "mc_username": "_Thorfin7",
         "region": "AS",
         "total_points": 0,
         "gamemodes": {}
@@ -1555,7 +1555,7 @@
     "1241406385195847837": {
         "mc_username": "Ritofied",
         "region": "AS",
-        "total_points": 20,
+        "total_points": 28,
         "gamemodes": {
             "axe": {
                 "tier": "HT3",
@@ -1566,10 +1566,14 @@
                 "points": 6
             },
             "mace": {
-                "tier": "N/A",
-                "points": 0
+                "tier": "HT4",
+                "points": 4
             },
             "uhc": {
+                "tier": "HT4",
+                "points": 4
+            },
+            "smp": {
                 "tier": "HT4",
                 "points": 4
             }
@@ -1719,7 +1723,7 @@
     },
     "1228684822973644802": {
         "mc_username": "xKaizr",
-        "region": "AS",
+        "region": "SA",
         "total_points": 0,
         "gamemodes": {}
     },
@@ -1749,6 +1753,12 @@
     },
     "1367472195705765929": {
         "mc_username": "zheefeng",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1304073093303504918": {
+        "mc_username": "Itzreallynotme",
         "region": "AS",
         "total_points": 0,
         "gamemodes": {}
