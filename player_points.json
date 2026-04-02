@@ -1224,8 +1224,13 @@
     "1433765449476214919": {
         "mc_username": "_Thorfin7",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 2,
+        "gamemodes": {
+            "sword": {
+                "tier": "HT5",
+                "points": 2
+            }
+        }
     },
     "1361652687539535953": {
         "mc_username": "Legomanasd",
