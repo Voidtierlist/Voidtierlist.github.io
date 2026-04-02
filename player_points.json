@@ -947,9 +947,13 @@
     "1280130936138104940": {
         "mc_username": "LostInWorld",
         "region": "AS",
-        "total_points": 1,
+        "total_points": 2,
         "gamemodes": {
             "sword": {
+                "tier": "LT5",
+                "points": 1
+            },
+            "uhc": {
                 "tier": "LT5",
                 "points": 1
             }
