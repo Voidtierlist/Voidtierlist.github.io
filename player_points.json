@@ -1820,5 +1820,16 @@
                 "points": 4
             }
         }
+    },
+    "1355383136388907230": {
+        "mc_username": "KryzionXD",
+        "region": "AS",
+        "total_points": 6,
+        "gamemodes": {
+            "axe": {
+                "tier": "LT3",
+                "points": 6
+            }
+        }
     }
 }
