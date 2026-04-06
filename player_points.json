@@ -1617,11 +1617,11 @@
     "1485895435121070172": {
         "mc_username": "Dyn0_",
         "region": "AS",
-        "total_points": 6,
+        "total_points": 10,
         "gamemodes": {
             "nethpot": {
-                "tier": "LT3",
-                "points": 6
+                "tier": "HT3",
+                "points": 10
             }
         }
     },
@@ -1830,11 +1830,11 @@
         "region": "AS",
         "total_points": 12,
         "gamemodes": {
-            "axe": {
+            "nethpot": {
                 "tier": "LT3",
                 "points": 6
             },
-            "nethpot": {
+            "axe": {
                 "tier": "LT3",
                 "points": 6
             }
@@ -1860,6 +1860,39 @@
     },
     "1259259462276087939": {
         "mc_username": "SxyroX_",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1380884113942249615": {
+        "mc_username": "VoidS1ar",
+        "region": "AS",
+        "total_points": 30,
+        "gamemodes": {
+            "nethpot": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "axe": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "sword": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "crystal": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "smp": {
+                "tier": "LT3",
+                "points": 6
+            }
+        }
+    },
+    "1490660712903868518": {
+        "mc_username": "LightingGamerz4",
         "region": "AS",
         "total_points": 0,
         "gamemodes": {}
