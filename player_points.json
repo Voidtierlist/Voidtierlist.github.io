@@ -1867,7 +1867,7 @@
     "1380884113942249615": {
         "mc_username": "VoidS1ar",
         "region": "AS",
-        "total_points": 30,
+        "total_points": 36,
         "gamemodes": {
             "nethpot": {
                 "tier": "LT3",
@@ -1882,6 +1882,10 @@
                 "points": 6
             },
             "crystal": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "diamond pot": {
                 "tier": "LT3",
                 "points": 6
             },
