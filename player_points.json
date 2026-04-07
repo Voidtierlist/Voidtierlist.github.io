@@ -1904,11 +1904,15 @@
     "801116626329534464": {
         "mc_username": "Legoman1213",
         "region": "AS",
-        "total_points": 6,
+        "total_points": 10,
         "gamemodes": {
             "sword": {
                 "tier": "LT3",
                 "points": 6
+            },
+            "uhc": {
+                "tier": "HT4",
+                "points": 4
             }
         }
     }
