@@ -1148,13 +1148,17 @@
     "1437546302429986847": {
         "mc_username": "yt_lilcraft06",
         "region": "EU",
-        "total_points": 12,
+        "total_points": 18,
         "gamemodes": {
             "axe": {
                 "tier": "LT3",
                 "points": 6
             },
             "sword": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "nethpot": {
                 "tier": "LT3",
                 "points": 6
             }
