@@ -1915,5 +1915,16 @@
                 "points": 4
             }
         }
+    },
+    "938076515176968304": {
+        "mc_username": "Beefv1",
+        "region": "EU",
+        "total_points": 2,
+        "gamemodes": {
+            "nethpot": {
+                "tier": "HT5",
+                "points": 2
+            }
+        }
     }
 }
