@@ -1853,8 +1853,13 @@
     "1476168464698970223": {
         "mc_username": "Manshif_Cibo",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 1,
+        "gamemodes": {
+            "sword": {
+                "tier": "LT5",
+                "points": 1
+            }
+        }
     },
     "338658532901650432": {
         "mc_username": "revyro",
