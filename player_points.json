@@ -1967,5 +1967,16 @@
         "region": "AS",
         "total_points": 0,
         "gamemodes": {}
+    },
+    "1317240893278785690": {
+        "mc_username": "DanPlayzPvP",
+        "region": "EU",
+        "total_points": 3,
+        "gamemodes": {
+            "sword": {
+                "tier": "LT4",
+                "points": 3
+            }
+        }
     }
 }
