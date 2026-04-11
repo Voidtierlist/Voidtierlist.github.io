@@ -1861,11 +1861,15 @@
     "1476168464698970223": {
         "mc_username": "Manshif_Cibo",
         "region": "EU",
-        "total_points": 1,
+        "total_points": 3,
         "gamemodes": {
             "sword": {
                 "tier": "LT5",
                 "points": 1
+            },
+            "nethpot": {
+                "tier": "HT5",
+                "points": 2
             }
         }
     },
