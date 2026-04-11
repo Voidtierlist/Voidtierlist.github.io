@@ -1957,8 +1957,13 @@
     "1402661899941842988": {
         "mc_username": "ITZ_DARK_SENPAI",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 1,
+        "gamemodes": {
+            "nethpot": {
+                "tier": "LT5",
+                "points": 1
+            }
+        }
     },
     "1369295831873884280": {
         "mc_username": "ErrorXkiller",
